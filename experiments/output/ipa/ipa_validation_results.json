@@ -1,0 +1,194 @@
+{
+  "global_verdict": "FAIL",
+  "recommendation": "IPA does not improve on CA/CW consistently. Abandon competition-membership family.",
+  "per_dataset": {
+    "diabetes": {
+      "verdict": "SUCCESS",
+      "ipa_vs_ca": {
+        "macro_f1": 0.0,
+        "minority_f1": 0.0,
+        "gmean": 0.0,
+        "balanced_accuracy": 0.0,
+        "minority_recall": 0.0,
+        "auroc": 0.022439024390243978
+      },
+      "ipa_vs_cw": {
+        "macro_f1": 0.025876208846724147,
+        "minority_f1": 0.047619047619047616,
+        "gmean": 0.15617376188860607,
+        "balanced_accuracy": 0.012195121951219523,
+        "minority_recall": 0.024390243902439025,
+        "auroc": 0.001626016260162677
+      },
+      "ca_vs_cw": {
+        "macro_f1": 0.025876208846724147,
+        "minority_f1": 0.047619047619047616,
+        "gmean": 0.15617376188860607,
+        "balanced_accuracy": 0.012195121951219523,
+        "minority_recall": 0.024390243902439025,
+        "auroc": -0.0208130081300813
+      },
+      "noise_ambiguity_percentile": 73.62637362637363,
+      "noise_muIPA_percentile": 31.868131868131865,
+      "noise_percentile_decreased": true,
+      "retains_ca_gain": true,
+      "beats_cw": true
+    },
+    "ecoli2": {
+      "verdict": "SUCCESS",
+      "ipa_vs_ca": {
+        "macro_f1": 0.023998248633632313,
+        "minority_f1": 0.03508771929824561,
+        "gmean": 0.01064253777167612,
+        "balanced_accuracy": 0.011627906976744096,
+        "minority_recall": 0.0,
+        "auroc": 0.005813953488372103
+      },
+      "ipa_vs_cw": {
+        "macro_f1": -0.006978653530377521,
+        "minority_f1": 0.0,
+        "gmean": 0.052796946411890144,
+        "balanced_accuracy": 0.03924418604651159,
+        "minority_recall": 0.125,
+        "auroc": -0.0174418604651162
+      },
+      "ca_vs_cw": {
+        "macro_f1": -0.030976902164009834,
+        "minority_f1": -0.03508771929824561,
+        "gmean": 0.042154408640214025,
+        "balanced_accuracy": 0.02761627906976749,
+        "minority_recall": 0.125,
+        "auroc": -0.023255813953488302
+      },
+      "noise_ambiguity_percentile": 55.55555555555556,
+      "noise_muIPA_percentile": 55.55555555555556,
+      "noise_percentile_decreased": false,
+      "retains_ca_gain": true,
+      "beats_cw": true
+    },
+    "vehicle0": {
+      "verdict": "FAIL",
+      "ipa_vs_ca": {
+        "macro_f1": -0.007898735608625307,
+        "minority_f1": -0.01680672268907568,
+        "gmean": -0.019597756274962186,
+        "balanced_accuracy": -0.011512027491409005,
+        "minority_recall": -0.033333333333333326,
+        "auroc": 0.0006872852233678062
+      },
+      "ipa_vs_cw": {
+        "macro_f1": 0.042747200703629806,
+        "minority_f1": 0.0714285714285714,
+        "gmean": 0.0527078393938889,
+        "balanced_accuracy": 0.03848797250859093,
+        "minority_recall": 0.06666666666666665,
+        "auroc": 0.0027491408934708916
+      },
+      "ca_vs_cw": {
+        "macro_f1": 0.05064593631225511,
+        "minority_f1": 0.08823529411764708,
+        "gmean": 0.07230559566885109,
+        "balanced_accuracy": 0.04999999999999993,
+        "minority_recall": 0.09999999999999998,
+        "auroc": 0.0020618556701030855
+      },
+      "noise_ambiguity_percentile": 51.470588235294116,
+      "noise_muIPA_percentile": 63.23529411764706,
+      "noise_percentile_decreased": false,
+      "retains_ca_gain": true,
+      "beats_cw": true
+    }
+  },
+  "results": [
+    {
+      "dataset": "diabetes",
+      "model": "CW",
+      "macro_f1": 0.39267015706806285,
+      "minority_f1": 0.0,
+      "gmean": 0.0,
+      "balanced_accuracy": 0.5,
+      "minority_recall": 0.0,
+      "auroc": 0.5053658536585366
+    },
+    {
+      "dataset": "diabetes",
+      "model": "CA",
+      "macro_f1": 0.418546365914787,
+      "minority_f1": 0.047619047619047616,
+      "gmean": 0.15617376188860607,
+      "balanced_accuracy": 0.5121951219512195,
+      "minority_recall": 0.024390243902439025,
+      "auroc": 0.4845528455284553
+    },
+    {
+      "dataset": "diabetes",
+      "model": "IPA",
+      "macro_f1": 0.418546365914787,
+      "minority_f1": 0.047619047619047616,
+      "gmean": 0.15617376188860607,
+      "balanced_accuracy": 0.5121951219512195,
+      "minority_recall": 0.024390243902439025,
+      "auroc": 0.5069918699186993
+    },
+    {
+      "dataset": "ecoli2",
+      "model": "CW",
+      "macro_f1": 0.8045977011494252,
+      "minority_f1": 0.6666666666666666,
+      "gmean": 0.7719651757418463,
+      "balanced_accuracy": 0.7892441860465116,
+      "minority_recall": 0.625,
+      "auroc": 0.9302325581395349
+    },
+    {
+      "dataset": "ecoli2",
+      "model": "CA",
+      "macro_f1": 0.7736207989854154,
+      "minority_f1": 0.631578947368421,
+      "gmean": 0.8141195843820603,
+      "balanced_accuracy": 0.8168604651162791,
+      "minority_recall": 0.75,
+      "auroc": 0.9069767441860466
+    },
+    {
+      "dataset": "ecoli2",
+      "model": "IPA",
+      "macro_f1": 0.7976190476190477,
+      "minority_f1": 0.6666666666666666,
+      "gmean": 0.8247621221537365,
+      "balanced_accuracy": 0.8284883720930232,
+      "minority_recall": 0.75,
+      "auroc": 0.9127906976744187
+    },
+    {
+      "dataset": "vehicle0",
+      "model": "CW",
+      "macro_f1": 0.691747572815534,
+      "minority_f1": 0.5,
+      "gmean": 0.6125828368137348,
+      "balanced_accuracy": 0.6690721649484537,
+      "minority_recall": 0.4,
+      "auroc": 0.9243986254295532
+    },
+    {
+      "dataset": "vehicle0",
+      "model": "CA",
+      "macro_f1": 0.7423935091277891,
+      "minority_f1": 0.5882352941176471,
+      "gmean": 0.6848884324825859,
+      "balanced_accuracy": 0.7190721649484536,
+      "minority_recall": 0.5,
+      "auroc": 0.9264604810996563
+    },
+    {
+      "dataset": "vehicle0",
+      "model": "IPA",
+      "macro_f1": 0.7344947735191638,
+      "minority_f1": 0.5714285714285714,
+      "gmean": 0.6652906762076237,
+      "balanced_accuracy": 0.7075601374570446,
+      "minority_recall": 0.4666666666666667,
+      "auroc": 0.9271477663230241
+    }
+  ]
+}

@@ -1,0 +1,2913 @@
+{
+  "experiment": "scaling_ablation",
+  "scaling_options": [
+    "none",
+    "standard",
+    "minmax"
+  ],
+  "purity_threshold": 0.95,
+  "seed": 42,
+  "git": {
+    "status_porcelain": "?? Data/\n?? IMPLEMENTATION_NOTES.md\n?? RESEARCH_SPEC.md\n?? __pycache__/\n?? conftest.py\n?? docs/\n?? experiments/\n?? src/\n?? tests/",
+    "diff_stat": "",
+    "clean": false
+  },
+  "datasets": {
+    "diabetes": {
+      "info": {
+        "name": "diabetes",
+        "path": "C:\\Users\\kedar\\Desktop\\BITS\\Acads\\BharatSOP\\GBLSTSVM\\Data\\Data\\diabetes.csv",
+        "shape": [
+          768,
+          9
+        ],
+        "n_samples": 768,
+        "n_features": 8,
+        "n_classes": 2,
+        "class_counts": {
+          "0": 500,
+          "1": 268
+        },
+        "missing_values": 0,
+        "duplicate_rows": 0,
+        "label_values": [
+          0,
+          1
+        ],
+        "imbalance_ratio": 1.8656716417910448,
+        "duplicates_retained": true
+      },
+      "results": [
+        {
+          "scaling": "none",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 85,
+                "n_balls_pos": 27,
+                "n_balls_neg": 58,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9655172413793104,
+                "purity_mean": 0.9992148138454491,
+                "purity_std": 0.005061084978015649,
+                "purity_max": 1.0,
+                "radius_min": 1.9170028690641026,
+                "radius_mean": 10.970341485787086,
+                "radius_max": 31.09313274663716
+              },
+              "val": {
+                "accuracy": 0.6608695652173913,
+                "balanced_accuracy": 0.5125,
+                "macro_f1": 0.42121564072783585,
+                "minority_recall": 0.025,
+                "gmean": 0.15811388300841897,
+                "auroc": 0.5866666666666667,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    39,
+                    1
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.4982113821138211,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 85,
+                "n_balls_pos": 27,
+                "n_balls_neg": 58,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9655172413793104,
+                "purity_mean": 0.9992148138454491,
+                "purity_std": 0.005061084978015649,
+                "purity_max": 1.0,
+                "radius_min": 1.9170028690641026,
+                "radius_mean": 10.970341485787086,
+                "radius_max": 31.09313274663716,
+                "kappa_positive": 1.4358288770053476,
+                "kappa_negative": 0.7671428571428571
+              },
+              "val": {
+                "accuracy": 0.6608695652173913,
+                "balanced_accuracy": 0.5125,
+                "macro_f1": 0.42121564072783585,
+                "minority_recall": 0.025,
+                "gmean": 0.15811388300841897,
+                "auroc": 0.595,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    39,
+                    1
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.5053658536585366,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 85,
+                "n_balls_pos": 27,
+                "n_balls_neg": 58,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9655172413793104,
+                "purity_mean": 0.9992148138454491,
+                "purity_std": 0.005061084978015649,
+                "purity_max": 1.0,
+                "radius_min": 1.9170028690641026,
+                "radius_mean": 10.970341485787086,
+                "radius_max": 31.09313274663716,
+                "reliability_min": 0.8844013540944003,
+                "reliability_mean": 0.9975890901560982,
+                "reliability_std": 0.015661342668943458,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9764705882352941,
+                "frac_reliability_lt_0_95": 0.023529411764705882,
+                "frac_reliability_ge_0_95": 0.9764705882352941,
+                "frac_reliability_lt_0_90": 0.011764705882352941
+              },
+              "val": {
+                "accuracy": 0.6608695652173913,
+                "balanced_accuracy": 0.5125,
+                "macro_f1": 0.42121564072783585,
+                "minority_recall": 0.025,
+                "gmean": 0.15811388300841897,
+                "auroc": 0.5870000000000001,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    39,
+                    1
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.4930081300813008,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 85,
+                "n_balls_pos": 27,
+                "n_balls_neg": 58,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9655172413793104,
+                "purity_mean": 0.9992148138454491,
+                "purity_std": 0.005061084978015649,
+                "purity_max": 1.0,
+                "radius_min": 1.9170028690641026,
+                "radius_mean": 10.970341485787086,
+                "radius_max": 31.09313274663716,
+                "reliability_min": 0.8844013540944003,
+                "reliability_mean": 0.9975890901560982,
+                "reliability_std": 0.015661342668943458,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9764705882352941,
+                "frac_reliability_lt_0_95": 0.023529411764705882,
+                "frac_reliability_ge_0_95": 0.9764705882352941,
+                "frac_reliability_lt_0_90": 0.011764705882352941,
+                "frac_cr_weights_differ_from_cw": 0.023529411764705882,
+                "mean_abs_cr_minus_cw_weight": 0.0018495122659647673,
+                "max_abs_cr_minus_cw_weight": 0.0886806755018672,
+                "kappa_positive": 1.4358288770053476,
+                "kappa_negative": 0.7671428571428571
+              },
+              "val": {
+                "accuracy": 0.6608695652173913,
+                "balanced_accuracy": 0.5125,
+                "macro_f1": 0.42121564072783585,
+                "minority_recall": 0.025,
+                "gmean": 0.15811388300841897,
+                "auroc": 0.5926666666666668,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    39,
+                    1
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.49853658536585366,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0071544715447154905
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.005203252032520311
+            },
+            "CR_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0003252032520325576
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.006829268292682933
+            },
+            "CR_minus_R": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.005528455284552869
+            }
+          },
+          "best_val_macro_f1_clean": 0.42121564072783585
+        },
+        {
+          "scaling": "standard",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 29,
+                "n_balls_neg": 53,
+                "training_samples_in_balls": 320,
+                "purity_min": 0.9759036144578314,
+                "purity_mean": 0.9997061416397297,
+                "purity_std": 0.002644725242433144,
+                "purity_max": 1.0,
+                "radius_min": 0.2832348168391987,
+                "radius_mean": 0.8068858073799928,
+                "radius_max": 2.1538924265394925
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6573333333333333,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6130081300813008,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 29,
+                "n_balls_neg": 53,
+                "training_samples_in_balls": 320,
+                "purity_min": 0.9759036144578314,
+                "purity_mean": 0.9997061416397297,
+                "purity_std": 0.002644725242433144,
+                "purity_max": 1.0,
+                "radius_min": 0.2832348168391987,
+                "radius_mean": 0.8068858073799928,
+                "radius_max": 2.1538924265394925,
+                "kappa_positive": 1.4358288770053476,
+                "kappa_negative": 0.7671428571428571
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6833333333333332,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6396747967479675,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 29,
+                "n_balls_neg": 53,
+                "training_samples_in_balls": 320,
+                "purity_min": 0.9759036144578314,
+                "purity_mean": 0.9997061416397297,
+                "purity_std": 0.002644725242433144,
+                "purity_max": 1.0,
+                "radius_min": 0.2832348168391987,
+                "radius_mean": 0.8068858073799928,
+                "radius_max": 2.1538924265394925,
+                "reliability_min": 0.9381482008723785,
+                "reliability_mean": 0.9992457097667363,
+                "reliability_std": 0.006788612099373091,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9878048780487805,
+                "frac_reliability_lt_0_95": 0.012195121951219513,
+                "frac_reliability_ge_0_95": 0.9878048780487805,
+                "frac_reliability_lt_0_90": 0.0
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.655,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6104065040650406,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 29,
+                "n_balls_neg": 53,
+                "training_samples_in_balls": 320,
+                "purity_min": 0.9759036144578314,
+                "purity_mean": 0.9997061416397297,
+                "purity_std": 0.002644725242433144,
+                "purity_max": 1.0,
+                "radius_min": 0.2832348168391987,
+                "radius_mean": 0.8068858073799928,
+                "radius_max": 2.1538924265394925,
+                "reliability_min": 0.9381482008723785,
+                "reliability_mean": 0.9992457097667363,
+                "reliability_std": 0.006788612099373091,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9878048780487805,
+                "frac_reliability_lt_0_95": 0.012195121951219513,
+                "frac_reliability_ge_0_95": 0.9878048780487805,
+                "frac_reliability_lt_0_90": 0.0,
+                "frac_cr_weights_differ_from_cw": 0.012195121951219513,
+                "mean_abs_cr_minus_cw_weight": 0.000578648364660849,
+                "max_abs_cr_minus_cw_weight": 0.047449165902189616,
+                "kappa_positive": 1.4358288770053476,
+                "kappa_negative": 0.7671428571428571
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6826666666666666,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6370731707317073,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.026666666666666616
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.002601626016260239
+            },
+            "CR_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.02406504065040649
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.002601626016260128
+            },
+            "CR_minus_R": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.026666666666666727
+            }
+          },
+          "best_val_macro_f1_clean": 0.39473684210526316
+        },
+        {
+          "scaling": "minmax",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 28,
+                "n_balls_neg": 54,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9523809523809523,
+                "purity_mean": 0.9989676087237063,
+                "purity_std": 0.006581494386372443,
+                "purity_max": 1.0,
+                "radius_min": 0.04327934928731379,
+                "radius_mean": 0.13083644590938068,
+                "radius_max": 0.2999170105780494
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6903333333333334,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.7017886178861789,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 28,
+                "n_balls_neg": 54,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9523809523809523,
+                "purity_mean": 0.9989676087237063,
+                "purity_std": 0.006581494386372443,
+                "purity_max": 1.0,
+                "radius_min": 0.04327934928731379,
+                "radius_mean": 0.13083644590938068,
+                "radius_max": 0.2999170105780494,
+                "kappa_positive": 1.4358288770053476,
+                "kappa_negative": 0.7671428571428571
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.717,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.7216260162601627,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 28,
+                "n_balls_neg": 54,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9523809523809523,
+                "purity_mean": 0.9989676087237063,
+                "purity_std": 0.006581494386372443,
+                "purity_max": 1.0,
+                "radius_min": 0.04327934928731379,
+                "radius_mean": 0.13083644590938068,
+                "radius_max": 0.2999170105780494,
+                "reliability_min": 0.8778762254475011,
+                "reliability_mean": 0.9973977985881113,
+                "reliability_std": 0.016633330500452116,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.975609756097561,
+                "frac_reliability_lt_0_95": 0.024390243902439025,
+                "frac_reliability_ge_0_95": 0.975609756097561,
+                "frac_reliability_lt_0_90": 0.012195121951219513
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.6886666666666666,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.7001626016260163,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 82,
+                "n_balls_pos": 28,
+                "n_balls_neg": 54,
+                "training_samples_in_balls": 326,
+                "purity_min": 0.9523809523809523,
+                "purity_mean": 0.9989676087237063,
+                "purity_std": 0.006581494386372443,
+                "purity_max": 1.0,
+                "radius_min": 0.04327934928731379,
+                "radius_mean": 0.13083644590938068,
+                "radius_max": 0.2999170105780494,
+                "reliability_min": 0.8778762254475011,
+                "reliability_mean": 0.9973977985881113,
+                "reliability_std": 0.016633330500452116,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.975609756097561,
+                "frac_reliability_lt_0_95": 0.024390243902439025,
+                "frac_reliability_ge_0_95": 0.975609756097561,
+                "frac_reliability_lt_0_90": 0.012195121951219513,
+                "frac_cr_weights_differ_from_cw": 0.024390243902439025,
+                "mean_abs_cr_minus_cw_weight": 0.001996260225977374,
+                "max_abs_cr_minus_cw_weight": 0.09368638133527418,
+                "kappa_positive": 1.4358288770053476,
+                "kappa_negative": 0.7671428571428571
+              },
+              "val": {
+                "accuracy": 0.6521739130434783,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39473684210526316,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.7166666666666666,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    40,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.646551724137931,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.39267015706806285,
+                "minority_recall": 0.0,
+                "gmean": 0.0,
+                "auroc": 0.7206504065040651,
+                "confusion_matrix": [
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    41,
+                    0
+                  ]
+                ],
+                "prediction_collapse": true,
+                "unique_predicted_labels": [
+                  -1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.019837398373983794
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.001626016260162566
+            },
+            "CR_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.018861788617886233
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.0009756097560975618
+            },
+            "CR_minus_R": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0204878048780488
+            }
+          },
+          "best_val_macro_f1_clean": 0.39473684210526316
+        }
+      ]
+    },
+    "ecoli2": {
+      "info": {
+        "name": "ecoli2",
+        "path": "C:\\Users\\kedar\\Desktop\\BITS\\Acads\\BharatSOP\\GBLSTSVM\\Data\\Data\\ecoli2.csv",
+        "shape": [
+          336,
+          8
+        ],
+        "n_samples": 336,
+        "n_features": 7,
+        "n_classes": 2,
+        "class_counts": {
+          "0": 284,
+          "1": 52
+        },
+        "missing_values": 0,
+        "duplicate_rows": 0,
+        "label_values": [
+          0,
+          1
+        ],
+        "imbalance_ratio": 5.461538461538462,
+        "duplicates_retained": true
+      },
+      "results": [
+        {
+          "scaling": "none",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.987012987012987,
+                "purity_mean": 0.9981912824018088,
+                "purity_std": 0.004269181680499641,
+                "purity_max": 1.0,
+                "radius_min": 0.05172040216394304,
+                "radius_mean": 0.13941496907114675,
+                "radius_max": 0.26306529129892275
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.6398809523809523,
+                "macro_f1": 0.6470588235294118,
+                "minority_recall": 0.375,
+                "gmean": 0.5824823725107175,
+                "auroc": 0.8273809523809524,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.9019607843137255,
+                "balanced_accuracy": 0.7892441860465116,
+                "macro_f1": 0.8045977011494252,
+                "minority_recall": 0.625,
+                "gmean": 0.7719651757418463,
+                "auroc": 0.9331395348837209,
+                "confusion_matrix": [
+                  [
+                    41,
+                    2
+                  ],
+                  [
+                    3,
+                    5
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.987012987012987,
+                "purity_mean": 0.9981912824018088,
+                "purity_std": 0.004269181680499641,
+                "purity_max": 1.0,
+                "radius_min": 0.05172040216394304,
+                "radius_mean": 0.13941496907114675,
+                "radius_max": 0.26306529129892275,
+                "kappa_positive": 3.263888888888889,
+                "kappa_negative": 0.5904522613065326
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.6398809523809523,
+                "macro_f1": 0.6470588235294118,
+                "minority_recall": 0.375,
+                "gmean": 0.5824823725107175,
+                "auroc": 0.8422619047619048,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.9019607843137255,
+                "balanced_accuracy": 0.7892441860465116,
+                "macro_f1": 0.8045977011494252,
+                "minority_recall": 0.625,
+                "gmean": 0.7719651757418463,
+                "auroc": 0.9302325581395349,
+                "confusion_matrix": [
+                  [
+                    41,
+                    2
+                  ],
+                  [
+                    3,
+                    5
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.987012987012987,
+                "purity_mean": 0.9981912824018088,
+                "purity_std": 0.004269181680499641,
+                "purity_max": 1.0,
+                "radius_min": 0.05172040216394304,
+                "radius_mean": 0.13941496907114675,
+                "radius_max": 0.26306529129892275,
+                "reliability_min": 0.9608903527504324,
+                "reliability_mean": 0.9949916635028839,
+                "reliability_std": 0.012023738304480027,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.8461538461538461,
+                "frac_reliability_lt_0_95": 0.0,
+                "frac_reliability_ge_0_95": 1.0,
+                "frac_reliability_lt_0_90": 0.0
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.6398809523809523,
+                "macro_f1": 0.6470588235294118,
+                "minority_recall": 0.375,
+                "gmean": 0.5824823725107175,
+                "auroc": 0.8273809523809524,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.9019607843137255,
+                "balanced_accuracy": 0.7892441860465116,
+                "macro_f1": 0.8045977011494252,
+                "minority_recall": 0.625,
+                "gmean": 0.7719651757418463,
+                "auroc": 0.9331395348837209,
+                "confusion_matrix": [
+                  [
+                    41,
+                    2
+                  ],
+                  [
+                    3,
+                    5
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.987012987012987,
+                "purity_mean": 0.9981912824018088,
+                "purity_std": 0.004269181680499641,
+                "purity_max": 1.0,
+                "radius_min": 0.05172040216394304,
+                "radius_mean": 0.13941496907114675,
+                "radius_max": 0.26306529129892275,
+                "reliability_min": 0.9608903527504324,
+                "reliability_mean": 0.9949916635028839,
+                "reliability_std": 0.012023738304480027,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.8461538461538461,
+                "frac_reliability_lt_0_95": 0.0,
+                "frac_reliability_ge_0_95": 1.0,
+                "frac_reliability_lt_0_90": 0.0,
+                "frac_cr_weights_differ_from_cw": 0.15384615384615385,
+                "mean_abs_cr_minus_cw_weight": 0.0029571836101062263,
+                "max_abs_cr_minus_cw_weight": 0.023092379657407958,
+                "kappa_positive": 3.263888888888889,
+                "kappa_negative": 0.5904522613065326
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.6398809523809523,
+                "macro_f1": 0.6470588235294118,
+                "minority_recall": 0.375,
+                "gmean": 0.5824823725107175,
+                "auroc": 0.8422619047619048,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.9019607843137255,
+                "balanced_accuracy": 0.7892441860465116,
+                "macro_f1": 0.8045977011494252,
+                "minority_recall": 0.625,
+                "gmean": 0.7719651757418463,
+                "auroc": 0.9302325581395349,
+                "confusion_matrix": [
+                  [
+                    41,
+                    2
+                  ],
+                  [
+                    3,
+                    5
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.0029069767441860517
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            },
+            "CR_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.0029069767441860517
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            },
+            "CR_minus_R": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.0029069767441860517
+            }
+          },
+          "best_val_macro_f1_clean": 0.6470588235294118
+        },
+        {
+          "scaling": "standard",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 11,
+                "n_balls_pos": 6,
+                "n_balls_neg": 5,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.9726027397260274,
+                "purity_mean": 0.9965910663295471,
+                "purity_std": 0.008117384034031682,
+                "purity_max": 1.0,
+                "radius_min": 0.3687973037324246,
+                "radius_mean": 1.0960887546264264,
+                "radius_max": 3.9474586547126655
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.7916666666666667,
+                "macro_f1": 0.72875226039783,
+                "minority_recall": 0.75,
+                "gmean": 0.7905694150420949,
+                "auroc": 0.7678571428571429,
+                "confusion_matrix": [
+                  [
+                    35,
+                    7
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8627450980392157,
+                "balanced_accuracy": 0.8168604651162791,
+                "macro_f1": 0.7736207989854154,
+                "minority_recall": 0.75,
+                "gmean": 0.8141195843820603,
+                "auroc": 0.9069767441860466,
+                "confusion_matrix": [
+                  [
+                    38,
+                    5
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 11,
+                "n_balls_pos": 6,
+                "n_balls_neg": 5,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.9726027397260274,
+                "purity_mean": 0.9965910663295471,
+                "purity_std": 0.008117384034031682,
+                "purity_max": 1.0,
+                "radius_min": 0.3687973037324246,
+                "radius_mean": 1.0960887546264264,
+                "radius_max": 3.9474586547126655,
+                "kappa_positive": 3.263888888888889,
+                "kappa_negative": 0.5904522613065326
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.7916666666666667,
+                "macro_f1": 0.72875226039783,
+                "minority_recall": 0.75,
+                "gmean": 0.7905694150420949,
+                "auroc": 0.7648809523809524,
+                "confusion_matrix": [
+                  [
+                    35,
+                    7
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8627450980392157,
+                "balanced_accuracy": 0.8168604651162791,
+                "macro_f1": 0.7736207989854154,
+                "minority_recall": 0.75,
+                "gmean": 0.8141195843820603,
+                "auroc": 0.9069767441860466,
+                "confusion_matrix": [
+                  [
+                    38,
+                    5
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 11,
+                "n_balls_pos": 6,
+                "n_balls_neg": 5,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.9726027397260274,
+                "purity_mean": 0.9965910663295471,
+                "purity_std": 0.008117384034031682,
+                "purity_max": 1.0,
+                "radius_min": 0.3687973037324246,
+                "radius_mean": 1.0960887546264264,
+                "radius_max": 3.9474586547126655,
+                "reliability_min": 0.9306349968632682,
+                "reliability_mean": 0.9915412588047108,
+                "reliability_std": 0.020416675887674547,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.8181818181818182,
+                "frac_reliability_lt_0_95": 0.09090909090909091,
+                "frac_reliability_ge_0_95": 0.9090909090909091,
+                "frac_reliability_lt_0_90": 0.0
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.7916666666666667,
+                "macro_f1": 0.72875226039783,
+                "minority_recall": 0.75,
+                "gmean": 0.7905694150420949,
+                "auroc": 0.7678571428571429,
+                "confusion_matrix": [
+                  [
+                    35,
+                    7
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8627450980392157,
+                "balanced_accuracy": 0.8168604651162791,
+                "macro_f1": 0.7736207989854154,
+                "minority_recall": 0.75,
+                "gmean": 0.8141195843820603,
+                "auroc": 0.9069767441860466,
+                "confusion_matrix": [
+                  [
+                    38,
+                    5
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 11,
+                "n_balls_pos": 6,
+                "n_balls_neg": 5,
+                "training_samples_in_balls": 217,
+                "purity_min": 0.9726027397260274,
+                "purity_mean": 0.9965910663295471,
+                "purity_std": 0.008117384034031682,
+                "purity_max": 1.0,
+                "radius_min": 0.3687973037324246,
+                "radius_mean": 1.0960887546264264,
+                "radius_max": 3.9474586547126655,
+                "reliability_min": 0.9306349968632682,
+                "reliability_mean": 0.9915412588047108,
+                "reliability_std": 0.020416675887674547,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.8181818181818182,
+                "frac_reliability_lt_0_95": 0.09090909090909091,
+                "frac_reliability_ge_0_95": 0.9090909090909091,
+                "frac_reliability_lt_0_90": 0.0,
+                "frac_cr_weights_differ_from_cw": 0.18181818181818182,
+                "mean_abs_cr_minus_cw_weight": 0.00499448286656522,
+                "max_abs_cr_minus_cw_weight": 0.040956722957617986,
+                "kappa_positive": 3.263888888888889,
+                "kappa_negative": 0.5904522613065326
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.7916666666666667,
+                "macro_f1": 0.72875226039783,
+                "minority_recall": 0.75,
+                "gmean": 0.7905694150420949,
+                "auroc": 0.7648809523809524,
+                "confusion_matrix": [
+                  [
+                    35,
+                    7
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8627450980392157,
+                "balanced_accuracy": 0.8168604651162791,
+                "macro_f1": 0.7736207989854154,
+                "minority_recall": 0.75,
+                "gmean": 0.8141195843820603,
+                "auroc": 0.9069767441860466,
+                "confusion_matrix": [
+                  [
+                    38,
+                    5
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            },
+            "CR_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            },
+            "CR_minus_R": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            }
+          },
+          "best_val_macro_f1_clean": 0.72875226039783
+        },
+        {
+          "scaling": "minmax",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 210,
+                "purity_min": 0.9859154929577465,
+                "purity_mean": 0.9978482003129892,
+                "purity_std": 0.005046563404794341,
+                "purity_max": 1.0,
+                "radius_min": 0.0490277716595811,
+                "radius_mean": 0.17497325376653033,
+                "radius_max": 0.40601297330394065
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.6398809523809523,
+                "macro_f1": 0.6470588235294118,
+                "minority_recall": 0.375,
+                "gmean": 0.5824823725107175,
+                "auroc": 0.7678571428571429,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8823529411764706,
+                "balanced_accuracy": 0.6758720930232558,
+                "macro_f1": 0.7166666666666667,
+                "minority_recall": 0.375,
+                "gmean": 0.6052099385894467,
+                "auroc": 0.877906976744186,
+                "confusion_matrix": [
+                  [
+                    42,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 210,
+                "purity_min": 0.9859154929577465,
+                "purity_mean": 0.9978482003129892,
+                "purity_std": 0.005046563404794341,
+                "purity_max": 1.0,
+                "radius_min": 0.0490277716595811,
+                "radius_mean": 0.17497325376653033,
+                "radius_max": 0.40601297330394065,
+                "kappa_positive": 3.263888888888889,
+                "kappa_negative": 0.5904522613065326
+              },
+              "val": {
+                "accuracy": 0.84,
+                "balanced_accuracy": 0.7023809523809523,
+                "macro_f1": 0.7023809523809523,
+                "minority_recall": 0.5,
+                "gmean": 0.6725927091345493,
+                "auroc": 0.7708333333333333,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.9019607843137255,
+                "balanced_accuracy": 0.7892441860465116,
+                "macro_f1": 0.8045977011494252,
+                "minority_recall": 0.625,
+                "gmean": 0.7719651757418463,
+                "auroc": 0.875,
+                "confusion_matrix": [
+                  [
+                    41,
+                    2
+                  ],
+                  [
+                    3,
+                    5
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 210,
+                "purity_min": 0.9859154929577465,
+                "purity_mean": 0.9978482003129892,
+                "purity_std": 0.005046563404794341,
+                "purity_max": 1.0,
+                "radius_min": 0.0490277716595811,
+                "radius_mean": 0.17497325376653033,
+                "radius_max": 0.40601297330394065,
+                "reliability_min": 0.9563036891940238,
+                "reliability_mean": 0.9940590255966766,
+                "reliability_std": 0.014074574681222462,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.8461538461538461,
+                "frac_reliability_lt_0_95": 0.0,
+                "frac_reliability_ge_0_95": 1.0,
+                "frac_reliability_lt_0_90": 0.0
+              },
+              "val": {
+                "accuracy": 0.82,
+                "balanced_accuracy": 0.6398809523809523,
+                "macro_f1": 0.6470588235294118,
+                "minority_recall": 0.375,
+                "gmean": 0.5824823725107175,
+                "auroc": 0.7678571428571429,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8823529411764706,
+                "balanced_accuracy": 0.6758720930232558,
+                "macro_f1": 0.7166666666666667,
+                "minority_recall": 0.375,
+                "gmean": 0.6052099385894467,
+                "auroc": 0.8749999999999999,
+                "confusion_matrix": [
+                  [
+                    42,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 13,
+                "n_balls_pos": 6,
+                "n_balls_neg": 7,
+                "training_samples_in_balls": 210,
+                "purity_min": 0.9859154929577465,
+                "purity_mean": 0.9978482003129892,
+                "purity_std": 0.005046563404794341,
+                "purity_max": 1.0,
+                "radius_min": 0.0490277716595811,
+                "radius_mean": 0.17497325376653033,
+                "radius_max": 0.40601297330394065,
+                "reliability_min": 0.9563036891940238,
+                "reliability_mean": 0.9940590255966766,
+                "reliability_std": 0.014074574681222462,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.8461538461538461,
+                "frac_reliability_lt_0_95": 0.0,
+                "frac_reliability_ge_0_95": 1.0,
+                "frac_reliability_lt_0_90": 0.0,
+                "frac_cr_weights_differ_from_cw": 0.15384615384615385,
+                "mean_abs_cr_minus_cw_weight": 0.0035078617708065307,
+                "max_abs_cr_minus_cw_weight": 0.02580058552614173,
+                "kappa_positive": 3.263888888888889,
+                "kappa_negative": 0.5904522613065326
+              },
+              "val": {
+                "accuracy": 0.84,
+                "balanced_accuracy": 0.7023809523809523,
+                "macro_f1": 0.7023809523809523,
+                "minority_recall": 0.5,
+                "gmean": 0.6725927091345493,
+                "auroc": 0.7708333333333333,
+                "confusion_matrix": [
+                  [
+                    38,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.9019607843137255,
+                "balanced_accuracy": 0.7892441860465116,
+                "macro_f1": 0.8045977011494252,
+                "minority_recall": 0.625,
+                "gmean": 0.7719651757418463,
+                "auroc": 0.875,
+                "confusion_matrix": [
+                  [
+                    41,
+                    2
+                  ],
+                  [
+                    3,
+                    5
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": 0.019607843137254943,
+              "balanced_accuracy": 0.1133720930232558,
+              "macro_f1": 0.08793103448275852,
+              "minority_recall": 0.25,
+              "gmean": 0.1667552371523996,
+              "auroc": -0.0029069767441860517
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.0029069767441861627
+            },
+            "CR_minus_clean": {
+              "accuracy": 0.019607843137254943,
+              "balanced_accuracy": 0.1133720930232558,
+              "macro_f1": 0.08793103448275852,
+              "minority_recall": 0.25,
+              "gmean": 0.1667552371523996,
+              "auroc": -0.0029069767441860517
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0
+            },
+            "CR_minus_R": {
+              "accuracy": 0.019607843137254943,
+              "balanced_accuracy": 0.1133720930232558,
+              "macro_f1": 0.08793103448275852,
+              "minority_recall": 0.25,
+              "gmean": 0.1667552371523996,
+              "auroc": 1.1102230246251565e-16
+            }
+          },
+          "best_val_macro_f1_clean": 0.6470588235294118
+        }
+      ]
+    },
+    "vehicle0": {
+      "info": {
+        "name": "vehicle0",
+        "path": "C:\\Users\\kedar\\Desktop\\BITS\\Acads\\BharatSOP\\GBLSTSVM\\Data\\Data\\vehicle0.csv",
+        "shape": [
+          846,
+          19
+        ],
+        "n_samples": 846,
+        "n_features": 18,
+        "n_classes": 2,
+        "class_counts": {
+          "0": 647,
+          "1": 199
+        },
+        "missing_values": 0,
+        "duplicate_rows": 0,
+        "label_values": [
+          0,
+          1
+        ],
+        "imbalance_ratio": 3.251256281407035,
+        "duplicates_retained": true
+      },
+      "results": [
+        {
+          "scaling": "none",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 59,
+                "n_balls_pos": 27,
+                "n_balls_neg": 32,
+                "training_samples_in_balls": 525,
+                "purity_min": 0.9830508474576272,
+                "purity_mean": 0.9997127262280954,
+                "purity_std": 0.0021878118660913206,
+                "purity_max": 1.0,
+                "radius_min": 4.242640687119285,
+                "radius_mean": 14.922729707720645,
+                "radius_max": 82.49184033330268
+              },
+              "val": {
+                "accuracy": 0.8110236220472441,
+                "balanced_accuracy": 0.6460481099656358,
+                "macro_f1": 0.6701298701298701,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5653208194167091,
+                "auroc": 0.8865979381443299,
+                "confusion_matrix": [
+                  [
+                    93,
+                    4
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8188976377952756,
+                "balanced_accuracy": 0.6512027491408935,
+                "macro_f1": 0.6780557698666373,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5683520519737901,
+                "auroc": 0.9103092783505153,
+                "confusion_matrix": [
+                  [
+                    94,
+                    3
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 59,
+                "n_balls_pos": 27,
+                "n_balls_neg": 32,
+                "training_samples_in_balls": 525,
+                "purity_min": 0.9830508474576272,
+                "purity_mean": 0.9997127262280954,
+                "purity_std": 0.0021878118660913206,
+                "purity_max": 1.0,
+                "radius_min": 4.242640687119285,
+                "radius_mean": 14.922729707720645,
+                "radius_max": 82.49184033330268,
+                "kappa_positive": 2.129496402877698,
+                "kappa_negative": 0.6534216335540839
+              },
+              "val": {
+                "accuracy": 0.8110236220472441,
+                "balanced_accuracy": 0.6575601374570447,
+                "macro_f1": 0.6814381270903009,
+                "minority_recall": 0.36666666666666664,
+                "gmean": 0.5897171551040846,
+                "auroc": 0.9058419243986254,
+                "confusion_matrix": [
+                  [
+                    92,
+                    5
+                  ],
+                  [
+                    19,
+                    11
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8110236220472441,
+                "balanced_accuracy": 0.6690721649484537,
+                "macro_f1": 0.691747572815534,
+                "minority_recall": 0.4,
+                "gmean": 0.6125828368137348,
+                "auroc": 0.9243986254295532,
+                "confusion_matrix": [
+                  [
+                    91,
+                    6
+                  ],
+                  [
+                    18,
+                    12
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 59,
+                "n_balls_pos": 27,
+                "n_balls_neg": 32,
+                "training_samples_in_balls": 525,
+                "purity_min": 0.9830508474576272,
+                "purity_mean": 0.9997127262280954,
+                "purity_std": 0.0021878118660913206,
+                "purity_max": 1.0,
+                "radius_min": 4.242640687119285,
+                "radius_mean": 14.922729707720645,
+                "radius_max": 82.49184033330268,
+                "reliability_min": 0.9325292670024335,
+                "reliability_mean": 0.9988564282542786,
+                "reliability_std": 0.008709182945691374,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9830508474576272,
+                "frac_reliability_lt_0_95": 0.01694915254237288,
+                "frac_reliability_ge_0_95": 0.9830508474576272,
+                "frac_reliability_lt_0_90": 0.0
+              },
+              "val": {
+                "accuracy": 0.8110236220472441,
+                "balanced_accuracy": 0.6460481099656358,
+                "macro_f1": 0.6701298701298701,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5653208194167091,
+                "auroc": 0.8855670103092783,
+                "confusion_matrix": [
+                  [
+                    93,
+                    4
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8188976377952756,
+                "balanced_accuracy": 0.6512027491408935,
+                "macro_f1": 0.6780557698666373,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5683520519737901,
+                "auroc": 0.9120274914089347,
+                "confusion_matrix": [
+                  [
+                    94,
+                    3
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 59,
+                "n_balls_pos": 27,
+                "n_balls_neg": 32,
+                "training_samples_in_balls": 525,
+                "purity_min": 0.9830508474576272,
+                "purity_mean": 0.9997127262280954,
+                "purity_std": 0.0021878118660913206,
+                "purity_max": 1.0,
+                "radius_min": 4.242640687119285,
+                "radius_mean": 14.922729707720645,
+                "radius_max": 82.49184033330268,
+                "reliability_min": 0.9325292670024335,
+                "reliability_mean": 0.9988564282542786,
+                "reliability_std": 0.008709182945691374,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9830508474576272,
+                "frac_reliability_lt_0_95": 0.01694915254237288,
+                "frac_reliability_ge_0_95": 0.9830508474576272,
+                "frac_reliability_lt_0_90": 0.0,
+                "frac_cr_weights_differ_from_cw": 0.01694915254237288,
+                "mean_abs_cr_minus_cw_weight": 0.000747234518175616,
+                "max_abs_cr_minus_cw_weight": 0.04408683657236134,
+                "kappa_positive": 2.129496402877698,
+                "kappa_negative": 0.6534216335540839
+              },
+              "val": {
+                "accuracy": 0.8110236220472441,
+                "balanced_accuracy": 0.6575601374570447,
+                "macro_f1": 0.6814381270903009,
+                "minority_recall": 0.36666666666666664,
+                "gmean": 0.5897171551040846,
+                "auroc": 0.9072164948453608,
+                "confusion_matrix": [
+                  [
+                    92,
+                    5
+                  ],
+                  [
+                    19,
+                    11
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8110236220472441,
+                "balanced_accuracy": 0.6690721649484537,
+                "macro_f1": 0.691747572815534,
+                "minority_recall": 0.4,
+                "gmean": 0.6125828368137348,
+                "auroc": 0.9240549828178694,
+                "confusion_matrix": [
+                  [
+                    91,
+                    6
+                  ],
+                  [
+                    18,
+                    12
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": -0.007874015748031482,
+              "balanced_accuracy": 0.017869415807560185,
+              "macro_f1": 0.013691802948896714,
+              "minority_recall": 0.06666666666666671,
+              "gmean": 0.04423078483994469,
+              "auroc": 0.014089347079037862
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.001718213058419349
+            },
+            "CR_minus_clean": {
+              "accuracy": -0.007874015748031482,
+              "balanced_accuracy": 0.017869415807560185,
+              "macro_f1": 0.013691802948896714,
+              "minority_recall": 0.06666666666666671,
+              "gmean": 0.04423078483994469,
+              "auroc": 0.013745704467354014
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": -0.0003436426116838476
+            },
+            "CR_minus_R": {
+              "accuracy": -0.007874015748031482,
+              "balanced_accuracy": 0.017869415807560185,
+              "macro_f1": 0.013691802948896714,
+              "minority_recall": 0.06666666666666671,
+              "gmean": 0.04423078483994469,
+              "auroc": 0.012027491408934665
+            }
+          },
+          "best_val_macro_f1_clean": 0.6701298701298701
+        },
+        {
+          "scaling": "standard",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 45,
+                "n_balls_pos": 19,
+                "n_balls_neg": 26,
+                "training_samples_in_balls": 510,
+                "purity_min": 0.9791666666666666,
+                "purity_mean": 0.9989516216730556,
+                "purity_std": 0.004088794494664877,
+                "purity_max": 1.0,
+                "radius_min": 0.4069896134795646,
+                "radius_mean": 1.0496978868114921,
+                "radius_max": 2.7836747219966753
+              },
+              "val": {
+                "accuracy": 0.84251968503937,
+                "balanced_accuracy": 0.6666666666666666,
+                "macro_f1": 0.7032710280373832,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5773502691896257,
+                "auroc": 0.8639175257731959,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.84251968503937,
+                "balanced_accuracy": 0.6781786941580756,
+                "macro_f1": 0.7147349505840073,
+                "minority_recall": 0.36666666666666664,
+                "gmean": 0.6024006954993862,
+                "auroc": 0.8814432989690721,
+                "confusion_matrix": [
+                  [
+                    96,
+                    1
+                  ],
+                  [
+                    19,
+                    11
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 45,
+                "n_balls_pos": 19,
+                "n_balls_neg": 26,
+                "training_samples_in_balls": 510,
+                "purity_min": 0.9791666666666666,
+                "purity_mean": 0.9989516216730556,
+                "purity_std": 0.004088794494664877,
+                "purity_max": 1.0,
+                "radius_min": 0.4069896134795646,
+                "radius_mean": 1.0496978868114921,
+                "radius_max": 2.7836747219966753,
+                "kappa_positive": 2.129496402877698,
+                "kappa_negative": 0.6534216335540839
+              },
+              "val": {
+                "accuracy": 0.8503937007874016,
+                "balanced_accuracy": 0.6833333333333333,
+                "macro_f1": 0.7236917439596932,
+                "minority_recall": 0.36666666666666664,
+                "gmean": 0.6055300708194983,
+                "auroc": 0.8735395189003438,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    19,
+                    11
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8188976377952756,
+                "balanced_accuracy": 0.6972508591065292,
+                "macro_f1": 0.71785955761615,
+                "minority_recall": 0.4666666666666667,
+                "gmean": 0.6580195215353793,
+                "auroc": 0.8965635738831614,
+                "confusion_matrix": [
+                  [
+                    90,
+                    7
+                  ],
+                  [
+                    16,
+                    14
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 45,
+                "n_balls_pos": 19,
+                "n_balls_neg": 26,
+                "training_samples_in_balls": 510,
+                "purity_min": 0.9791666666666666,
+                "purity_mean": 0.9989516216730556,
+                "purity_std": 0.004088794494664877,
+                "purity_max": 1.0,
+                "radius_min": 0.4069896134795646,
+                "radius_mean": 1.0496978868114921,
+                "radius_max": 2.7836747219966753,
+                "reliability_min": 0.952195399020887,
+                "reliability_mean": 0.9971270141685993,
+                "reliability_std": 0.010835394233040505,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9333333333333333,
+                "frac_reliability_lt_0_95": 0.0,
+                "frac_reliability_ge_0_95": 1.0,
+                "frac_reliability_lt_0_90": 0.0
+              },
+              "val": {
+                "accuracy": 0.84251968503937,
+                "balanced_accuracy": 0.6666666666666666,
+                "macro_f1": 0.7032710280373832,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5773502691896257,
+                "auroc": 0.8642611683848798,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.84251968503937,
+                "balanced_accuracy": 0.6781786941580756,
+                "macro_f1": 0.7147349505840073,
+                "minority_recall": 0.36666666666666664,
+                "gmean": 0.6024006954993862,
+                "auroc": 0.881786941580756,
+                "confusion_matrix": [
+                  [
+                    96,
+                    1
+                  ],
+                  [
+                    19,
+                    11
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 45,
+                "n_balls_pos": 19,
+                "n_balls_neg": 26,
+                "training_samples_in_balls": 510,
+                "purity_min": 0.9791666666666666,
+                "purity_mean": 0.9989516216730556,
+                "purity_std": 0.004088794494664877,
+                "purity_max": 1.0,
+                "radius_min": 0.4069896134795646,
+                "radius_mean": 1.0496978868114921,
+                "radius_max": 2.7836747219966753,
+                "reliability_min": 0.952195399020887,
+                "reliability_mean": 0.9971270141685993,
+                "reliability_std": 0.010835394233040505,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9333333333333333,
+                "frac_reliability_lt_0_95": 0.0,
+                "frac_reliability_ge_0_95": 1.0,
+                "frac_reliability_lt_0_90": 0.0,
+                "frac_cr_weights_differ_from_cw": 0.06666666666666667,
+                "mean_abs_cr_minus_cw_weight": 0.0018772710951315411,
+                "max_abs_cr_minus_cw_weight": 0.031236560463173135,
+                "kappa_positive": 2.129496402877698,
+                "kappa_negative": 0.6534216335540839
+              },
+              "val": {
+                "accuracy": 0.8503937007874016,
+                "balanced_accuracy": 0.6833333333333333,
+                "macro_f1": 0.7236917439596932,
+                "minority_recall": 0.36666666666666664,
+                "gmean": 0.6055300708194983,
+                "auroc": 0.8735395189003438,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    19,
+                    11
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8188976377952756,
+                "balanced_accuracy": 0.6972508591065292,
+                "macro_f1": 0.71785955761615,
+                "minority_recall": 0.4666666666666667,
+                "gmean": 0.6580195215353793,
+                "auroc": 0.897594501718213,
+                "confusion_matrix": [
+                  [
+                    90,
+                    7
+                  ],
+                  [
+                    16,
+                    14
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": -0.023622047244094446,
+              "balanced_accuracy": 0.01907216494845354,
+              "macro_f1": 0.003124607032142679,
+              "minority_recall": 0.10000000000000003,
+              "gmean": 0.05561882603599311,
+              "auroc": 0.015120274914089293
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0003436426116838476
+            },
+            "CR_minus_clean": {
+              "accuracy": -0.023622047244094446,
+              "balanced_accuracy": 0.01907216494845354,
+              "macro_f1": 0.003124607032142679,
+              "minority_recall": 0.10000000000000003,
+              "gmean": 0.05561882603599311,
+              "auroc": 0.016151202749140836
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0010309278350515427
+            },
+            "CR_minus_R": {
+              "accuracy": -0.023622047244094446,
+              "balanced_accuracy": 0.01907216494845354,
+              "macro_f1": 0.003124607032142679,
+              "minority_recall": 0.10000000000000003,
+              "gmean": 0.05561882603599311,
+              "auroc": 0.01580756013745699
+            }
+          },
+          "best_val_macro_f1_clean": 0.7032710280373832
+        },
+        {
+          "scaling": "minmax",
+          "models": {
+            "Clean GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 53,
+                "n_balls_pos": 23,
+                "n_balls_neg": 30,
+                "training_samples_in_balls": 523,
+                "purity_min": 0.96,
+                "purity_mean": 0.9988416331580575,
+                "purity_std": 0.005864232538030165,
+                "purity_max": 1.0,
+                "radius_min": 0.07572634948444566,
+                "radius_mean": 0.2046831090052501,
+                "radius_max": 0.5406841783456049
+              },
+              "val": {
+                "accuracy": 0.84251968503937,
+                "balanced_accuracy": 0.6666666666666666,
+                "macro_f1": 0.7032710280373832,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5773502691896257,
+                "auroc": 0.8786941580756014,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8582677165354331,
+                "balanced_accuracy": 0.7,
+                "macro_f1": 0.7432614555256065,
+                "minority_recall": 0.4,
+                "gmean": 0.6324555320336759,
+                "auroc": 0.8484536082474227,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    18,
+                    12
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CW-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 53,
+                "n_balls_pos": 23,
+                "n_balls_neg": 30,
+                "training_samples_in_balls": 523,
+                "purity_min": 0.96,
+                "purity_mean": 0.9988416331580575,
+                "purity_std": 0.005864232538030165,
+                "purity_max": 1.0,
+                "radius_min": 0.07572634948444566,
+                "radius_mean": 0.2046831090052501,
+                "radius_max": 0.5406841783456049,
+                "kappa_positive": 2.129496402877698,
+                "kappa_negative": 0.6534216335540839
+              },
+              "val": {
+                "accuracy": 0.8346456692913385,
+                "balanced_accuracy": 0.6615120274914089,
+                "macro_f1": 0.694606664376503,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5743665268941904,
+                "auroc": 0.8859106529209622,
+                "confusion_matrix": [
+                  [
+                    96,
+                    1
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8661417322834646,
+                "balanced_accuracy": 0.7166666666666667,
+                "macro_f1": 0.7620412212057753,
+                "minority_recall": 0.43333333333333335,
+                "gmean": 0.6582805886043833,
+                "auroc": 0.8621993127147767,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    17,
+                    13
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "R-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 53,
+                "n_balls_pos": 23,
+                "n_balls_neg": 30,
+                "training_samples_in_balls": 523,
+                "purity_min": 0.96,
+                "purity_mean": 0.9988416331580575,
+                "purity_std": 0.005864232538030165,
+                "purity_max": 1.0,
+                "radius_min": 0.07572634948444566,
+                "radius_mean": 0.2046831090052501,
+                "radius_max": 0.5406841783456049,
+                "reliability_min": 0.9193627732345256,
+                "reliability_mean": 0.9974273051691648,
+                "reliability_std": 0.012237027116609919,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9433962264150944,
+                "frac_reliability_lt_0_95": 0.018867924528301886,
+                "frac_reliability_ge_0_95": 0.9811320754716981,
+                "frac_reliability_lt_0_90": 0.0
+              },
+              "val": {
+                "accuracy": 0.84251968503937,
+                "balanced_accuracy": 0.6666666666666666,
+                "macro_f1": 0.7032710280373832,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5773502691896257,
+                "auroc": 0.8804123711340206,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8582677165354331,
+                "balanced_accuracy": 0.7,
+                "macro_f1": 0.7432614555256065,
+                "minority_recall": 0.4,
+                "gmean": 0.6324555320336759,
+                "auroc": 0.8494845360824742,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    18,
+                    12
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            },
+            "CR-GBLSTSVM": {
+              "ball_stats": {
+                "n_balls_total": 53,
+                "n_balls_pos": 23,
+                "n_balls_neg": 30,
+                "training_samples_in_balls": 523,
+                "purity_min": 0.96,
+                "purity_mean": 0.9988416331580575,
+                "purity_std": 0.005864232538030165,
+                "purity_max": 1.0,
+                "radius_min": 0.07572634948444566,
+                "radius_mean": 0.2046831090052501,
+                "radius_max": 0.5406841783456049,
+                "reliability_min": 0.9193627732345256,
+                "reliability_mean": 0.9974273051691648,
+                "reliability_std": 0.012237027116609919,
+                "reliability_max": 1.0,
+                "frac_reliability_ge_0_99": 0.9433962264150944,
+                "frac_reliability_lt_0_95": 0.018867924528301886,
+                "frac_reliability_ge_0_95": 0.9811320754716981,
+                "frac_reliability_lt_0_90": 0.0,
+                "frac_cr_weights_differ_from_cw": 0.05660377358490566,
+                "mean_abs_cr_minus_cw_weight": 0.003926838909882505,
+                "max_abs_cr_minus_cw_weight": 0.17171668433511078,
+                "kappa_positive": 2.129496402877698,
+                "kappa_negative": 0.6534216335540839
+              },
+              "val": {
+                "accuracy": 0.8346456692913385,
+                "balanced_accuracy": 0.6615120274914089,
+                "macro_f1": 0.694606664376503,
+                "minority_recall": 0.3333333333333333,
+                "gmean": 0.5743665268941904,
+                "auroc": 0.8859106529209622,
+                "confusion_matrix": [
+                  [
+                    96,
+                    1
+                  ],
+                  [
+                    20,
+                    10
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              },
+              "test": {
+                "accuracy": 0.8661417322834646,
+                "balanced_accuracy": 0.7166666666666667,
+                "macro_f1": 0.7620412212057753,
+                "minority_recall": 0.43333333333333335,
+                "gmean": 0.6582805886043833,
+                "auroc": 0.8632302405498282,
+                "confusion_matrix": [
+                  [
+                    97,
+                    0
+                  ],
+                  [
+                    17,
+                    13
+                  ]
+                ],
+                "prediction_collapse": false,
+                "unique_predicted_labels": [
+                  -1.0,
+                  1.0
+                ]
+              }
+            }
+          },
+          "deltas_test": {
+            "CW_minus_clean": {
+              "accuracy": 0.007874015748031482,
+              "balanced_accuracy": 0.01666666666666672,
+              "macro_f1": 0.018779765680168814,
+              "minority_recall": 0.033333333333333326,
+              "gmean": 0.02582505657070744,
+              "auroc": 0.013745704467354014
+            },
+            "R_minus_clean": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0010309278350515427
+            },
+            "CR_minus_clean": {
+              "accuracy": 0.007874015748031482,
+              "balanced_accuracy": 0.01666666666666672,
+              "macro_f1": 0.018779765680168814,
+              "minority_recall": 0.033333333333333326,
+              "gmean": 0.02582505657070744,
+              "auroc": 0.014776632302405557
+            },
+            "CR_minus_CW": {
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "minority_recall": 0.0,
+              "gmean": 0.0,
+              "auroc": 0.0010309278350515427
+            },
+            "CR_minus_R": {
+              "accuracy": 0.007874015748031482,
+              "balanced_accuracy": 0.01666666666666672,
+              "macro_f1": 0.018779765680168814,
+              "minority_recall": 0.033333333333333326,
+              "gmean": 0.02582505657070744,
+              "auroc": 0.013745704467354014
+            }
+          },
+          "best_val_macro_f1_clean": 0.7032710280373832
+        }
+      ]
+    }
+  }
+}

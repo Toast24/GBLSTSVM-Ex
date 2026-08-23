@@ -1,0 +1,85 @@
+{
+  "formula": {
+    "name": "Laplace/credibility shrinkage of R_opp toward 1",
+    "R_opp_S": "c(n_opp)*R_opp + (1-c(n_opp))*1",
+    "c": "n_opp / (n_opp + lambda)",
+    "lambda": 1.0,
+    "prior": 1.0,
+    "mu": "A * R_opp_S"
+  },
+  "datasets_detected": 17,
+  "successfully_completed": 17,
+  "failed": 0,
+  "seeds": [
+    42,
+    0,
+    1
+  ],
+  "completed_datasets": [
+    "australian",
+    "breast_cancer",
+    "breast_cancer_wisconsin_diagnostic",
+    "breast_cancer_wisconsin_original",
+    "chronic_kidney_disease",
+    "congressional_voting_records",
+    "credit_approval",
+    "diabetes",
+    "ecoli2",
+    "german_credit",
+    "heart",
+    "ionosphere",
+    "messidor_features",
+    "spambase",
+    "tic_tac_toe",
+    "vehicle0",
+    "wholesale_customers"
+  ],
+  "vs_ca": {
+    "Topo": {
+      "macro_f1": {
+        "wins": 16,
+        "ties": 15,
+        "losses": 20,
+        "mean": -0.0008257207436457282,
+        "median": 0.0
+      },
+      "gmean": {
+        "wins": 15,
+        "ties": 17,
+        "losses": 19,
+        "mean": -0.00488564631605552,
+        "median": 0.0
+      },
+      "minority_f1": {
+        "wins": 13,
+        "ties": 17,
+        "losses": 21,
+        "mean": -0.00830066496186797,
+        "median": 0.0
+      }
+    },
+    "SupportAware-Topo": {
+      "macro_f1": {
+        "wins": 15,
+        "ties": 20,
+        "losses": 16,
+        "mean": 0.0031464664031661716,
+        "median": 0.0
+      },
+      "gmean": {
+        "wins": 12,
+        "ties": 23,
+        "losses": 16,
+        "mean": -0.006600015113962987,
+        "median": 0.0
+      },
+      "minority_f1": {
+        "wins": 12,
+        "ties": 23,
+        "losses": 16,
+        "mean": -0.010776481247646491,
+        "median": 0.0
+      }
+    }
+  }
+}

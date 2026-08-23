@@ -1,0 +1,56 @@
+{
+  "dataset": "vehicle0",
+  "config": {
+    "scaling": "none",
+    "purity_threshold": 0.8,
+    "c1": 0.1,
+    "c2": 0.1,
+    "min_ball_count": 2,
+    "seed": 42,
+    "train_n": 719,
+    "test_n": 127,
+    "note": "Trained on train+validation; evaluated once on untouched test."
+  },
+  "deltas_test": {
+    "CW_minus_clean": {
+      "accuracy": 0.007874015748031482,
+      "balanced_accuracy": 0.016666666666666607,
+      "macro_f1": 0.01140049643339125,
+      "minority_recall": 0.033333333333333326,
+      "gmean": 0.01676858304133111,
+      "auroc": 0.0010309278350515427
+    },
+    "R_minus_clean": {
+      "accuracy": -0.007874015748031482,
+      "balanced_accuracy": -0.01666666666666672,
+      "macro_f1": -0.011656609346227587,
+      "minority_recall": -0.033333333333333326,
+      "gmean": -0.017082095919942253,
+      "auroc": -0.0013745704467353903
+    },
+    "CR_minus_clean": {
+      "accuracy": 0.007874015748031482,
+      "balanced_accuracy": 0.016666666666666607,
+      "macro_f1": 0.01140049643339125,
+      "minority_recall": 0.033333333333333326,
+      "gmean": 0.01676858304133111,
+      "auroc": -1.1102230246251565e-16
+    },
+    "CR_minus_CW": {
+      "accuracy": 0.0,
+      "balanced_accuracy": 0.0,
+      "macro_f1": 0.0,
+      "minority_recall": 0.0,
+      "gmean": 0.0,
+      "auroc": -0.0010309278350516538
+    },
+    "CR_minus_R": {
+      "accuracy": 0.015748031496062964,
+      "balanced_accuracy": 0.033333333333333326,
+      "macro_f1": 0.023057105779618836,
+      "minority_recall": 0.06666666666666665,
+      "gmean": 0.03385067896127336,
+      "auroc": 0.0013745704467352793
+    }
+  }
+}

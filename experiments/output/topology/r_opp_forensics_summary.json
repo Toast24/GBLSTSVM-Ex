@@ -1,0 +1,102 @@
+{
+  "runs_compared": {
+    "successful": [
+      "chronic_kidney_disease_s42",
+      "credit_approval_s42",
+      "spambase_s42"
+    ],
+    "adversarial": [
+      "ecoli2_s42",
+      "ionosphere_s0",
+      "vehicle0_s1"
+    ]
+  },
+  "compact_comparison": {
+    "metric": [
+      "n_balls (run total)",
+      "n_corrected_balls",
+      "mean_abs_topo_minus_ca (corrected)",
+      "downweighted_R_opp_mean",
+      "downweighted_n_opp_mean",
+      "downweighted_recip_ratio_mean",
+      "downweighted_nearest_opp_dist_median",
+      "high_comp_minority_mean_abs_correction",
+      "frac_high_comp_downweighted_with_R_opp_eq_0"
+    ],
+    "successful": [
+      685,
+      639,
+      0.338,
+      0.758,
+      10.1,
+      0.76,
+      8.17,
+      0.372,
+      0.022
+    ],
+    "adversarial": [
+      91,
+      71,
+      0.552,
+      0.568,
+      2.3,
+      0.52,
+      22.44,
+      0.649,
+      0.316
+    ]
+  },
+  "per_run_highlights": {
+    "chronic_kidney_disease_s42": {
+      "outcome": "successful",
+      "n_balls": 52,
+      "downweighted_R_opp": 0.677,
+      "downweighted_n_opp": 2.2,
+      "high_comp_minority_correction": 0.233
+    },
+    "credit_approval_s42": {
+      "outcome": "successful",
+      "n_balls": 82,
+      "downweighted_R_opp": 0.719,
+      "downweighted_n_opp": 2.1,
+      "high_comp_minority_correction": 0.41
+    },
+    "spambase_s42": {
+      "outcome": "successful",
+      "n_balls": 551,
+      "downweighted_R_opp": 0.766,
+      "downweighted_n_opp": 11.4,
+      "high_comp_minority_correction": 0.473
+    },
+    "ecoli2_s42": {
+      "outcome": "adversarial",
+      "n_balls": 13,
+      "downweighted_R_opp": 0.375,
+      "downweighted_n_opp": 2.9,
+      "high_comp_minority_correction": 0.0,
+      "note": "Only 13 balls; kNN graph too sparse for stable R_opp"
+    },
+    "ionosphere_s0": {
+      "outcome": "adversarial",
+      "n_balls": 27,
+      "downweighted_R_opp": 0.135,
+      "downweighted_n_opp": 2.2,
+      "high_comp_minority_correction": 1.16,
+      "note": "Near-zero reciprocal support on high-comp minority; corrections nearly wipe CA weight"
+    },
+    "vehicle0_s1": {
+      "outcome": "adversarial",
+      "n_balls": 51,
+      "downweighted_R_opp": 0.765,
+      "downweighted_n_opp": 2.1,
+      "high_comp_minority_correction": 0.676,
+      "note": "Moderate R_opp but sparse n_opp and strong minority suppression"
+    }
+  },
+  "strongest_patterns": [
+    "Sparse granulation destabilizes R_opp: adversarial runs have far fewer balls (13-51 vs 52-551) and downweighted balls see mean n_opp=2.3 vs 10.1 in successful runs. With k=5 on <30 balls, reciprocal-opposite counts become noisy; ecoli2 (13 balls) and ionosphere (27) show the worst corrections (mean |Topo-CA|=0.51-0.84). spambase (551 balls) stabilizes R_opp at 0.77 with rich kNN connectivity.",
+    "R_opp=0 causes catastrophic downweighting on high-competition balls: 31.6% of high-compA downweighted balls in adversarial runs have R_opp=0 (vs 2.2% successful), producing mean |Topo-CA|~1.0 (full CA weight removal). ionosphere_s0 is the extreme case (hcm |Topo-CA|=1.16). Useful corrections require non-zero reciprocal support; zero R_opp is not selective noise suppression but total ball silencing.",
+    "Harmful corrections are larger in magnitude, not driven by purity/radius: purity is ~1.0 in both groups; radius and ball_size do not separate outcomes. Instead, adversarial runs apply mean |Topo-CA|=0.55 on corrected balls vs 0.34 successful, with high-comp minority balls penalized nearly 2x harder (-0.83 vs -0.46 mean Topo-CA). R_opp helps when downweighting is moderate (high mean R_opp ~0.76); it hurts when the same compA balls get R_opp near 0 or corrections are oversized relative to CA."
+  ],
+  "hypothesis_for_future_modification": "R_opp is informative only when the ball graph is sufficiently dense (n_balls >> k) and reciprocal opposite support is non-degenerate. Principled modification would need to guard against R_opp=0 total suppression on high-compA minority balls and/or down-weight R_opp when granulation is sparse. Not proposed or implemented here."
+}

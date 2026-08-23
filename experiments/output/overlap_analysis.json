@@ -1,0 +1,130 @@
+{
+  "protocol": {
+    "seed": 42,
+    "c1": 100.0,
+    "c2": 0.01,
+    "purity_threshold": 0.95,
+    "min_ball_count": 2,
+    "alpha": 1.0,
+    "epsilon": 1e-06,
+    "top_k": 3
+  },
+  "summary": [
+    {
+      "dataset": "diabetes",
+      "n_balls": 85,
+      "radius": {
+        "mean": 10.970341485787086,
+        "median": 8.818565203591795,
+        "min": 1.9170028690641026,
+        "max": 31.09313274663716
+      },
+      "overlap": {
+        "mean": 0.0034670610743271994,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.09093081631503493
+      },
+      "frac_overlap_gt_0": 0.07058823529411765,
+      "frac_overlap_ge_0_5": 0.0,
+      "minority_mean_overlap": 0.005457410950329851,
+      "majority_mean_overlap": 0.002540518890670792,
+      "minority_mean_mu": 1.0054574109503298,
+      "majority_mean_mu": 0.9974594811093291,
+      "radius_mean": 10.970341485787086,
+      "radius_median": 8.818565203591795,
+      "radius_min": 1.9170028690641026,
+      "radius_max": 31.09313274663716,
+      "overlap_mean": 0.0034670610743271994,
+      "overlap_median": 0.0,
+      "overlap_min": 0.0,
+      "overlap_max": 0.09093081631503493
+    },
+    {
+      "dataset": "ecoli2",
+      "n_balls": 13,
+      "radius": {
+        "mean": 0.13941496907114675,
+        "median": 0.11697098449299109,
+        "min": 0.05172040216394304,
+        "max": 0.26306529129892275
+      },
+      "overlap": {
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "frac_overlap_gt_0": 0.0,
+      "frac_overlap_ge_0_5": 0.0,
+      "minority_mean_overlap": 0.0,
+      "majority_mean_overlap": 0.0,
+      "minority_mean_mu": 1.0,
+      "majority_mean_mu": 1.0,
+      "radius_mean": 0.13941496907114675,
+      "radius_median": 0.11697098449299109,
+      "radius_min": 0.05172040216394304,
+      "radius_max": 0.26306529129892275,
+      "overlap_mean": 0.0,
+      "overlap_median": 0.0,
+      "overlap_min": 0.0,
+      "overlap_max": 0.0
+    },
+    {
+      "dataset": "vehicle0",
+      "n_balls": 59,
+      "radius": {
+        "mean": 14.922729707720645,
+        "median": 13.315624870020338,
+        "min": 4.242640687119285,
+        "max": 82.49184033330268
+      },
+      "overlap": {
+        "mean": 0.020264873542861377,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.1260473083026961
+      },
+      "frac_overlap_gt_0": 0.3898305084745763,
+      "frac_overlap_ge_0_5": 0.0,
+      "minority_mean_overlap": 0.022141250722755947,
+      "majority_mean_overlap": 0.01868168029732533,
+      "minority_mean_mu": 1.0221412507227559,
+      "majority_mean_mu": 0.9813183197026747,
+      "radius_mean": 14.922729707720645,
+      "radius_median": 13.315624870020338,
+      "radius_min": 4.242640687119285,
+      "radius_max": 82.49184033330268,
+      "overlap_mean": 0.020264873542861377,
+      "overlap_median": 0.0,
+      "overlap_min": 0.0,
+      "overlap_max": 0.1260473083026961
+    }
+  ],
+  "correlations": [
+    {
+      "dataset": "diabetes",
+      "overlap_vs_purity": 0.037325367699031074,
+      "overlap_vs_radius": 0.1992244228928946,
+      "overlap_vs_cw_weight": 0.09423471262540453,
+      "overlap_vs_r_weight": 0.037036255322522645,
+      "overlap_vs_cr_weight": 0.09520831049847933
+    },
+    {
+      "dataset": "ecoli2",
+      "overlap_vs_purity": NaN,
+      "overlap_vs_radius": NaN,
+      "overlap_vs_cw_weight": NaN,
+      "overlap_vs_r_weight": NaN,
+      "overlap_vs_cr_weight": NaN
+    },
+    {
+      "dataset": "vehicle0",
+      "overlap_vs_purity": 0.08165964218330173,
+      "overlap_vs_radius": 0.057424095019784634,
+      "overlap_vs_cw_weight": 0.05289378027661498,
+      "overlap_vs_r_weight": 0.08165964218330171,
+      "overlap_vs_cr_weight": 0.05347421754145869
+    }
+  ]
+}

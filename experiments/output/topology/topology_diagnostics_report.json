@@ -1,0 +1,265 @@
+{
+  "config": {
+    "seed": 42,
+    "purity": 0.95,
+    "min_ball_count": 2
+  },
+  "sensible": true,
+  "datasets": {
+    "diabetes": {
+      "n_balls": 85,
+      "k": 5,
+      "distributions": {
+        "comp": {
+          "n": 85,
+          "mean": 0.3086380544147603,
+          "median": 0.20716185826780575,
+          "std": 0.2974816101022726,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "A": {
+          "n": 85,
+          "mean": 0.37402648840086644,
+          "median": 0.366717187362361,
+          "std": 0.3295693751626272,
+          "min": 0.0,
+          "max": 0.9670325418097863
+        },
+        "R_opp": {
+          "n": 85,
+          "mean": 0.44392156583339865,
+          "median": 0.4999999975,
+          "std": 0.43540114963821147,
+          "min": 0.0,
+          "max": 0.9999999980000001
+        },
+        "muTopo": {
+          "n": 85,
+          "mean": 0.22941304429711773,
+          "median": 0.10349117123522228,
+          "std": 0.25976631685841106,
+          "min": 0.0,
+          "max": 0.8614803712820722
+        }
+      },
+      "correlations": {
+        "A_vs_CW": {
+          "pearson": 0.30064868437672515,
+          "spearman": 0.30830214631182823
+        },
+        "R_opp_vs_A": {
+          "pearson": 0.441650724884861,
+          "spearman": 0.48560344229094354
+        },
+        "muTopo_vs_CW": {
+          "pearson": -0.04329762923598536,
+          "spearman": 0.006558333026192782
+        }
+      },
+      "class_means": {
+        "A": {
+          "minority": 0.5192504470706374,
+          "majority": 0.3064222317787316
+        },
+        "R_opp": {
+          "minority": 0.4962962940537037,
+          "majority": 0.41954022683429126
+        },
+        "muTopo": {
+          "minority": 0.2129284194292257,
+          "majority": 0.23708692139079157
+        }
+      },
+      "fractions": {
+        "A_gt_0_5": 0.3176470588235294,
+        "R_opp_gt_0": 0.5647058823529412,
+        "muTopo_gt_0_5": 0.11764705882352941
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_A": 0.6880843552940201,
+        "noise_ball_A_percentile": 73.62637362637363,
+        "noise_ball_R_opp": 0.0,
+        "noise_ball_R_opp_percentile": 37.362637362637365,
+        "noise_ball_muTopo": 0.0,
+        "noise_ball_muTopo_percentile": 42.857142857142854,
+        "noise_ball_comp": 0.34404217764701006,
+        "noise_ball_n_opp": 2,
+        "noise_ball_n_recip": 0
+      },
+      "mechanism_degenerate": false
+    },
+    "ecoli2": {
+      "n_balls": 13,
+      "k": 5,
+      "distributions": {
+        "comp": {
+          "n": 13,
+          "mean": 0.44236963081394737,
+          "median": 0.5901159686456003,
+          "std": 0.33658501074354297,
+          "min": 0.0,
+          "max": 0.8201578708083934
+        },
+        "A": {
+          "n": 13,
+          "mean": 0.36555919689486,
+          "median": 0.3804788429712418,
+          "std": 0.25283944113668577,
+          "min": 0.0,
+          "max": 0.8197680627087993
+        },
+        "R_opp": {
+          "n": 13,
+          "mean": 0.28846153600961544,
+          "median": 0.0,
+          "std": 0.4368390996118642,
+          "min": 0.0,
+          "max": 0.9999999900000002
+        },
+        "muTopo": {
+          "n": 13,
+          "mean": 0.10743870478780829,
+          "median": 0.0,
+          "std": 0.16487285185772332,
+          "min": 0.0,
+          "max": 0.43062544648748624
+        }
+      },
+      "correlations": {
+        "A_vs_CW": {
+          "pearson": -0.6508139601186869,
+          "spearman": -0.5805489101161391
+        },
+        "R_opp_vs_A": {
+          "pearson": 0.018007556172820245,
+          "spearman": -0.02041241452319315
+        },
+        "muTopo_vs_CW": {
+          "pearson": 0.4513884439922502,
+          "spearman": 0.4533249528545303
+        }
+      },
+      "class_means": {
+        "A": {
+          "minority": 0.18782333006631757,
+          "majority": 0.5179042256050392
+        },
+        "R_opp": {
+          "minority": 0.4999999950000001,
+          "majority": 0.10714285687500001
+        },
+        "muTopo": {
+          "minority": 0.18782332818808425,
+          "majority": 0.03853759901614313
+        }
+      },
+      "fractions": {
+        "A_gt_0_5": 0.15384615384615385,
+        "R_opp_gt_0": 0.3076923076923077,
+        "muTopo_gt_0_5": 0.0
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_A": 0.37868702323339815,
+        "noise_ball_A_percentile": 55.55555555555556,
+        "noise_ball_R_opp": 0.9999999900000002,
+        "noise_ball_R_opp_percentile": 100.0,
+        "noise_ball_muTopo": 0.378687019446528,
+        "noise_ball_muTopo_percentile": 94.44444444444444,
+        "noise_ball_comp": 0.18934351161669907,
+        "noise_ball_n_opp": 1,
+        "noise_ball_n_recip": 1
+      },
+      "mechanism_degenerate": false
+    },
+    "vehicle0": {
+      "n_balls": 59,
+      "k": 5,
+      "distributions": {
+        "comp": {
+          "n": 59,
+          "mean": 0.386526401880237,
+          "median": 0.3681649353666364,
+          "std": 0.18051319661560455,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "A": {
+          "n": 59,
+          "mean": 0.6358943178126655,
+          "median": 0.7175920859697937,
+          "std": 0.22197328372895092,
+          "min": 0.0,
+          "max": 0.9884497927818718
+        },
+        "R_opp": {
+          "n": 59,
+          "mean": 0.6720338943755649,
+          "median": 0.6666666644444444,
+          "std": 0.37188683240003995,
+          "min": 0.0,
+          "max": 0.9999999966666667
+        },
+        "muTopo": {
+          "n": 59,
+          "mean": 0.4498203672461316,
+          "median": 0.4255818779037318,
+          "std": 0.27436859672239783,
+          "min": 0.0,
+          "max": 0.9884497894870392
+        }
+      },
+      "correlations": {
+        "A_vs_CW": {
+          "pearson": 0.1610067938208781,
+          "spearman": 0.17181019342747939
+        },
+        "R_opp_vs_A": {
+          "pearson": 0.27229704056701837,
+          "spearman": 0.3017624709704707
+        },
+        "muTopo_vs_CW": {
+          "pearson": 0.09776308081474609,
+          "spearman": 0.03808011706788911
+        }
+      },
+      "class_means": {
+        "A": {
+          "minority": 0.6748022379429836,
+          "majority": 0.6030657602027096
+        },
+        "R_opp": {
+          "minority": 0.6882716010931069,
+          "majority": 0.658333329332639
+        },
+        "muTopo": {
+          "minority": 0.47902168083772406,
+          "majority": 0.4251817589032255
+        }
+      },
+      "fractions": {
+        "A_gt_0_5": 0.6610169491525424,
+        "R_opp_gt_0": 0.8305084745762712,
+        "muTopo_gt_0_5": 0.423728813559322
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_A": 0.7602769877237507,
+        "noise_ball_A_percentile": 51.470588235294116,
+        "noise_ball_R_opp": 0.4999999975,
+        "noise_ball_R_opp_percentile": 41.17647058823529,
+        "noise_ball_muTopo": 0.38013849196118293,
+        "noise_ball_muTopo_percentile": 41.17647058823529,
+        "noise_ball_comp": 0.38013849386187537,
+        "noise_ball_n_opp": 2,
+        "noise_ball_n_recip": 1
+      },
+      "mechanism_degenerate": false
+    }
+  }
+}

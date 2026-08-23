@@ -1,0 +1,422 @@
+{
+  "global_gate_pass": false,
+  "datasets": {
+    "diabetes": {
+      "dataset": "diabetes",
+      "n_balls": 90,
+      "k": 5,
+      "membership_summary": {
+        "compA": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.36852183384642195,
+          "median": 0.3487255669331272,
+          "std": 0.2788237870861567
+        },
+        "muA": {
+          "min": 0.0,
+          "max": 0.9945017921084177,
+          "mean": 0.6198831503193027,
+          "median": 0.692114922838422,
+          "std": 0.35299301573605785
+        },
+        "muB": {
+          "min": 0.7982328060619974,
+          "max": 1.0,
+          "mean": 0.9381340773605766,
+          "median": 0.9431638499584234,
+          "std": 0.04751598208036325
+        },
+        "muC": {
+          "min": 0.0,
+          "max": 0.9895209215297408,
+          "mean": 0.5855452355498336,
+          "median": 0.6302535751075472,
+          "std": 0.336920772542927
+        }
+      },
+      "null_model_a": {
+        "k": 5,
+        "n_permutations": 200,
+        "ks_statistic": 0.19111111111111106,
+        "p_value": 0.0023634417013166376,
+        "per_class": {
+          "minority": {
+            "ks_statistic": 0.219,
+            "p_value": 0.09772001665890445
+          },
+          "majority": {
+            "ks_statistic": 0.3504166666666667,
+            "p_value": 4.3135732613549786e-07
+          }
+        },
+        "comp_real_summary": {
+          "mean": 0.36852183384642195,
+          "std": 0.2788237870861567,
+          "median": 0.3487255669331272
+        },
+        "p_value_bonferroni": 0.007090325103949913
+      },
+      "redundancy_b_vs_cw": {
+        "pearson_r": -0.06468699161055304,
+        "spearman_r": -0.05722568911669234,
+        "within_class_variance_pos": 0.002419367097619785,
+        "within_class_variance_neg": 0.0021627981473696196,
+        "within_class_variance_minority": 0.002419367097619785
+      },
+      "redundancy_a_vs_b": {
+        "pearson_r_all": 0.2391804533087438,
+        "spearman_r_all": 0.24881750587866525,
+        "pearson_r": 0.2391804533087438,
+        "spearman_r": 0.24881750587866525,
+        "pearson_r_minority_only": 0.11259713738725008,
+        "spearman_r_minority_only": 0.15195094760312153
+      },
+      "redundancy_a_vs_r_bmru": {
+        "available": true,
+        "muA_vs_R_pearson": 0.07707015572802506,
+        "muA_vs_R_spearman": 0.09475482739042025,
+        "muA_vs_BMRU_mu_pearson": -0.15936378737989798,
+        "muA_vs_BMRU_mu_spearman": -0.1396451028825504,
+        "muA_vs_BMRU_u_pearson": 0.1422533617353932
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_mu_c": 0.0,
+        "noise_ball_mu_c_percentile": 17.77777777777778,
+        "noise_ball_naive_density_weight": 1.4422945438365549,
+        "noise_ball_naive_percentile": 82.22222222222221,
+        "overall_mu_c_summary": {
+          "min": 0.0,
+          "max": 0.9995193666679911,
+          "mean": 0.5843088341340988,
+          "median": 0.6253555926338321,
+          "std": 0.3056689475073911
+        },
+        "overall_naive_summary": {
+          "min": 0.6657866129624938,
+          "max": 1.7046795602248097,
+          "mean": 1.0247995632840083,
+          "median": 0.7996310011901615,
+          "std": 0.3416269467228343
+        }
+      },
+      "plot_paths": [
+        "C:\\Users\\kedar\\Desktop\\BITS\\Acads\\BharatSOP\\GBLSTSVM\\experiments\\output\\cbcm\\diabetes_membership_histograms.png"
+      ],
+      "connectivity_meta": {
+        "k": 5,
+        "class_k_capped": {},
+        "densities": "[3.10881317 2.90608761 3.10224572 3.06749088 3.17385515 2.93867147\n 2.8139991  3.00403709 2.87363899 2.97847592 3.01792673 3.3046575\n 3.1130598  3.08848246 3.02807031 3.26475983 3.15985903 3.09636479\n 3.15233892 2.90867086 2.92442134 2.80186928 3.08386141 3.05940993\n 3.0499272  3.03476203 3.16721213 2.75589981 2.73675486 3.05746176\n 2.97810933 3.15934217 3.00423159 3.09379615 2.96010109 3.26955581\n 3.26578788 3.18937811 3.05056802 2.59270604 3.03070547 3.04681579\n 2.91649789 2.96534018 2.82200377 3.20608281 3.19136093 3.11666139\n 2.95588375 3.12871398 2.9684644  3.2079962  3.55404773 3.14115242\n 3.25918681 3.00200272 2.88477374 3.24833133 3.23255148 3.18024973\n 3.16829042 3.05622062 3.37233595 2.89688928 2.98718642 2.8550848\n 3.15999894 2.77909056 2.72874281 3.12272185 3.02539095 3.45869593\n 2.82356397 2.85728926 3.11391889 3.5069666  3.29005234 3.01510558\n 3.24805749 3.16129434 2.95871633 2.88928355 3.09264884 2.72561951\n 3.1453177  2.95546459 3.19043109 3.21213887 3.20127766 3.36623147]"
+      },
+      "stop_conditions": {
+        "compA_indistinguishable_from_null": {
+          "triggered": false,
+          "p_value_bonferroni": 0.007090325103949913,
+          "threshold": 0.05
+        },
+        "muB_redundant_with_CW": {
+          "triggered": false,
+          "pearson_r": -0.06468699161055304,
+          "within_class_var_pos": 0.002419367097619785,
+          "within_class_var_neg": 0.0021627981473696196,
+          "threshold_r": 0.9
+        },
+        "muA_muB_highly_correlated": {
+          "triggered": false,
+          "pearson_r": 0.2391804533087438,
+          "threshold_r": 0.8
+        },
+        "synthetic_noise_rewarded": {
+          "triggered": false,
+          "mu_c_percentile": 17.77777777777778,
+          "threshold_percentile": 70.0
+        },
+        "dataset_gate_pass": true
+      }
+    },
+    "ecoli2": {
+      "dataset": "ecoli2",
+      "n_balls": 13,
+      "k": 5,
+      "membership_summary": {
+        "compA": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.4099591120493962,
+          "median": 0.0,
+          "std": 0.44928974180487935
+        },
+        "muA": {
+          "min": 0.0,
+          "max": 0.709072047859871,
+          "mean": 0.16012546562388666,
+          "median": 0.0,
+          "std": 0.29251435376484547
+        },
+        "muB": {
+          "min": 0.876922639590494,
+          "max": 1.0,
+          "mean": 0.9457002838688011,
+          "median": 0.9404004517692245,
+          "std": 0.036444364467031365
+        },
+        "muC": {
+          "min": 0.0,
+          "max": 0.7077303090552254,
+          "mean": 0.1540772361859388,
+          "median": 0.0,
+          "std": 0.28167027372007775
+        }
+      },
+      "null_model_a": {
+        "k": 5,
+        "n_permutations": 200,
+        "ks_statistic": 0.5346153846153846,
+        "p_value": 0.0005601244292595988,
+        "per_class": {
+          "minority": {
+            "ks_statistic": 0.8508333333333333,
+            "p_value": 2.431191455418742e-05
+          },
+          "majority": {
+            "ks_statistic": 0.9957142857142857,
+            "p_value": 1.6084632606942494e-15
+          }
+        },
+        "comp_real_summary": {
+          "mean": 0.4099591120493962,
+          "std": 0.44928974180487935,
+          "median": 0.0
+        },
+        "p_value_bonferroni": 0.0016803732877787966
+      },
+      "redundancy_b_vs_cw": {
+        "pearson_r": -0.25021116476320504,
+        "spearman_r": -0.26842445061515785,
+        "within_class_variance_pos": 0.0017892467036791358,
+        "within_class_variance_neg": 0.0006101309379745317,
+        "within_class_variance_minority": 0.0017892467036791358
+      },
+      "redundancy_a_vs_b": {
+        "pearson_r_all": 0.24825645703360721,
+        "spearman_r_all": 0.19533472375535477,
+        "pearson_r": 0.24825645703360721,
+        "spearman_r": 0.19533472375535477,
+        "pearson_r_minority_only": NaN,
+        "spearman_r_minority_only": NaN
+      },
+      "redundancy_a_vs_r_bmru": {
+        "available": true,
+        "muA_vs_R_pearson": 0.22781045060284605,
+        "muA_vs_R_spearman": 0.2303863916277092,
+        "muA_vs_BMRU_mu_pearson": 0.22882851225683004,
+        "muA_vs_BMRU_mu_spearman": 0.11146641273711001,
+        "muA_vs_BMRU_u_pearson": -0.1734818358592175
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_mu_c": 0.0,
+        "noise_ball_mu_c_percentile": 81.25,
+        "noise_ball_naive_density_weight": 3.3657554874944626,
+        "noise_ball_naive_percentile": 81.25,
+        "overall_mu_c_summary": {
+          "min": 0.0,
+          "max": 0.6737389922928095,
+          "mean": 0.1153828444470908,
+          "median": 0.0,
+          "std": 0.24086609529544023
+        },
+        "overall_naive_summary": {
+          "min": 0.5415908867651649,
+          "max": 3.6286189766704857,
+          "mean": 2.2751376791237,
+          "median": 3.1552816560613905,
+          "std": 1.319370226314722
+        }
+      },
+      "plot_paths": [
+        "C:\\Users\\kedar\\Desktop\\BITS\\Acads\\BharatSOP\\GBLSTSVM\\experiments\\output\\cbcm\\ecoli2_membership_histograms.png"
+      ],
+      "connectivity_meta": {
+        "k": 5,
+        "class_k_capped": {},
+        "densities": "[2.97388094 2.9869602  3.00856325 3.20730358 3.06122612 3.11230884\n 3.03493595 2.8797667  2.92519096 3.28616374 3.13101507 2.87306235\n 2.77910756]"
+      },
+      "stop_conditions": {
+        "compA_indistinguishable_from_null": {
+          "triggered": false,
+          "p_value_bonferroni": 0.0016803732877787966,
+          "threshold": 0.05
+        },
+        "muB_redundant_with_CW": {
+          "triggered": false,
+          "pearson_r": -0.25021116476320504,
+          "within_class_var_pos": 0.0017892467036791358,
+          "within_class_var_neg": 0.0006101309379745317,
+          "threshold_r": 0.9
+        },
+        "muA_muB_highly_correlated": {
+          "triggered": false,
+          "pearson_r": 0.24825645703360721,
+          "threshold_r": 0.8
+        },
+        "synthetic_noise_rewarded": {
+          "triggered": true,
+          "mu_c_percentile": 81.25,
+          "threshold_percentile": 70.0
+        },
+        "dataset_gate_pass": false
+      }
+    },
+    "vehicle0": {
+      "dataset": "vehicle0",
+      "n_balls": 58,
+      "k": 5,
+      "membership_summary": {
+        "compA": {
+          "min": 0.0,
+          "max": 0.8692043983195891,
+          "mean": 0.364154939995074,
+          "median": 0.3776852536807907,
+          "std": 0.23167451561482383
+        },
+        "muA": {
+          "min": 0.0,
+          "max": 0.9989393690935612,
+          "mean": 0.7114921539475793,
+          "median": 0.892181015708106,
+          "std": 0.3380115815058819
+        },
+        "muB": {
+          "min": 0.7688221131718233,
+          "max": 1.0,
+          "mean": 0.9426311411568202,
+          "median": 0.9534585332121867,
+          "std": 0.04924983030486311
+        },
+        "muC": {
+          "min": 0.0,
+          "max": 0.9989393690935612,
+          "mean": 0.6714400059535423,
+          "median": 0.8120115959406927,
+          "std": 0.32128452527032947
+        }
+      },
+      "null_model_a": {
+        "k": 5,
+        "n_permutations": 200,
+        "ks_statistic": 0.21353448275862075,
+        "p_value": 0.00844346168221266,
+        "per_class": {
+          "minority": {
+            "ks_statistic": 0.19863636363636364,
+            "p_value": 0.31131832681892235
+          },
+          "majority": {
+            "ks_statistic": 0.36916666666666664,
+            "p_value": 6.93903851816861e-05
+          }
+        },
+        "comp_real_summary": {
+          "mean": 0.364154939995074,
+          "std": 0.23167451561482383,
+          "median": 0.3776852536807907
+        },
+        "p_value_bonferroni": 0.025330385046637982
+      },
+      "redundancy_b_vs_cw": {
+        "pearson_r": -0.1259972222219966,
+        "spearman_r": -0.06057191042716057,
+        "within_class_variance_pos": 0.003464575817774663,
+        "within_class_variance_neg": 0.001728545112642899,
+        "within_class_variance_minority": 0.003464575817774663
+      },
+      "redundancy_a_vs_b": {
+        "pearson_r_all": 0.045974911680618055,
+        "spearman_r_all": 0.1042676125906592,
+        "pearson_r": 0.045974911680618055,
+        "spearman_r": 0.1042676125906592,
+        "pearson_r_minority_only": 0.0023383461052265547,
+        "spearman_r_minority_only": 0.01526287012771937
+      },
+      "redundancy_a_vs_r_bmru": {
+        "available": true,
+        "muA_vs_R_pearson": -0.08579903242199469,
+        "muA_vs_R_spearman": -0.035670180813199316,
+        "muA_vs_BMRU_mu_pearson": -0.14204000093232752,
+        "muA_vs_BMRU_mu_spearman": -0.32737582545215754,
+        "muA_vs_BMRU_u_pearson": 0.1507518902293123
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_mu_c": 0.6691829914673352,
+        "noise_ball_mu_c_percentile": 30.612244897959183,
+        "noise_ball_naive_density_weight": 2.114713039384294,
+        "noise_ball_naive_percentile": 75.51020408163265,
+        "overall_mu_c_summary": {
+          "min": 0.0,
+          "max": 0.995810381788984,
+          "mean": 0.753134537930631,
+          "median": 0.8510721929448586,
+          "std": 0.22084781177096763
+        },
+        "overall_naive_summary": {
+          "min": 0.6082524369622897,
+          "max": 2.472323669587269,
+          "mean": 1.2764692786183236,
+          "median": 0.6924341572281887,
+          "std": 0.7546237118500766
+        }
+      },
+      "plot_paths": [
+        "C:\\Users\\kedar\\Desktop\\BITS\\Acads\\BharatSOP\\GBLSTSVM\\experiments\\output\\cbcm\\vehicle0_membership_histograms.png"
+      ],
+      "connectivity_meta": {
+        "k": 5,
+        "class_k_capped": {},
+        "densities": "[3.11892219 3.03897147 2.94851154 3.23144445 2.81758317 3.0832939\n 2.95873578 3.06759475 3.09352815 3.20036736 3.14022694 3.02856065\n 3.15210176 3.34023454 3.01099547 2.90644388 3.39797697 3.00768502\n 3.11184549 2.57104435 3.30896325 2.98896402 3.23401804 3.23242395\n 2.9432147  3.16240204 3.31561392 3.17357712 3.41399923 3.21466031\n 2.89657418 2.71481367 2.96761406 3.04939219 3.28418166 3.01407872\n 3.2749422  2.85636043 3.19290237 3.10520859 3.02464951 3.1055692\n 3.31823432 3.13735755 3.09162139 2.98212487 3.37265456 2.86780968\n 3.22322884 3.1273518  3.38924738 2.90812642 2.8980761  2.87957305\n 3.18686804 3.29690381 3.24088167 3.22372643]"
+      },
+      "stop_conditions": {
+        "compA_indistinguishable_from_null": {
+          "triggered": false,
+          "p_value_bonferroni": 0.025330385046637982,
+          "threshold": 0.05
+        },
+        "muB_redundant_with_CW": {
+          "triggered": false,
+          "pearson_r": -0.1259972222219966,
+          "within_class_var_pos": 0.003464575817774663,
+          "within_class_var_neg": 0.001728545112642899,
+          "threshold_r": 0.9
+        },
+        "muA_muB_highly_correlated": {
+          "triggered": false,
+          "pearson_r": 0.045974911680618055,
+          "threshold_r": 0.8
+        },
+        "synthetic_noise_rewarded": {
+          "triggered": false,
+          "mu_c_percentile": 30.612244897959183,
+          "threshold_percentile": 70.0
+        },
+        "dataset_gate_pass": true
+      }
+    }
+  },
+  "config": {
+    "seed": 42,
+    "purity": 0.95,
+    "min_ball_count": 2,
+    "n_permutations": 200,
+    "stop_thresholds": {
+      "ks_alpha_bonferroni": 0.05,
+      "cw_redundancy_r": 0.9,
+      "ab_redundancy_r": 0.8,
+      "noise_percentile": 70.0
+    }
+  }
+}

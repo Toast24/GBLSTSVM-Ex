@@ -1,0 +1,98 @@
+{
+  "n_runs": 51,
+  "category_counts": {
+    "informative_r_opp": 29,
+    "adversarial_r_opp": 19,
+    "redundant_r_opp": 3
+  },
+  "category_outcomes": {
+    "informative_r_opp": {
+      "n": 29,
+      "mean_delta_macro_f1_topo_vs_ca": 0.059028024484877234,
+      "mean_delta_gmean_topo_vs_ca": 0.08907565312374416,
+      "frac_topo_beats_ca": 0.5517241379310345
+    },
+    "adversarial_r_opp": {
+      "n": 19,
+      "mean_delta_macro_f1_topo_vs_ca": -0.09231181410459852,
+      "mean_delta_gmean_topo_vs_ca": -0.14907167908986377,
+      "frac_topo_beats_ca": 0.0
+    },
+    "redundant_r_opp": {
+      "n": 3,
+      "mean_delta_macro_f1_topo_vs_ca": 0.0,
+      "mean_delta_gmean_topo_vs_ca": 0.0,
+      "frac_topo_beats_ca": 0.0
+    }
+  },
+  "correlation_summary": {
+    "r_opp_std": {
+      "mean_when_topo_beats_ca": 0.4058417314812828,
+      "mean_when_topo_loses_to_ca": 0.39957343095977316
+    },
+    "r_opp_var": {
+      "mean_when_topo_beats_ca": 0.16845196084082736,
+      "mean_when_topo_loses_to_ca": 0.16337007949807508
+    },
+    "ca_weight_var": {
+      "mean_when_topo_beats_ca": 0.2639876452908832,
+      "mean_when_topo_loses_to_ca": 0.20977220166302685
+    },
+    "topo_weight_var": {
+      "mean_when_topo_beats_ca": 0.13513021058119756,
+      "mean_when_topo_loses_to_ca": 0.09968267518159245
+    },
+    "corr_ca_r_opp": {
+      "mean_when_topo_beats_ca": 0.45432193974706275,
+      "mean_when_topo_loses_to_ca": 0.46024568498421103
+    },
+    "corr_ca_topo": {
+      "mean_when_topo_beats_ca": 0.7597605208296143,
+      "mean_when_topo_loses_to_ca": 0.6908966576695079
+    },
+    "corr_r_opp_topo": {
+      "mean_when_topo_beats_ca": 0.8181242984264028,
+      "mean_when_topo_loses_to_ca": 0.8262759326988132
+    },
+    "rel_l2_topo_minus_ca": {
+      "mean_when_topo_beats_ca": 0.5616216261633908,
+      "mean_when_topo_loses_to_ca": 0.6127264143172755
+    },
+    "compA_std": {
+      "mean_when_topo_beats_ca": 0.29108952303271324,
+      "mean_when_topo_loses_to_ca": 0.29297203192469323
+    }
+  },
+  "threshold_hints": {
+    "r_opp_std": {
+      "wins_median": 0.425002246064651,
+      "losses_median": 0.40482802096893233
+    },
+    "rel_l2_topo_minus_ca": {
+      "wins_median": 0.5426031937419504,
+      "losses_median": 0.5461697206509186
+    },
+    "corr_ca_r_opp": {
+      "wins_median": 0.5379640540307389,
+      "losses_median": 0.4510677425544872
+    },
+    "topo_weight_var": {
+      "wins_median": 0.09245345102245359,
+      "losses_median": 0.08621849193808273
+    }
+  },
+  "thresholds_used": {
+    "R_OPP_MIN_STD": 0.02,
+    "TOPO_CA_MIN_REL_L2": 0.01,
+    "HURT_MACRO_F1": -0.01,
+    "HURT_GMEAN": -0.015
+  },
+  "patterns": [
+    "3/51 runs classified redundant (near-constant R_opp or Topo\u2248CA); 29 informative; 19 adversarial.",
+    "Runs where Topo beats CA have higher mean r_opp_std (0.4058) than losses (0.3996).",
+    "Successful runs show larger rel_l2_topo_minus_ca (0.5616) vs failed (0.6127) \u2014 Topo must differ from CA to help.",
+    "corr(CA,R_opp) is lower when Topo wins (0.454) than when it loses (0.460) \u2014 R_opp adds most when not redundant with CA.",
+    "Largest adversarial cases: ecoli2(s42, \u0394=-0.215), ionosphere(s0, \u0394=-0.193), vehicle0(s1, \u0394=-0.167)",
+    "Informative R_opp runs with Topo>CA: 16 (e.g. chronic_kidney_disease, spambase, breast_cancer_wisconsin_diagnostic)."
+  ]
+}

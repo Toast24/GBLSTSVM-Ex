@@ -1,0 +1,69 @@
+{
+  "datasets_detected": 17,
+  "successfully_completed": 17,
+  "failed": 0,
+  "seeds": [
+    42,
+    0,
+    1
+  ],
+  "completed_datasets": [
+    "australian",
+    "breast_cancer",
+    "breast_cancer_wisconsin_diagnostic",
+    "breast_cancer_wisconsin_original",
+    "chronic_kidney_disease",
+    "congressional_voting_records",
+    "credit_approval",
+    "diabetes",
+    "ecoli2",
+    "german_credit",
+    "heart",
+    "ionosphere",
+    "messidor_features",
+    "spambase",
+    "tic_tac_toe",
+    "vehicle0",
+    "wholesale_customers"
+  ],
+  "topo_vs_cw_macro_f1": {
+    "wins": 7,
+    "ties": 2,
+    "losses": 8,
+    "mean": -0.013754661105116705,
+    "median": 0.0,
+    "std": 0.14325338114632322
+  },
+  "topo_vs_ca_macro_f1": {
+    "wins": 6,
+    "ties": 2,
+    "losses": 9,
+    "mean": -0.0008257207436457238,
+    "median": -0.0015875496073267104,
+    "std": 0.07329499124194967
+  },
+  "topo_vs_cw_gmean": {
+    "wins": 7,
+    "ties": 2,
+    "losses": 8,
+    "mean": -0.03342967919303113,
+    "median": 0.0,
+    "std": 0.2816334387021732
+  },
+  "topo_vs_ca_gmean": {
+    "wins": 6,
+    "ties": 3,
+    "losses": 8,
+    "mean": -0.004885646316055522,
+    "median": 0.0,
+    "std": 0.11445376803115284
+  },
+  "mechanism_findings": {
+    "mean_prediction_change_rate_vs_cw": 0.2525410879417803,
+    "datasets_topo_beats_cw_gmean": 7,
+    "datasets_topo_beats_ca_gmean": 6,
+    "datasets_high_competition_minority": 38,
+    "mean_corr_topo_weights_vs_ca": 0.7431968978890401,
+    "degenerate_mechanism_count": 3
+  }
+}

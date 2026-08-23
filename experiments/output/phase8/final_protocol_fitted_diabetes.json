@@ -1,0 +1,56 @@
+{
+  "dataset": "diabetes",
+  "config": {
+    "scaling": "minmax",
+    "purity_threshold": 0.85,
+    "c1": 0.1,
+    "c2": 1.0,
+    "min_ball_count": 2,
+    "seed": 42,
+    "train_n": 652,
+    "test_n": 116,
+    "note": "Trained on train+validation; evaluated once on untouched test."
+  },
+  "deltas_test": {
+    "CW_minus_clean": {
+      "accuracy": -0.008620689655172376,
+      "balanced_accuracy": 0.015447154471544766,
+      "macro_f1": 0.0032537836615361693,
+      "minority_recall": 0.09756097560975607,
+      "gmean": 0.017045166384767052,
+      "auroc": 0.02634146341463417
+    },
+    "R_minus_clean": {
+      "accuracy": -0.008620689655172376,
+      "balanced_accuracy": -0.006666666666666599,
+      "macro_f1": -0.007451337851717699,
+      "minority_recall": 0.0,
+      "gmean": -0.006146307750582447,
+      "auroc": -0.0003252032520324466
+    },
+    "CR_minus_clean": {
+      "accuracy": -0.017241379310344862,
+      "balanced_accuracy": 0.008780487804878057,
+      "macro_f1": -0.004522975546038865,
+      "minority_recall": 0.09756097560975607,
+      "gmean": 0.010021624531521334,
+      "auroc": 0.029593495934959302
+    },
+    "CR_minus_CW": {
+      "accuracy": -0.008620689655172487,
+      "balanced_accuracy": -0.00666666666666671,
+      "macro_f1": -0.007776759207575035,
+      "minority_recall": 0.0,
+      "gmean": -0.007023541853245718,
+      "auroc": 0.003252032520325132
+    },
+    "CR_minus_R": {
+      "accuracy": -0.008620689655172487,
+      "balanced_accuracy": 0.015447154471544655,
+      "macro_f1": 0.0029283623056788333,
+      "minority_recall": 0.09756097560975607,
+      "gmean": 0.01616793228210378,
+      "auroc": 0.02991869918699175
+    }
+  }
+}

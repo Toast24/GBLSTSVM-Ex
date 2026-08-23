@@ -1,0 +1,1059 @@
+{
+  "decision": {
+    "decision": "B",
+    "rationale": "Promising but unstable: vehicle0 shows the only clean gain (d_gmean=+0.0723, d_minority_f1=+0.0882); diabetes baseline degenerate; ecoli2 has outlier/mapping artefacts. One controlled refinement (best mapping or SP) on vehicle0 only.",
+    "evidence_table": [
+      {
+        "Candidate": "CA \u2014 diabetes",
+        "New vs CW": "gmean +0.1562, mf1 +0.0476",
+        "New vs R": "r=0.191",
+        "New vs BMRU": "r=0.022",
+        "New vs OBRU": "r=-0.120",
+        "Outlier risk": "noise muA pct=63.3",
+        "Evidence": "promising_unstable; best_map=A2_ambiguity (d_gmean=+0.1562); |r(muA,|score|)=-0.122"
+      },
+      {
+        "Candidate": "SP \u2014 ecoli2",
+        "New vs CW": "gmean +0.0528, mf1 -0.0351",
+        "New vs R": "r=-0.291",
+        "New vs BMRU": "r=-0.343",
+        "New vs OBRU": "r=nan",
+        "Outlier risk": "noise muA pct=84.6",
+        "Evidence": "promising_unstable; best_map=A1_comp (d_gmean=+0.0528); |r(muA,|score|)=0.553"
+      },
+      {
+        "Candidate": "CA \u2014 vehicle0",
+        "New vs CW": "gmean +0.0723, mf1 +0.0882",
+        "New vs R": "r=0.102",
+        "New vs BMRU": "r=-0.212",
+        "New vs OBRU": "r=0.127",
+        "Outlier risk": "noise muA pct=82.0",
+        "Evidence": "promising_unstable; best_map=A2_ambiguity (d_gmean=+0.0723); |r(muA,|score|)=-0.179"
+      }
+    ],
+    "dataset_assessments": [
+      {
+        "dataset": "diabetes",
+        "signal": "promising_unstable",
+        "ca_gain": 0.15617376188860607,
+        "mf1_gain": 0.047619047619047616,
+        "sp_gain": 0.15617376188860607,
+        "outlier_risk": false,
+        "cw_collapsed": true,
+        "best_mapping": "A2_ambiguity",
+        "best_mapping_gain": 0.15617376188860607
+      },
+      {
+        "dataset": "ecoli2",
+        "signal": "promising_unstable",
+        "ca_gain": 0.042154408640214025,
+        "mf1_gain": -0.03508771929824561,
+        "sp_gain": 0.052796946411890144,
+        "outlier_risk": true,
+        "cw_collapsed": false,
+        "best_mapping": "A1_comp",
+        "best_mapping_gain": 0.052796946411890144
+      },
+      {
+        "dataset": "vehicle0",
+        "signal": "promising_unstable",
+        "ca_gain": 0.07230559566885109,
+        "mf1_gain": 0.08823529411764708,
+        "sp_gain": -0.047262017397025735,
+        "outlier_risk": true,
+        "cw_collapsed": false,
+        "best_mapping": "A2_ambiguity",
+        "best_mapping_gain": 0.07230559566885109
+      }
+    ],
+    "per_dataset_signals": {
+      "diabetes": "promising_unstable",
+      "ecoli2": "promising_unstable",
+      "vehicle0": "promising_unstable"
+    }
+  },
+  "datasets": {
+    "diabetes": {
+      "n_balls": 85,
+      "k": 5,
+      "muA_correlations": {
+        "cw_abs_decision_score": {
+          "pearson": -0.12198470995560648,
+          "spearman": -0.13330768935073414,
+          "n": 85
+        },
+        "CW": {
+          "pearson": 0.30715385774227866,
+          "spearman": 0.30830214631182823,
+          "n": 85
+        },
+        "R": {
+          "pearson": 0.19145847083844908,
+          "spearman": 0.17510498674973277,
+          "n": 85
+        },
+        "BMRU_mu": {
+          "pearson": 0.02195171117492837,
+          "spearman": 0.006150505054204295,
+          "n": 85
+        },
+        "OBRU_mu": {
+          "pearson": -0.11986389114002163,
+          "spearman": -0.16823909091834172,
+          "n": 85
+        },
+        "nearest_opp_dist": {
+          "pearson": -0.009535635627116627,
+          "spearman": -0.35077135846779683,
+          "n": 85
+        },
+        "nearest_same_dist": {
+          "pearson": 0.24535501801068932,
+          "spearman": 0.24025966060451312,
+          "n": 85
+        },
+        "opp_same_ratio": {
+          "pearson": -0.509033477266431,
+          "spearman": -0.5307064458823184,
+          "n": 85
+        },
+        "opp_neighbor_fraction": {
+          "pearson": 0.5000976181751903,
+          "spearman": 0.6713338252197225,
+          "n": 85
+        },
+        "compA": {
+          "pearson": 0.5000976181751903,
+          "spearman": 0.6713338252197225,
+          "n": 85
+        }
+      },
+      "muA_distributions": {
+        "minority": {
+          "n": 27,
+          "mean": 0.6803571595634508,
+          "median": 0.6611470026874644,
+          "std": 0.32421368746298057,
+          "min": 0.0,
+          "max": 0.9989131467004765
+        },
+        "majority": {
+          "n": 58,
+          "mean": 0.4153682382575145,
+          "median": 0.5654376930421618,
+          "std": 0.4064292305646087,
+          "min": 0.0,
+          "max": 0.9808123136531669
+        },
+        "minority_minus_majority_mean": 0.26498892130593626
+      },
+      "muA_threshold_fractions": {
+        "frac_gt_0.25": 0.6352941176470588,
+        "frac_gt_0.5": 0.6352941176470588,
+        "frac_gt_0.75": 0.3176470588235294
+      },
+      "changed_ball_profile": {
+        "test_pred_diff_frac": 0.008620689655172414,
+        "frac_high_muA_minority": 0.4090909090909091,
+        "frac_high_muA_boundary_proxy": 0.3181818181818182,
+        "frac_boundary_minority": 0.10588235294117647,
+        "n_balls_high_muA": 22
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_mu_c": 0.9027086305876529,
+        "noise_ball_mu_c_percentile": 85.71428571428571,
+        "noise_ball_naive_density_weight": 1.297396758301633,
+        "noise_ball_naive_percentile": 64.83516483516483,
+        "overall_mu_c_summary": {
+          "min": 0.0,
+          "max": 0.9926844880767773,
+          "mean": 0.5079114464110523,
+          "median": 0.5890270858210845,
+          "std": 0.35890698432886686
+        },
+        "overall_naive_summary": {
+          "min": 0.6721309392176023,
+          "max": 1.6908422466790773,
+          "mean": 1.0324481540252315,
+          "median": 0.8356356936735428,
+          "std": 0.32834438854146525
+        },
+        "noise_ball_mu_a": 0.8859718825912294,
+        "noise_ball_mu_a_percentile": 63.33333333333333,
+        "noise_ball_comp_a": 0.33115975197781583,
+        "noise_ball_mu_b": 1.0,
+        "noise_ball_nearest_same_dist": 70.59655970312342,
+        "noise_ball_nearest_opp_dist": 254.83469594278165,
+        "noise_ball_opp_neighbor_fraction": 0.33115975197781583
+      }
+    },
+    "ecoli2": {
+      "n_balls": 13,
+      "k": 5,
+      "muA_correlations": {
+        "cw_abs_decision_score": {
+          "pearson": 0.5525804655899142,
+          "spearman": 0.6574685979306976,
+          "n": 13
+        },
+        "CW": {
+          "pearson": -0.6673049430941254,
+          "spearman": -0.5805489101161391,
+          "n": 13
+        },
+        "R": {
+          "pearson": -0.2909230027646068,
+          "spearman": -0.26352313834736496,
+          "n": 13
+        },
+        "BMRU_mu": {
+          "pearson": -0.34343630829115135,
+          "spearman": -0.25967247145162003,
+          "n": 13
+        },
+        "OBRU_mu": {
+          "pearson": NaN,
+          "spearman": NaN,
+          "n": 13
+        },
+        "nearest_opp_dist": {
+          "pearson": -0.05663676999511291,
+          "spearman": -0.02489647988659846,
+          "n": 13
+        },
+        "nearest_same_dist": {
+          "pearson": 0.4373074823952442,
+          "spearman": 0.5194444444444444,
+          "n": 13
+        },
+        "opp_same_ratio": {
+          "pearson": -0.800218067390037,
+          "spearman": -0.4475206422889622,
+          "n": 13
+        },
+        "opp_neighbor_fraction": {
+          "pearson": 0.691323634257142,
+          "spearman": 0.44999999999999996,
+          "n": 13
+        },
+        "compA": {
+          "pearson": 0.691323634257142,
+          "spearman": 0.44999999999999996,
+          "n": 13
+        }
+      },
+      "muA_distributions": {
+        "minority": {
+          "n": 6,
+          "mean": 0.3038687348634391,
+          "median": 0.26245016314003544,
+          "std": 0.30706442953563035,
+          "min": 0.0,
+          "max": 0.6758126227161689
+        },
+        "majority": {
+          "n": 7,
+          "mean": 0.7304328125017542,
+          "median": 0.6663351962993979,
+          "std": 0.1542565220009802,
+          "min": 0.5899957510377443,
+          "max": 0.9675164487802607
+        },
+        "minority_minus_majority_mean": -0.42656407763831505
+      },
+      "muA_threshold_fractions": {
+        "frac_gt_0.25": 0.7692307692307693,
+        "frac_gt_0.5": 0.7692307692307693,
+        "frac_gt_0.75": 0.15384615384615385
+      },
+      "changed_ball_profile": {
+        "test_pred_diff_frac": 0.0784313725490196,
+        "frac_high_muA_minority": 0.25,
+        "frac_high_muA_boundary_proxy": 0.5,
+        "frac_boundary_minority": 0.0,
+        "n_balls_high_muA": 4
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_mu_c": 0.5673356639614515,
+        "noise_ball_mu_c_percentile": 61.111111111111114,
+        "noise_ball_naive_density_weight": 3.371325864643533,
+        "noise_ball_naive_percentile": 77.77777777777779,
+        "overall_mu_c_summary": {
+          "min": 0.0,
+          "max": 0.9553143914495252,
+          "mean": 0.4057906526202488,
+          "median": 0.4712891589346302,
+          "std": 0.3530324551070342
+        },
+        "overall_naive_summary": {
+          "min": 0.5610503458479641,
+          "max": 3.7601849474898628,
+          "mean": 1.9726838305511676,
+          "median": 1.9079546511453276,
+          "std": 1.3774045440549032
+        },
+        "noise_ball_mu_a": 0.6573803484798899,
+        "noise_ball_mu_a_percentile": 84.61538461538461,
+        "noise_ball_comp_a": 0.20733139409901255,
+        "noise_ball_mu_b": 1.0,
+        "noise_ball_nearest_same_dist": 0.17131841699011807,
+        "noise_ball_nearest_opp_dist": 0.23092206477510968,
+        "noise_ball_opp_neighbor_fraction": 0.20733139409901255
+      }
+    },
+    "vehicle0": {
+      "n_balls": 59,
+      "k": 5,
+      "muA_correlations": {
+        "cw_abs_decision_score": {
+          "pearson": -0.179289471512065,
+          "spearman": -0.16005493945220306,
+          "n": 59
+        },
+        "CW": {
+          "pearson": 0.15543054057262917,
+          "spearman": 0.17181019342747939,
+          "n": 59
+        },
+        "R": {
+          "pearson": 0.10247669245009129,
+          "spearman": 0.11566037845664379,
+          "n": 59
+        },
+        "BMRU_mu": {
+          "pearson": -0.21229497634570707,
+          "spearman": -0.27390815181404043,
+          "n": 59
+        },
+        "OBRU_mu": {
+          "pearson": 0.127330951383111,
+          "spearman": 0.2537497719085144,
+          "n": 59
+        },
+        "nearest_opp_dist": {
+          "pearson": -0.2118342652131572,
+          "spearman": -0.4045218136819647,
+          "n": 59
+        },
+        "nearest_same_dist": {
+          "pearson": -0.27120473428870123,
+          "spearman": -0.024085821008716334,
+          "n": 59
+        },
+        "opp_same_ratio": {
+          "pearson": -0.003630746509616531,
+          "spearman": -0.2784669560051201,
+          "n": 59
+        },
+        "opp_neighbor_fraction": {
+          "pearson": 0.37715950475144483,
+          "spearman": 0.7672233668756873,
+          "n": 59
+        },
+        "compA": {
+          "pearson": 0.37715950475144483,
+          "spearman": 0.7672233668756873,
+          "n": 59
+        }
+      },
+      "muA_distributions": {
+        "minority": {
+          "n": 27,
+          "mean": 0.8538421472979748,
+          "median": 0.9326185863247923,
+          "std": 0.15335593587346755,
+          "min": 0.5497122272359805,
+          "max": 0.9998665927132183
+        },
+        "majority": {
+          "n": 32,
+          "mean": 0.788043810000442,
+          "median": 0.9161089583692756,
+          "std": 0.24532790388682316,
+          "min": 0.0,
+          "max": 0.9923360358782707
+        },
+        "minority_minus_majority_mean": 0.06579833729753282
+      },
+      "muA_threshold_fractions": {
+        "frac_gt_0.25": 0.9661016949152542,
+        "frac_gt_0.5": 0.9661016949152542,
+        "frac_gt_0.75": 0.6610169491525424
+      },
+      "changed_ball_profile": {
+        "test_pred_diff_frac": 0.03937007874015748,
+        "frac_high_muA_minority": 0.6666666666666666,
+        "frac_high_muA_boundary_proxy": 0.06666666666666667,
+        "frac_boundary_minority": 0.0,
+        "n_balls_high_muA": 15
+      },
+      "synthetic_noise": {
+        "m_noise_points": 3,
+        "method": "farthest_minority_balls",
+        "noise_ball_mu_c": 0.8570621480353436,
+        "noise_ball_mu_c_percentile": 44.11764705882353,
+        "noise_ball_naive_density_weight": 2.185861038634315,
+        "noise_ball_naive_percentile": 89.70588235294117,
+        "overall_mu_c_summary": {
+          "min": 0.0,
+          "max": 0.9999588253376607,
+          "mean": 0.7859328648042507,
+          "median": 0.879134907649141,
+          "std": 0.2231982162771462
+        },
+        "overall_naive_summary": {
+          "min": 0.6363665126092023,
+          "max": 2.572073798383022,
+          "mean": 1.319818811365747,
+          "median": 0.7188950260945419,
+          "std": 0.7302631317929967
+        },
+        "noise_ball_mu_a": 0.9546724712530666,
+        "noise_ball_mu_a_percentile": 81.9672131147541,
+        "noise_ball_comp_a": 0.6064513136919096,
+        "noise_ball_mu_b": 1.0,
+        "noise_ball_nearest_same_dist": 31.344962381005782,
+        "noise_ball_nearest_opp_dist": 25.934961388485277,
+        "noise_ball_opp_neighbor_fraction": 0.6064513136919096
+      }
+    }
+  },
+  "screening": {
+    "diabetes": [
+      {
+        "dataset": "diabetes",
+        "model": "CW",
+        "split": "test",
+        "macro_f1": 0.39267015706806285,
+        "minority_f1": 0.0,
+        "gmean": 0.0,
+        "balanced_accuracy": 0.5,
+        "minority_recall": 0.0,
+        "auroc": 0.5053658536585366
+      },
+      {
+        "dataset": "diabetes",
+        "model": "CA",
+        "split": "test",
+        "macro_f1": 0.418546365914787,
+        "minority_f1": 0.047619047619047616,
+        "gmean": 0.15617376188860607,
+        "balanced_accuracy": 0.5121951219512195,
+        "minority_recall": 0.024390243902439025,
+        "auroc": 0.4845528455284553
+      },
+      {
+        "dataset": "diabetes",
+        "model": "CC",
+        "split": "test",
+        "macro_f1": 0.418546365914787,
+        "minority_f1": 0.047619047619047616,
+        "gmean": 0.15617376188860607,
+        "balanced_accuracy": 0.5121951219512195,
+        "minority_recall": 0.024390243902439025,
+        "auroc": 0.4845528455284553
+      },
+      {
+        "dataset": "diabetes",
+        "model": "best_map_A2_ambiguity",
+        "split": "test",
+        "macro_f1": 0.418546365914787,
+        "minority_f1": 0.047619047619047616,
+        "gmean": 0.15617376188860607,
+        "balanced_accuracy": 0.5121951219512195,
+        "minority_recall": 0.024390243902439025,
+        "auroc": 0.49365853658536585
+      },
+      {
+        "dataset": "diabetes",
+        "model": "SP_supported_pressure",
+        "split": "test",
+        "macro_f1": 0.418546365914787,
+        "minority_f1": 0.047619047619047616,
+        "gmean": 0.15617376188860607,
+        "balanced_accuracy": 0.5121951219512195,
+        "minority_recall": 0.024390243902439025,
+        "auroc": 0.526178861788618
+      }
+    ],
+    "ecoli2": [
+      {
+        "dataset": "ecoli2",
+        "model": "CW",
+        "split": "test",
+        "macro_f1": 0.8045977011494252,
+        "minority_f1": 0.6666666666666666,
+        "gmean": 0.7719651757418463,
+        "balanced_accuracy": 0.7892441860465116,
+        "minority_recall": 0.625,
+        "auroc": 0.9302325581395349
+      },
+      {
+        "dataset": "ecoli2",
+        "model": "CA",
+        "split": "test",
+        "macro_f1": 0.7736207989854154,
+        "minority_f1": 0.631578947368421,
+        "gmean": 0.8141195843820603,
+        "balanced_accuracy": 0.8168604651162791,
+        "minority_recall": 0.75,
+        "auroc": 0.9069767441860466
+      },
+      {
+        "dataset": "ecoli2",
+        "model": "CC",
+        "split": "test",
+        "macro_f1": 0.7736207989854154,
+        "minority_f1": 0.631578947368421,
+        "gmean": 0.8141195843820603,
+        "balanced_accuracy": 0.8168604651162791,
+        "minority_recall": 0.75,
+        "auroc": 0.9069767441860466
+      },
+      {
+        "dataset": "ecoli2",
+        "model": "best_map_A1_comp",
+        "split": "test",
+        "macro_f1": 0.7976190476190477,
+        "minority_f1": 0.6666666666666666,
+        "gmean": 0.8247621221537365,
+        "balanced_accuracy": 0.8284883720930232,
+        "minority_recall": 0.75,
+        "auroc": 0.9244186046511628
+      },
+      {
+        "dataset": "ecoli2",
+        "model": "SP_supported_pressure",
+        "split": "test",
+        "macro_f1": 0.7976190476190477,
+        "minority_f1": 0.6666666666666666,
+        "gmean": 0.8247621221537365,
+        "balanced_accuracy": 0.8284883720930232,
+        "minority_recall": 0.75,
+        "auroc": 0.9186046511627907
+      }
+    ],
+    "vehicle0": [
+      {
+        "dataset": "vehicle0",
+        "model": "CW",
+        "split": "test",
+        "macro_f1": 0.691747572815534,
+        "minority_f1": 0.5,
+        "gmean": 0.6125828368137348,
+        "balanced_accuracy": 0.6690721649484537,
+        "minority_recall": 0.4,
+        "auroc": 0.9243986254295532
+      },
+      {
+        "dataset": "vehicle0",
+        "model": "CA",
+        "split": "test",
+        "macro_f1": 0.7423935091277891,
+        "minority_f1": 0.5882352941176471,
+        "gmean": 0.6848884324825859,
+        "balanced_accuracy": 0.7190721649484536,
+        "minority_recall": 0.5,
+        "auroc": 0.9264604810996563
+      },
+      {
+        "dataset": "vehicle0",
+        "model": "CC",
+        "split": "test",
+        "macro_f1": 0.726078431372549,
+        "minority_f1": 0.56,
+        "gmean": 0.6616650869474854,
+        "balanced_accuracy": 0.7024054982817869,
+        "minority_recall": 0.4666666666666667,
+        "auroc": 0.9268041237113401
+      },
+      {
+        "dataset": "vehicle0",
+        "model": "best_map_A2_ambiguity",
+        "split": "test",
+        "macro_f1": 0.7423935091277891,
+        "minority_f1": 0.5882352941176471,
+        "gmean": 0.6848884324825859,
+        "balanced_accuracy": 0.7190721649484536,
+        "minority_recall": 0.5,
+        "auroc": 0.9223367697594502
+      },
+      {
+        "dataset": "vehicle0",
+        "model": "SP_supported_pressure",
+        "split": "test",
+        "macro_f1": 0.6701298701298701,
+        "minority_f1": 0.45454545454545453,
+        "gmean": 0.5653208194167091,
+        "balanced_accuracy": 0.6460481099656358,
+        "minority_recall": 0.3333333333333333,
+        "auroc": 0.9192439862542956
+      }
+    ]
+  },
+  "mapping_comparison": {
+    "diabetes": {
+      "cw_baseline": {
+        "dataset": "diabetes",
+        "model": "CW",
+        "split": "test",
+        "macro_f1": 0.39267015706806285,
+        "minority_f1": 0.0,
+        "gmean": 0.0,
+        "balanced_accuracy": 0.5,
+        "minority_recall": 0.0,
+        "auroc": 0.5053658536585366
+      },
+      "mapping_test_screen": [
+        {
+          "mapping": "A1_comp",
+          "distribution": {
+            "n": 85,
+            "mean": 0.3086380544147603,
+            "median": 0.20716185826780575,
+            "std": 0.2974816101022726,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "test_metrics": {
+            "dataset": "diabetes",
+            "model": "A1_comp",
+            "split": "test",
+            "macro_f1": 0.39267015706806285,
+            "minority_f1": 0.0,
+            "gmean": 0.0,
+            "balanced_accuracy": 0.5,
+            "minority_recall": 0.0,
+            "auroc": 0.5034146341463415
+          },
+          "corr_muA_pearson": 0.5000976181751903
+        },
+        {
+          "mapping": "A2_ambiguity",
+          "distribution": {
+            "n": 85,
+            "mean": 0.37402648840086644,
+            "median": 0.366717187362361,
+            "std": 0.3295693751626272,
+            "min": 0.0,
+            "max": 0.9670325418097863
+          },
+          "test_metrics": {
+            "dataset": "diabetes",
+            "model": "A2_ambiguity",
+            "split": "test",
+            "macro_f1": 0.418546365914787,
+            "minority_f1": 0.047619047619047616,
+            "gmean": 0.15617376188860607,
+            "balanced_accuracy": 0.5121951219512195,
+            "minority_recall": 0.024390243902439025,
+            "auroc": 0.49365853658536585
+          },
+          "corr_muA_pearson": 0.9794921122754692
+        },
+        {
+          "mapping": "A3_parabolic",
+          "distribution": {
+            "n": 85,
+            "mean": 0.4995411897311649,
+            "median": 0.598952879217761,
+            "std": 0.4016508553293969,
+            "min": 0.0,
+            "max": 0.9989131467004765
+          },
+          "test_metrics": {
+            "dataset": "diabetes",
+            "model": "A3_parabolic",
+            "split": "test",
+            "macro_f1": 0.418546365914787,
+            "minority_f1": 0.047619047619047616,
+            "gmean": 0.15617376188860607,
+            "balanced_accuracy": 0.5121951219512195,
+            "minority_recall": 0.024390243902439025,
+            "auroc": 0.4845528455284553
+          },
+          "corr_muA_pearson": 1.0
+        },
+        {
+          "mapping": "A4_sqrt",
+          "distribution": {
+            "n": 85,
+            "mean": 0.2800154100227171,
+            "median": 0.3869602302620261,
+            "std": 0.21558447899280878,
+            "min": 0.0,
+            "max": 0.49972821280684077
+          },
+          "test_metrics": {
+            "dataset": "diabetes",
+            "model": "A4_sqrt",
+            "split": "test",
+            "macro_f1": 0.418546365914787,
+            "minority_f1": 0.047619047619047616,
+            "gmean": 0.15617376188860607,
+            "balanced_accuracy": 0.5121951219512195,
+            "minority_recall": 0.024390243902439025,
+            "auroc": 0.48975609756097555
+          },
+          "corr_muA_pearson": 0.9867570837966234
+        },
+        {
+          "mapping": "bounded_odds",
+          "distribution": {
+            "n": 85,
+            "mean": 0.30863805342265654,
+            "median": 0.20716185757730254,
+            "std": 0.29748160913757093,
+            "min": 0.0,
+            "max": 0.999999996878581
+          },
+          "test_metrics": {
+            "dataset": "diabetes",
+            "model": "bounded_odds",
+            "split": "test",
+            "macro_f1": 0.39267015706806285,
+            "minority_f1": 0.0,
+            "gmean": 0.0,
+            "balanced_accuracy": 0.5,
+            "minority_recall": 0.0,
+            "auroc": 0.5034146341463415
+          },
+          "corr_muA_pearson": 0.5000976182038669
+        },
+        {
+          "mapping": "balance",
+          "distribution": {
+            "n": 85,
+            "mean": 0.3740264904346351,
+            "median": 0.3667171892768205,
+            "std": 0.329569374067351,
+            "min": 2.965560241818821e-09,
+            "max": 0.9670325419216705
+          },
+          "test_metrics": {
+            "dataset": "diabetes",
+            "model": "balance",
+            "split": "test",
+            "macro_f1": 0.418546365914787,
+            "minority_f1": 0.047619047619047616,
+            "gmean": 0.15617376188860607,
+            "balanced_accuracy": 0.5121951219512195,
+            "minority_recall": 0.024390243902439025,
+            "auroc": 0.49365853658536585
+          },
+          "corr_muA_pearson": 0.9794921122572141
+        }
+      ]
+    },
+    "ecoli2": {
+      "cw_baseline": {
+        "dataset": "ecoli2",
+        "model": "CW",
+        "split": "test",
+        "macro_f1": 0.8045977011494252,
+        "minority_f1": 0.6666666666666666,
+        "gmean": 0.7719651757418463,
+        "balanced_accuracy": 0.7892441860465116,
+        "minority_recall": 0.625,
+        "auroc": 0.9302325581395349
+      },
+      "mapping_test_screen": [
+        {
+          "mapping": "A1_comp",
+          "distribution": {
+            "n": 13,
+            "mean": 0.44236963081394737,
+            "median": 0.5901159686456003,
+            "std": 0.33658501074354297,
+            "min": 0.0,
+            "max": 0.8201578708083934
+          },
+          "test_metrics": {
+            "dataset": "ecoli2",
+            "model": "A1_comp",
+            "split": "test",
+            "macro_f1": 0.7976190476190477,
+            "minority_f1": 0.6666666666666666,
+            "gmean": 0.8247621221537365,
+            "balanced_accuracy": 0.8284883720930232,
+            "minority_recall": 0.75,
+            "auroc": 0.9244186046511628
+          },
+          "corr_muA_pearson": 0.691323634257142
+        },
+        {
+          "mapping": "A2_ambiguity",
+          "distribution": {
+            "n": 13,
+            "mean": 0.36555919689486,
+            "median": 0.3804788429712418,
+            "std": 0.25283944113668577,
+            "min": 0.0,
+            "max": 0.8197680627087993
+          },
+          "test_metrics": {
+            "dataset": "ecoli2",
+            "model": "A2_ambiguity",
+            "split": "test",
+            "macro_f1": 0.7976190476190477,
+            "minority_f1": 0.6666666666666666,
+            "gmean": 0.8247621221537365,
+            "balanced_accuracy": 0.8284883720930232,
+            "minority_recall": 0.75,
+            "auroc": 0.9127906976744187
+          },
+          "corr_muA_pearson": 0.9681320931992128
+        },
+        {
+          "mapping": "A3_parabolic",
+          "distribution": {
+            "n": 13,
+            "mean": 0.5335570843609934,
+            "median": 0.6161935359937487,
+            "std": 0.3186700366138656,
+            "min": 0.0,
+            "max": 0.9675164487802607
+          },
+          "test_metrics": {
+            "dataset": "ecoli2",
+            "model": "A3_parabolic",
+            "split": "test",
+            "macro_f1": 0.7736207989854154,
+            "minority_f1": 0.631578947368421,
+            "gmean": 0.8141195843820603,
+            "balanced_accuracy": 0.8168604651162791,
+            "minority_recall": 0.75,
+            "auroc": 0.9069767441860466
+          },
+          "corr_muA_pearson": 1.0
+        },
+        {
+          "mapping": "A4_sqrt",
+          "distribution": {
+            "n": 13,
+            "mean": 0.31872204964331485,
+            "median": 0.39248997948793185,
+            "std": 0.1783410389153676,
+            "min": 0.0,
+            "max": 0.4918120699973367
+          },
+          "test_metrics": {
+            "dataset": "ecoli2",
+            "model": "A4_sqrt",
+            "split": "test",
+            "macro_f1": 0.7736207989854154,
+            "minority_f1": 0.631578947368421,
+            "gmean": 0.8141195843820603,
+            "balanced_accuracy": 0.8168604651162791,
+            "minority_recall": 0.75,
+            "auroc": 0.9156976744186047
+          },
+          "corr_muA_pearson": 0.9791655673760911
+        },
+        {
+          "mapping": "bounded_odds",
+          "distribution": {
+            "n": 13,
+            "mean": 0.4423696293727111,
+            "median": 0.5901159667379777,
+            "std": 0.3365850096485763,
+            "min": 0.0,
+            "max": 0.8201578680323935
+          },
+          "test_metrics": {
+            "dataset": "ecoli2",
+            "model": "bounded_odds",
+            "split": "test",
+            "macro_f1": 0.7976190476190477,
+            "minority_f1": 0.6666666666666666,
+            "gmean": 0.8247621221537365,
+            "balanced_accuracy": 0.8284883720930232,
+            "minority_recall": 0.75,
+            "auroc": 0.9244186046511628
+          },
+          "corr_muA_pearson": 0.6913236342915976
+        },
+        {
+          "mapping": "balance",
+          "distribution": {
+            "n": 13,
+            "mean": 0.3655591990370196,
+            "median": 0.380478844914381,
+            "std": 0.25283944022318616,
+            "min": 3.2732787591527313e-09,
+            "max": 0.8197680632914213
+          },
+          "test_metrics": {
+            "dataset": "ecoli2",
+            "model": "balance",
+            "split": "test",
+            "macro_f1": 0.7976190476190477,
+            "minority_f1": 0.6666666666666666,
+            "gmean": 0.8247621221537365,
+            "balanced_accuracy": 0.8284883720930232,
+            "minority_recall": 0.75,
+            "auroc": 0.9127906976744187
+          },
+          "corr_muA_pearson": 0.9681320931554106
+        }
+      ]
+    },
+    "vehicle0": {
+      "cw_baseline": {
+        "dataset": "vehicle0",
+        "model": "CW",
+        "split": "test",
+        "macro_f1": 0.691747572815534,
+        "minority_f1": 0.5,
+        "gmean": 0.6125828368137348,
+        "balanced_accuracy": 0.6690721649484537,
+        "minority_recall": 0.4,
+        "auroc": 0.9243986254295532
+      },
+      "mapping_test_screen": [
+        {
+          "mapping": "A1_comp",
+          "distribution": {
+            "n": 59,
+            "mean": 0.386526401880237,
+            "median": 0.3681649353666364,
+            "std": 0.18051319661560455,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "test_metrics": {
+            "dataset": "vehicle0",
+            "model": "A1_comp",
+            "split": "test",
+            "macro_f1": 0.6997635933806146,
+            "minority_f1": 0.5106382978723404,
+            "gmean": 0.6159394802242905,
+            "balanced_accuracy": 0.6742268041237114,
+            "minority_recall": 0.4,
+            "auroc": 0.9209621993127147
+          },
+          "corr_muA_pearson": 0.37715950475144483
+        },
+        {
+          "mapping": "A2_ambiguity",
+          "distribution": {
+            "n": 59,
+            "mean": 0.6358943178126655,
+            "median": 0.7175920859697937,
+            "std": 0.22197328372895092,
+            "min": 0.0,
+            "max": 0.9884497927818718
+          },
+          "test_metrics": {
+            "dataset": "vehicle0",
+            "model": "A2_ambiguity",
+            "split": "test",
+            "macro_f1": 0.7423935091277891,
+            "minority_f1": 0.5882352941176471,
+            "gmean": 0.6848884324825859,
+            "balanced_accuracy": 0.7190721649484536,
+            "minority_recall": 0.5,
+            "auroc": 0.9223367697594502
+          },
+          "corr_muA_pearson": 0.9598670076396325
+        },
+        {
+          "mapping": "A3_parabolic",
+          "distribution": {
+            "n": 59,
+            "mean": 0.8181549135094826,
+            "median": 0.9202457700931076,
+            "std": 0.21090332245314927,
+            "min": 0.0,
+            "max": 0.9998665927132183
+          },
+          "test_metrics": {
+            "dataset": "vehicle0",
+            "model": "A3_parabolic",
+            "split": "test",
+            "macro_f1": 0.7423935091277891,
+            "minority_f1": 0.5882352941176471,
+            "gmean": 0.6848884324825859,
+            "balanced_accuracy": 0.7190721649484536,
+            "minority_recall": 0.5,
+            "auroc": 0.9264604810996563
+          },
+          "corr_muA_pearson": 1.0
+        },
+        {
+          "mapping": "A4_sqrt",
+          "distribution": {
+            "n": 59,
+            "mean": 0.4427021151946784,
+            "median": 0.47964720631238633,
+            "std": 0.09248548848077943,
+            "min": 0.0,
+            "max": 0.49996664706588634
+          },
+          "test_metrics": {
+            "dataset": "vehicle0",
+            "model": "A4_sqrt",
+            "split": "test",
+            "macro_f1": 0.6894205209994684,
+            "minority_f1": 0.4888888888888889,
+            "gmean": 0.5929134774590449,
+            "balanced_accuracy": 0.6627147766323024,
+            "minority_recall": 0.36666666666666664,
+            "auroc": 0.9216494845360825
+          },
+          "corr_muA_pearson": 0.9556346206876998
+        },
+        {
+          "mapping": "bounded_odds",
+          "distribution": {
+            "n": 59,
+            "mean": 0.3865264006277038,
+            "median": 0.3681649341596839,
+            "std": 0.18051319602363658,
+            "min": 0.0,
+            "max": 0.999999996503163
+          },
+          "test_metrics": {
+            "dataset": "vehicle0",
+            "model": "bounded_odds",
+            "split": "test",
+            "macro_f1": 0.6997635933806146,
+            "minority_f1": 0.5106382978723404,
+            "gmean": 0.6159394802242905,
+            "balanced_accuracy": 0.6742268041237114,
+            "minority_recall": 0.4,
+            "auroc": 0.9209621993127147
+          },
+          "corr_muA_pearson": 0.3771595048833698
+        },
+        {
+          "mapping": "balance",
+          "distribution": {
+            "n": 59,
+            "mean": 0.6358943189993963,
+            "median": 0.717592086817294,
+            "std": 0.2219732829885191,
+            "min": 3.3010109090625406e-09,
+            "max": 0.9884497928198168
+          },
+          "test_metrics": {
+            "dataset": "vehicle0",
+            "model": "balance",
+            "split": "test",
+            "macro_f1": 0.7423935091277891,
+            "minority_f1": 0.5882352941176471,
+            "gmean": 0.6848884324825859,
+            "balanced_accuracy": 0.7190721649484536,
+            "minority_recall": 0.5,
+            "auroc": 0.9223367697594502
+          },
+          "corr_muA_pearson": 0.9598670076152785
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "dataset": "ecoli2",
+  "config": {
+    "scaling": "none",
+    "purity_threshold": 0.95,
+    "c1": 100.0,
+    "c2": 10.0,
+    "min_ball_count": 2,
+    "seed": 42,
+    "train_n": 285,
+    "test_n": 51,
+    "note": "Trained on train+validation; evaluated once on untouched test."
+  },
+  "deltas_test": {
+    "CW_minus_clean": {
+      "accuracy": -0.019607843137254943,
+      "balanced_accuracy": -0.011627906976744096,
+      "macro_f1": -0.024885936557526578,
+      "minority_recall": 0.0,
+      "gmean": -0.011495254611874062,
+      "auroc": 0.0174418604651162
+    },
+    "R_minus_clean": {
+      "accuracy": 0.0,
+      "balanced_accuracy": 0.0,
+      "macro_f1": 0.0,
+      "minority_recall": 0.0,
+      "gmean": 0.0,
+      "auroc": 0.0
+    },
+    "CR_minus_clean": {
+      "accuracy": -0.019607843137254943,
+      "balanced_accuracy": -0.011627906976744096,
+      "macro_f1": -0.024885936557526578,
+      "minority_recall": 0.0,
+      "gmean": -0.011495254611874062,
+      "auroc": 0.0174418604651162
+    },
+    "CR_minus_CW": {
+      "accuracy": 0.0,
+      "balanced_accuracy": 0.0,
+      "macro_f1": 0.0,
+      "minority_recall": 0.0,
+      "gmean": 0.0,
+      "auroc": 0.0
+    },
+    "CR_minus_R": {
+      "accuracy": -0.019607843137254943,
+      "balanced_accuracy": -0.011627906976744096,
+      "macro_f1": -0.024885936557526578,
+      "minority_recall": 0.0,
+      "gmean": -0.011495254611874062,
+      "auroc": 0.0174418604651162
+    }
+  }
+}

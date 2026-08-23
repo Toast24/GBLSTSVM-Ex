@@ -1,0 +1,156 @@
+[
+  {
+    "scenario": "balanced_100_100",
+    "n_minority": 100,
+    "n_majority": 100,
+    "n_balls": 22,
+    "radius_scale": 1.1620595322906815,
+    "purity_distribution": {
+      "min": 0.96875,
+      "max": 1.0,
+      "mean": 0.9985795454545454,
+      "std": 0.006509340475789546,
+      "q50": 1.0
+    },
+    "radius_distribution": {
+      "min": 0.28993092423793854,
+      "max": 1.8793920185090311,
+      "mean": 1.0799298467192608,
+      "std": 0.475279585906186,
+      "q50": 1.1620595322906815
+    },
+    "reliability_distribution": {
+      "min": 0.924955340687621,
+      "max": 1.0,
+      "mean": 0.9965888791221645,
+      "std": 0.015631719627324975,
+      "q50": 1.0
+    },
+    "fit_runtime_sec": 3.3573140000225976,
+    "metrics": {
+      "r_gblstsvm": {
+        "accuracy": 0.63,
+        "balanced_accuracy": 0.63,
+        "macro_f1": 0.5713127099988413,
+        "minority_recall": 0.26,
+        "predict_runtime_sec": 1.6200006939470768e-05
+      },
+      "baseline_gblstsvm": {
+        "accuracy": 0.63,
+        "balanced_accuracy": 0.63,
+        "macro_f1": 0.5713127099988413,
+        "minority_recall": 0.26,
+        "predict_runtime_sec": 1.7200014553964138e-05
+      }
+    },
+    "reliability_variants": {
+      "purity_only": {
+        "reliability_mean": 0.9986505681818181,
+        "metrics": {
+          "accuracy": 0.63,
+          "balanced_accuracy": 0.63,
+          "macro_f1": 0.5713127099988413,
+          "minority_recall": 0.26,
+          "predict_runtime_sec": 1.3899989426136017e-05
+        }
+      },
+      "radius_impurity_only": {
+        "reliability_mean": 0.9978718048416478,
+        "metrics": {
+          "accuracy": 0.63,
+          "balanced_accuracy": 0.63,
+          "macro_f1": 0.5713127099988413,
+          "minority_recall": 0.26,
+          "predict_runtime_sec": 1.309998333454132e-05
+        }
+      },
+      "full": {
+        "reliability_mean": 0.9965888791221645,
+        "metrics": {
+          "accuracy": 0.63,
+          "balanced_accuracy": 0.63,
+          "macro_f1": 0.5713127099988413,
+          "minority_recall": 0.26,
+          "predict_runtime_sec": 2.7500034775584936e-05
+        }
+      }
+    }
+  },
+  {
+    "scenario": "imbalanced_50_150",
+    "n_minority": 50,
+    "n_majority": 150,
+    "n_balls": 15,
+    "radius_scale": 0.9022011143326694,
+    "purity_distribution": {
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q50": 1.0
+    },
+    "radius_distribution": {
+      "min": 0.49696633540490504,
+      "max": 2.283827450955648,
+      "mean": 1.1134586750542081,
+      "std": 0.5101868797731114,
+      "q50": 0.9022011143326694
+    },
+    "reliability_distribution": {
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q50": 1.0
+    },
+    "fit_runtime_sec": 0.1169841000228189,
+    "metrics": {
+      "r_gblstsvm": {
+        "accuracy": 0.82,
+        "balanced_accuracy": 0.7666666666666666,
+        "macro_f1": 0.7631267272009474,
+        "minority_recall": 0.66,
+        "predict_runtime_sec": 1.5099998563528061e-05
+      },
+      "baseline_gblstsvm": {
+        "accuracy": 0.82,
+        "balanced_accuracy": 0.7666666666666666,
+        "macro_f1": 0.7631267272009474,
+        "minority_recall": 0.66,
+        "predict_runtime_sec": 1.5099998563528061e-05
+      }
+    },
+    "reliability_variants": {
+      "purity_only": {
+        "reliability_mean": 1.0,
+        "metrics": {
+          "accuracy": 0.82,
+          "balanced_accuracy": 0.7666666666666666,
+          "macro_f1": 0.7631267272009474,
+          "minority_recall": 0.66,
+          "predict_runtime_sec": 1.8400023691356182e-05
+        }
+      },
+      "radius_impurity_only": {
+        "reliability_mean": 1.0,
+        "metrics": {
+          "accuracy": 0.82,
+          "balanced_accuracy": 0.7666666666666666,
+          "macro_f1": 0.7631267272009474,
+          "minority_recall": 0.66,
+          "predict_runtime_sec": 1.5600002370774746e-05
+        }
+      },
+      "full": {
+        "reliability_mean": 1.0,
+        "metrics": {
+          "accuracy": 0.82,
+          "balanced_accuracy": 0.7666666666666666,
+          "macro_f1": 0.7631267272009474,
+          "minority_recall": 0.66,
+          "predict_runtime_sec": 1.4899997040629387e-05
+        }
+      }
+    }
+  }
+]
