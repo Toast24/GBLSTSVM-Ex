@@ -1,0 +1,827 @@
+{
+  "protocol": {
+    "purity_threshold": 0.95,
+    "min_samples_per_ball": 1,
+    "min_ball_count_not_applied": 2,
+    "datasets": [
+      "diabetes",
+      "ecoli2",
+      "vehicle0"
+    ],
+    "seeds": [
+      42,
+      0,
+      1
+    ]
+  },
+  "aggregated_summary": {
+    "n_singleton_children": 896,
+    "n_predicted_outliers": 147,
+    "n_legitimate_singletons": 73,
+    "n_undefined_hd2": 676,
+    "n_samples_affected": 896,
+    "n_unique_outlier_samples": 147,
+    "n_unique_legitimate_samples": 73,
+    "class_distribution_all": {
+      "+1": 434,
+      "-1": 462
+    },
+    "class_distribution_outliers": {
+      "+1": 75,
+      "-1": 72
+    },
+    "class_distribution_legitimate": {
+      "+1": 33,
+      "-1": 40
+    },
+    "edge_case_counts": {
+      "no_second_heterogeneous": 676,
+      "two_sample_parent": 484
+    }
+  },
+  "per_run": [
+    {
+      "dataset": "diabetes",
+      "seed": 42,
+      "summary": {
+        "n_singleton_children": 211,
+        "n_predicted_outliers": 32,
+        "n_legitimate_singletons": 17,
+        "n_undefined_hd2": 162,
+        "n_samples_affected": 211,
+        "n_unique_outlier_samples": 32,
+        "n_unique_legitimate_samples": 17,
+        "class_distribution_all": {
+          "+1": 103,
+          "-1": 108
+        },
+        "class_distribution_outliers": {
+          "+1": 21,
+          "-1": 11
+        },
+        "class_distribution_legitimate": {
+          "+1": 10,
+          "-1": 7
+        },
+        "edge_case_counts": {
+          "no_second_heterogeneous": 162,
+          "two_sample_parent": 112
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 162,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "diabetes",
+            "seed": 42,
+            "split_id": 9,
+            "parent_index_in_queue": 0,
+            "child_slot": "second",
+            "parent_num_samples": 7,
+            "parent_purity": 0.8571428571428571,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 329,
+            "singleton_label": -1.0,
+            "hd1": 38.00125630818013,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "no_second_heterogeneous",
+            "parent_sample_indices": "20,69,72,183,314,329,511"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 112,
+          "example": {
+            "dataset": "diabetes",
+            "seed": 42,
+            "split_id": 32,
+            "parent_index_in_queue": 4,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 400,
+            "singleton_label": -1.0,
+            "hd1": 5.745013838103438,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "355,400"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "diabetes",
+      "seed": 0,
+      "summary": {
+        "n_singleton_children": 206,
+        "n_predicted_outliers": 26,
+        "n_legitimate_singletons": 14,
+        "n_undefined_hd2": 166,
+        "n_samples_affected": 206,
+        "n_unique_outlier_samples": 26,
+        "n_unique_legitimate_samples": 14,
+        "class_distribution_all": {
+          "+1": 101,
+          "-1": 105
+        },
+        "class_distribution_outliers": {
+          "+1": 16,
+          "-1": 10
+        },
+        "class_distribution_legitimate": {
+          "+1": 6,
+          "-1": 8
+        },
+        "edge_case_counts": {
+          "no_second_heterogeneous": 166,
+          "two_sample_parent": 120
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 166,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "diabetes",
+            "seed": 0,
+            "split_id": 9,
+            "parent_index_in_queue": 0,
+            "child_slot": "second",
+            "parent_num_samples": 4,
+            "parent_purity": 0.75,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 427,
+            "singleton_label": -1.0,
+            "hd1": 32.27655695702377,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "no_second_heterogeneous",
+            "parent_sample_indices": "71,427,431,453"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 120,
+          "example": {
+            "dataset": "diabetes",
+            "seed": 0,
+            "split_id": 40,
+            "parent_index_in_queue": 8,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 463,
+            "singleton_label": 1.0,
+            "hd1": 5.385900203308635,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "36,463"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "diabetes",
+      "seed": 1,
+      "summary": {
+        "n_singleton_children": 214,
+        "n_predicted_outliers": 31,
+        "n_legitimate_singletons": 18,
+        "n_undefined_hd2": 165,
+        "n_samples_affected": 214,
+        "n_unique_outlier_samples": 31,
+        "n_unique_legitimate_samples": 18,
+        "class_distribution_all": {
+          "+1": 105,
+          "-1": 109
+        },
+        "class_distribution_outliers": {
+          "+1": 16,
+          "-1": 15
+        },
+        "class_distribution_legitimate": {
+          "+1": 8,
+          "-1": 10
+        },
+        "edge_case_counts": {
+          "no_second_heterogeneous": 165,
+          "two_sample_parent": 122
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 165,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "diabetes",
+            "seed": 1,
+            "split_id": 9,
+            "parent_index_in_queue": 0,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 437,
+            "singleton_label": 1.0,
+            "hd1": 16.69263217710137,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "57,437"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 122,
+          "example": {
+            "dataset": "diabetes",
+            "seed": 1,
+            "split_id": 9,
+            "parent_index_in_queue": 0,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 437,
+            "singleton_label": 1.0,
+            "hd1": 16.69263217710137,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "57,437"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 42,
+      "summary": {
+        "n_singleton_children": 18,
+        "n_predicted_outliers": 2,
+        "n_legitimate_singletons": 0,
+        "n_undefined_hd2": 16,
+        "n_samples_affected": 18,
+        "n_unique_outlier_samples": 2,
+        "n_unique_legitimate_samples": 0,
+        "class_distribution_all": {
+          "+1": 9,
+          "-1": 9
+        },
+        "class_distribution_outliers": {
+          "+1": 1,
+          "-1": 1
+        },
+        "class_distribution_legitimate": {},
+        "edge_case_counts": {
+          "no_second_heterogeneous": 16,
+          "two_sample_parent": 12
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 16,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "ecoli2",
+            "seed": 42,
+            "split_id": 12,
+            "parent_index_in_queue": 5,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 99,
+            "singleton_label": -1.0,
+            "hd1": 0.10723805294763607,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "55,99"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 12,
+          "example": {
+            "dataset": "ecoli2",
+            "seed": 42,
+            "split_id": 12,
+            "parent_index_in_queue": 5,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 99,
+            "singleton_label": -1.0,
+            "hd1": 0.10723805294763607,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "55,99"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 0,
+      "summary": {
+        "n_singleton_children": 11,
+        "n_predicted_outliers": 2,
+        "n_legitimate_singletons": 0,
+        "n_undefined_hd2": 9,
+        "n_samples_affected": 11,
+        "n_unique_outlier_samples": 2,
+        "n_unique_legitimate_samples": 0,
+        "class_distribution_all": {
+          "+1": 5,
+          "-1": 6
+        },
+        "class_distribution_outliers": {
+          "-1": 2
+        },
+        "class_distribution_legitimate": {},
+        "edge_case_counts": {
+          "no_second_heterogeneous": 9,
+          "two_sample_parent": 8
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 9,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "ecoli2",
+            "seed": 0,
+            "split_id": 10,
+            "parent_index_in_queue": 6,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 158,
+            "singleton_label": -1.0,
+            "hd1": 0.2310844001658268,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "93,158"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 8,
+          "example": {
+            "dataset": "ecoli2",
+            "seed": 0,
+            "split_id": 10,
+            "parent_index_in_queue": 6,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 158,
+            "singleton_label": -1.0,
+            "hd1": 0.2310844001658268,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "93,158"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 1,
+      "summary": {
+        "n_singleton_children": 11,
+        "n_predicted_outliers": 4,
+        "n_legitimate_singletons": 1,
+        "n_undefined_hd2": 6,
+        "n_samples_affected": 11,
+        "n_unique_outlier_samples": 4,
+        "n_unique_legitimate_samples": 1,
+        "class_distribution_all": {
+          "+1": 6,
+          "-1": 5
+        },
+        "class_distribution_outliers": {
+          "+1": 2,
+          "-1": 2
+        },
+        "class_distribution_legitimate": {
+          "-1": 1
+        },
+        "edge_case_counts": {
+          "no_second_heterogeneous": 6,
+          "two_sample_parent": 4
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 6,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "ecoli2",
+            "seed": 1,
+            "split_id": 14,
+            "parent_index_in_queue": 9,
+            "child_slot": "second",
+            "parent_num_samples": 5,
+            "parent_purity": 0.8,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 218,
+            "singleton_label": 1.0,
+            "hd1": 0.2588435821108957,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "no_second_heterogeneous",
+            "parent_sample_indices": "3,6,101,108,218"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 4,
+          "example": {
+            "dataset": "ecoli2",
+            "seed": 1,
+            "split_id": 26,
+            "parent_index_in_queue": 23,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 182,
+            "singleton_label": 1.0,
+            "hd1": 0.16217274740226859,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "182,196"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "summary": {
+        "n_singleton_children": 67,
+        "n_predicted_outliers": 15,
+        "n_legitimate_singletons": 5,
+        "n_undefined_hd2": 47,
+        "n_samples_affected": 67,
+        "n_unique_outlier_samples": 15,
+        "n_unique_legitimate_samples": 5,
+        "class_distribution_all": {
+          "+1": 30,
+          "-1": 37
+        },
+        "class_distribution_outliers": {
+          "+1": 8,
+          "-1": 7
+        },
+        "class_distribution_legitimate": {
+          "+1": 2,
+          "-1": 3
+        },
+        "edge_case_counts": {
+          "no_second_heterogeneous": 47,
+          "two_sample_parent": 32
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 47,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "vehicle0",
+            "seed": 42,
+            "split_id": 23,
+            "parent_index_in_queue": 6,
+            "child_slot": "first",
+            "parent_num_samples": 4,
+            "parent_purity": 0.75,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 60,
+            "singleton_label": -1.0,
+            "hd1": 25.436194683953808,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "no_second_heterogeneous",
+            "parent_sample_indices": "60,246,371,530"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 32,
+          "example": {
+            "dataset": "vehicle0",
+            "seed": 42,
+            "split_id": 33,
+            "parent_index_in_queue": 9,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 323,
+            "singleton_label": 1.0,
+            "hd1": 26.758176320519304,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "149,323"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "summary": {
+        "n_singleton_children": 83,
+        "n_predicted_outliers": 20,
+        "n_legitimate_singletons": 9,
+        "n_undefined_hd2": 54,
+        "n_samples_affected": 83,
+        "n_unique_outlier_samples": 20,
+        "n_unique_legitimate_samples": 9,
+        "class_distribution_all": {
+          "+1": 40,
+          "-1": 43
+        },
+        "class_distribution_outliers": {
+          "+1": 8,
+          "-1": 12
+        },
+        "class_distribution_legitimate": {
+          "+1": 3,
+          "-1": 6
+        },
+        "edge_case_counts": {
+          "no_second_heterogeneous": 54,
+          "two_sample_parent": 40
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 54,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "vehicle0",
+            "seed": 0,
+            "split_id": 18,
+            "parent_index_in_queue": 5,
+            "child_slot": "first",
+            "parent_num_samples": 3,
+            "parent_purity": 0.6666666666666666,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 445,
+            "singleton_label": -1.0,
+            "hd1": 29.614185789921695,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "no_second_heterogeneous",
+            "parent_sample_indices": "304,445,485"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 40,
+          "example": {
+            "dataset": "vehicle0",
+            "seed": 0,
+            "split_id": 35,
+            "parent_index_in_queue": 12,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 317,
+            "singleton_label": 1.0,
+            "hd1": 28.495613697550013,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "164,317"
+          }
+        }
+      }
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "summary": {
+        "n_singleton_children": 75,
+        "n_predicted_outliers": 15,
+        "n_legitimate_singletons": 9,
+        "n_undefined_hd2": 51,
+        "n_samples_affected": 75,
+        "n_unique_outlier_samples": 15,
+        "n_unique_legitimate_samples": 9,
+        "class_distribution_all": {
+          "+1": 35,
+          "-1": 40
+        },
+        "class_distribution_outliers": {
+          "+1": 3,
+          "-1": 12
+        },
+        "class_distribution_legitimate": {
+          "+1": 4,
+          "-1": 5
+        },
+        "edge_case_counts": {
+          "no_second_heterogeneous": 51,
+          "two_sample_parent": 34
+        }
+      },
+      "edge_cases": {
+        "no_second_heterogeneous": {
+          "count": 51,
+          "all_undefined_hd2": true,
+          "example": {
+            "dataset": "vehicle0",
+            "seed": 1,
+            "split_id": 16,
+            "parent_index_in_queue": 4,
+            "child_slot": "first",
+            "parent_num_samples": 3,
+            "parent_purity": 0.6666666666666666,
+            "parent_majority_label": -1.0,
+            "singleton_sample_index": 176,
+            "singleton_label": -1.0,
+            "hd1": 39.87480407475377,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "no_second_heterogeneous",
+            "parent_sample_indices": "150,176,331"
+          }
+        },
+        "duplicate_hd1_distance": {
+          "count": 0,
+          "example": null
+        },
+        "singleton_parent": {
+          "count": 0,
+          "example": null
+        },
+        "two_sample_parent": {
+          "count": 34,
+          "example": {
+            "dataset": "vehicle0",
+            "seed": 1,
+            "split_id": 44,
+            "parent_index_in_queue": 16,
+            "child_slot": "first",
+            "parent_num_samples": 2,
+            "parent_purity": 0.5,
+            "parent_majority_label": 1.0,
+            "singleton_sample_index": 150,
+            "singleton_label": 1.0,
+            "hd1": 17.635192088548397,
+            "hd2": null,
+            "s_size": 0,
+            "classification": "UNDEFINED_HD2",
+            "edge_flags": "two_sample_parent|no_second_heterogeneous",
+            "parent_sample_indices": "150,331"
+          }
+        }
+      }
+    }
+  ],
+  "edge_case_verification": {
+    "no_second_heterogeneous": {
+      "count": 676,
+      "all_undefined_hd2": true,
+      "example": {
+        "dataset": "diabetes",
+        "seed": 42,
+        "split_id": 9,
+        "parent_index_in_queue": 0,
+        "child_slot": "second",
+        "parent_num_samples": 7,
+        "parent_purity": 0.8571428571428571,
+        "parent_majority_label": -1.0,
+        "singleton_sample_index": 329,
+        "singleton_label": -1.0,
+        "hd1": 38.00125630818013,
+        "hd2": null,
+        "s_size": 0,
+        "classification": "UNDEFINED_HD2",
+        "edge_flags": "no_second_heterogeneous",
+        "parent_sample_indices": "20,69,72,183,314,329,511"
+      }
+    },
+    "duplicate_hd1_distance": {
+      "count": 0,
+      "example": null
+    },
+    "singleton_parent": {
+      "count": 0,
+      "example": null
+    },
+    "two_sample_parent": {
+      "count": 484,
+      "example": {
+        "dataset": "diabetes",
+        "seed": 42,
+        "split_id": 32,
+        "parent_index_in_queue": 4,
+        "child_slot": "first",
+        "parent_num_samples": 2,
+        "parent_purity": 0.5,
+        "parent_majority_label": 1.0,
+        "singleton_sample_index": 400,
+        "singleton_label": -1.0,
+        "hd1": 5.745013838103438,
+        "hd2": null,
+        "s_size": 0,
+        "classification": "UNDEFINED_HD2",
+        "edge_flags": "two_sample_parent|no_second_heterogeneous",
+        "parent_sample_indices": "355,400"
+      }
+    }
+  }
+}

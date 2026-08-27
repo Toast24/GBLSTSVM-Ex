@@ -1,0 +1,107 @@
+{
+  "n_runs": 51,
+  "n_repairs": 4663,
+  "protocol": {
+    "b0": "KMeans(k=2), rho=0.95, del_ball(n<2)",
+    "b1": "virtual reassignment from small/singleton child with parent-local minority and n_opp_within_2hd1>=2; skip if child would empty",
+    "repair_classes": {
+      "A": "saves B0-del_ball samples + support>=2 + boundary signal + sibling het + sep>=0.8",
+      "B": "mixed or conflicting signals",
+      "C": "no del_ball benefit + majority contamination / weak geometry"
+    }
+  },
+  "aggregate": {
+    "comparison_table": {
+      "1. minority sample survival": {
+        "b0": 0.5829429728913098,
+        "b1": 0.7733015609215161,
+        "delta": 0.1903585880302063
+      },
+      "2. majority sample survival": {
+        "b0": 0.7498112598907687,
+        "b1": 0.8709578109261067,
+        "delta": 0.12114655103533786
+      },
+      "3a. minority-label ball count": {
+        "b0": 34.509803921568626,
+        "b1": 49.3921568627451,
+        "delta": 14.882352941176471
+      },
+      "3b. majority-label ball count": {
+        "b0": 54.333333333333336,
+        "b1": 70.70588235294117,
+        "delta": 16.372549019607842
+      },
+      "4a. minority singleton-ball rate": {
+        "b0": 0.0,
+        "b1": 0.0,
+        "delta": 0.0
+      },
+      "4b. minority small-ball rate": {
+        "b0": 0.6823810732800875,
+        "b1": 0.7276436437837023,
+        "delta": 0.045262570503614735
+      },
+      "5a. mean purity": {
+        "b0": 0.9970611801224372,
+        "b1": 0.9970310568391058,
+        "delta": -3.0123283331637655e-05
+      },
+      "5b. purity std": {
+        "b0": 0.002731168799776409,
+        "b1": 0.003149440620182757,
+        "delta": 0.0004182718204063469
+      },
+      "6a. mean radius": {
+        "b0": 187.9908729666654,
+        "b1": 197.60219894428295,
+        "delta": 9.61132597761756
+      },
+      "6b. radius std": {
+        "b0": 411.88767808970715,
+        "b1": 356.7472199085443,
+        "delta": -55.140458181162906
+      },
+      "7. minority-to-opposite support": {
+        "b0": 47.43383917419839,
+        "b1": 38.20674829146301,
+        "delta": -2.6169282106782106
+      },
+      "8a. mean nearest opposite-ball dist": {
+        "b0": 804.6421746018037,
+        "b1": 483.47913776387554,
+        "delta": -321.16303683792813
+      },
+      "8b. mean nearest same-ball dist": {
+        "b0": 481.30109809325796,
+        "b1": 471.7652740787228,
+        "delta": -9.53582401453527
+      },
+      "8c. opp/same distance ratio": {
+        "b0": 1.6994811870043682,
+        "b1": 1.183369599608967,
+        "delta": -0.5161115873954013
+      },
+      "9. heterogeneous-ball separability": {
+        "b0": 1.7283069110154972,
+        "b1": 1.5634470061242152,
+        "delta": -0.039421964016471
+      },
+      "10. samples with changed representation": {
+        "b0": 0.0,
+        "b1": 426.19607843137254,
+        "delta": 426.19607843137254
+      }
+    }
+  },
+  "repair_classification": {
+    "A": 2839,
+    "B": 1822,
+    "C": 2,
+    "frac_A": 0.6088355136178426,
+    "frac_B": 0.3907355779541068,
+    "frac_C": 0.0004289084280506112,
+    "mean_frac_repair_saves_b0_lost": 0.8128448890068741
+  },
+  "verdict": "MIXED / not clearly defensible: B1 improves minority survival, but minority-to-opposite support and cross-ball geometry weaken on average. This is closer to survival inflation than a geometrically principled granulation fix."
+}

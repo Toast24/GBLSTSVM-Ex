@@ -1,0 +1,141 @@
+{
+  "n_runs": 51,
+  "harm_risk_definition": {
+    "mu_G": "purity * exp(-(r/median_positive_radius)^2)",
+    "compA_threshold": 0.5,
+    "n_opp_threshold": 2,
+    "harm_risk": "frac(compA>0.5 & mu_G<run_median & (n_opp<=2 | R_opp==0))"
+  },
+  "outcome_correlations": {
+    "n_opp alone (compA>0.5, n_opp<=2)": {
+      "delta_macro_f1_topo_vs_ca": 0.06257351237318336,
+      "delta_gmean_topo_vs_ca": 0.18731223863791438,
+      "delta_minority_f1_topo_vs_ca": 0.22515566432993497,
+      "mean_abs_topo_ca": 0.3928987749398517,
+      "mean_n_opp": -0.3017805089305779,
+      "frac_R_opp_eq_0": 0.05751888989826611
+    },
+    "R_opp=0 alone (compA>0.5)": {
+      "delta_macro_f1_topo_vs_ca": -0.18501630874460592,
+      "delta_gmean_topo_vs_ca": 0.009995094950744035,
+      "delta_minority_f1_topo_vs_ca": -0.03423887754914937,
+      "mean_abs_topo_ca": 0.637187306546476,
+      "mean_n_opp": -0.1476684078267985,
+      "frac_R_opp_eq_0": 0.5554510171797494
+    },
+    "\u03bc_G alone (compA>0.5, \u03bc_G<median)": {
+      "delta_macro_f1_topo_vs_ca": 0.08796316447434671,
+      "delta_gmean_topo_vs_ca": 0.02084801900067532,
+      "delta_minority_f1_topo_vs_ca": -0.040632939341671066,
+      "mean_abs_topo_ca": 0.4691543932923099,
+      "mean_n_opp": 0.5526339003319383,
+      "frac_R_opp_eq_0": -0.35550665696407063
+    },
+    "harm_risk (joint rule)": {
+      "delta_macro_f1_topo_vs_ca": -0.09827000492428639,
+      "delta_gmean_topo_vs_ca": 0.008204704957445167,
+      "delta_minority_f1_topo_vs_ca": 0.05762482999751634,
+      "mean_abs_topo_ca": 0.39683646426045377,
+      "mean_n_opp": -0.24185841777053757,
+      "frac_R_opp_eq_0": 0.10003106083700476
+    },
+    "mean n_opp (run)": {
+      "delta_macro_f1_topo_vs_ca": 0.2492345164819578,
+      "delta_gmean_topo_vs_ca": 0.08041830984028096,
+      "delta_minority_f1_topo_vs_ca": -0.1325210745423269,
+      "mean_abs_topo_ca": 0.23506439770630877,
+      "mean_n_opp": 0.9999999999999998,
+      "frac_R_opp_eq_0": -0.468491640820885
+    },
+    "frac R_opp=0 (all balls)": {
+      "delta_macro_f1_topo_vs_ca": -0.11101566057241512,
+      "delta_gmean_topo_vs_ca": 0.019261574076011083,
+      "delta_minority_f1_topo_vs_ca": 0.048460902381397365,
+      "mean_abs_topo_ca": 0.19295026820902444,
+      "mean_n_opp": -0.46849164082088507,
+      "frac_R_opp_eq_0": 1.0
+    }
+  },
+  "category_means": {
+    "adversarial_r_opp": {
+      "n": 19,
+      "harm_risk": 0.10884032595397526,
+      "frac_n_opp_risk": 0.15343715871095492,
+      "frac_r_opp_zero_hc": 0.07391283318331138,
+      "frac_low_muG_hc": 0.19762083509942696,
+      "delta_macro_f1_topo_vs_ca": -0.09231181410459852,
+      "mean_abs_topo_ca": 0.30767679613345034,
+      "frac_R_opp_eq_0": 0.4368037210665825,
+      "mean_n_opp": 2.2795200743546378
+    },
+    "informative_r_opp": {
+      "n": 29,
+      "harm_risk": 0.1129162467336042,
+      "frac_n_opp_risk": 0.21386260994338152,
+      "frac_r_opp_zero_hc": 0.046696409050938845,
+      "frac_low_muG_hc": 0.19425120685080463,
+      "delta_macro_f1_topo_vs_ca": 0.059028024484877234,
+      "mean_abs_topo_ca": 0.2931812411952206,
+      "frac_R_opp_eq_0": 0.4101428711408815,
+      "mean_n_opp": 2.3041704825539315
+    },
+    "redundant_r_opp": {
+      "n": 3,
+      "harm_risk": 0.0,
+      "frac_n_opp_risk": 0.0,
+      "frac_r_opp_zero_hc": 0.0,
+      "frac_low_muG_hc": 0.0,
+      "delta_macro_f1_topo_vs_ca": 0.0,
+      "mean_abs_topo_ca": 0.0,
+      "frac_R_opp_eq_0": 0.0,
+      "mean_n_opp": 1.0
+    }
+  },
+  "adv_vs_inf_separation": {
+    "n_opp alone (compA>0.5, n_opp<=2)": {
+      "mean_adversarial": 0.15343715871095492,
+      "mean_informative": 0.21386260994338152,
+      "cohens_d": -0.5643352044259492,
+      "auroc": 0.35571687840290384
+    },
+    "R_opp=0 alone (compA>0.5)": {
+      "mean_adversarial": 0.07391283318331138,
+      "mean_informative": 0.046696409050938845,
+      "cohens_d": 0.44805088601353715,
+      "auroc": 0.5662431941923775
+    },
+    "\u03bc_G alone (compA>0.5, \u03bc_G<median)": {
+      "mean_adversarial": 0.19762083509942696,
+      "mean_informative": 0.19425120685080463,
+      "cohens_d": 0.03759764490762515,
+      "auroc": 0.5317604355716878
+    },
+    "harm_risk (joint rule)": {
+      "mean_adversarial": 0.10884032595397526,
+      "mean_informative": 0.1129162467336042,
+      "cohens_d": -0.056583449919350985,
+      "auroc": 0.5245009074410163
+    }
+  },
+  "auroc_ranking": [
+    [
+      "R_opp=0 alone (compA>0.5)",
+      0.5662431941923775
+    ],
+    [
+      "\u03bc_G alone (compA>0.5, \u03bc_G<median)",
+      0.5317604355716878
+    ],
+    [
+      "harm_risk (joint rule)",
+      0.5245009074410163
+    ],
+    [
+      "n_opp alone (compA>0.5, n_opp<=2)",
+      0.35571687840290384
+    ]
+  ],
+  "best_auroc_signal": "R_opp=0 alone (compA>0.5)",
+  "best_auroc_value": 0.5662431941923775,
+  "interpretation": "R_opp=0 on high-compA balls alone matches or exceeds harm_risk for adversarial/informative separation; \u03bc_G adds little beyond zero-reciprocity."
+}

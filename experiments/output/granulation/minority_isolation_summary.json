@@ -1,0 +1,105 @@
+{
+  "n_runs": 51,
+  "n_splits": 13654,
+  "n_leaves": 13705,
+  "protocol": {
+    "purity": 0.95,
+    "min_samples_per_ball": 1,
+    "min_ball_count": 2,
+    "small_ball_max": 5,
+    "seeds_source": "topo_broad_screening_results.csv (Topo rows)"
+  },
+  "gates": {
+    "survival_gap_gate": 0.02,
+    "isolation_del_ball_gate": 0.5,
+    "corr_gate": 0.15,
+    "gap_ok": true,
+    "del_ok": true,
+    "iso_present": true,
+    "sparse_ok": true,
+    "classification_hop_ok": false,
+    "granulation_confirmed": true,
+    "outcome_link": false,
+    "confirmed": false
+  },
+  "survival": {
+    "mean_min": 0.5829429728913098,
+    "mean_maj": 0.7498112598907687,
+    "mean_gap": -0.16686828699945908,
+    "frac_runs_min_lt_maj": 0.9215686274509803,
+    "paired": {
+      "n": 51,
+      "mean_diff": -0.16686828699945908,
+      "frac_a_lt_b": 0.9215686274509803,
+      "frac_a_gt_b": 0.0196078431372549
+    }
+  },
+  "isolation": {
+    "mean_frac_isolating_splits": 0.2524509235046727,
+    "mean_frac_preserving_splits": 0.4931057315931318,
+    "n_isolating_splits": 3750,
+    "n_preserving_splits": 6087,
+    "frac_isolating_later_del_ball": 0.8035209399831196,
+    "frac_isolating_singleton_min_child": 0.8005333333333333,
+    "mean_purity_gain_isolating": 0.4287092287439656,
+    "mean_purity_gain_preserving": 0.16342217238076648,
+    "mean_hd1_norm_isolating": 1.9176520532388837,
+    "mean_hd1_norm_preserving": 1.0374536080051664,
+    "mean_opp_support_isolating": 1.5885699595711242,
+    "mean_opp_support_preserving": 15.984465459934516,
+    "mean_frac_min_in_small": 0.7493024147630114,
+    "corr_isolating_vs_min_survival": -0.521303544407374
+  },
+  "outcome_correlations": {
+    "minority\u2212majority survival": 0.22302707792324122,
+    "frac isolating splits": 0.049864598606006665,
+    "frac minority in small balls": -0.048004604367801636,
+    "minority survival": 0.16449627653688578,
+    "mean minority hd1_norm": -0.18853840322900123,
+    "mean local opp support (2\u00b7hd1)": -0.01998994003554476,
+    "mean n_opp (all balls)": 0.2492345164819578,
+    "mean n_opp (minority-label balls)": 0.2172860715480424,
+    "frac R_opp=0": -0.11101566057241512,
+    "n deleted balls": 0.145644253335744,
+    "n balls after del_ball": 0.228889606235379
+  },
+  "category_means": {
+    "adversarial_r_opp": {
+      "n": 19,
+      "minority_survival": 0.5346342675764943,
+      "majority_survival": 0.7110526216808325,
+      "frac_isolating_splits": 0.2619688079954753,
+      "frac_min_in_small_before_del": 0.8192115912581505,
+      "mean_n_opp_min_balls": 3.1819693529539217,
+      "delta_macro_f1_topo_vs_ca": -0.09231181410459852
+    },
+    "informative_r_opp": {
+      "n": 29,
+      "minority_survival": 0.571449673569083,
+      "majority_survival": 0.7493232566377032,
+      "frac_isolating_splits": 0.2723306809249751,
+      "frac_min_in_small_before_del": 0.7810138937589217,
+      "mean_n_opp_min_balls": 3.354441526279047,
+      "delta_macro_f1_topo_vs_ca": 0.059028024484877234
+    },
+    "redundant_r_opp": {
+      "n": 3,
+      "minority_survival": 1.0,
+      "majority_survival": 1.0,
+      "frac_isolating_splits": 0.0,
+      "frac_min_in_small_before_del": 0.0,
+      "mean_n_opp_min_balls": 1.0,
+      "delta_macro_f1_topo_vs_ca": 0.0
+    }
+  },
+  "verdict": "PARTIAL: the granulation chain is reproducible (isolation -> singleton/small ball -> del_ball minority loss -> sparse heterogeneous support). The last hop to poor classification is NOT supported: isolating-split rate does not correlate with Topo Delta Macro F1 and is essentially the same in adversarial vs informative R_opp runs. Do not modify the splitter for classifier gain yet. The repair below is justified only as a future granulation experiment whose success metric should be minority survival / small-ball rate, not Topo F1.",
+  "proposal": "Smallest change, still KMeans(k=2), still rho=0.95, no downstream edits: after `split_2balls` assignment, repair only isolating children. If a child is small (n<=5) or singleton, carries the parent's local minority, and those points have heterogeneous support in the parent (n_opp_within_2*hd1 >= 2), reassign them to the sibling cluster. Leave unrepaired: (i) n_opp_within_2*hd1 == 1 outliers with large hd1_norm, (ii) mixed preserving splits. If repair would empty a child, skip that repair and keep the frozen KMeans partition. This keeps legitimate boundary minority inside a ball that survives del_ball, without changing KMeans(k=2), purity threshold, or GBLSTSVM. Implementation is deferred until a granulation-only replay is approved; do not screen GBLSTSVM yet.",
+  "definitions": {
+    "global_minority": "rarer class on the training split after normalize_labels",
+    "minority_isolating": "one child is small (n<=5), pure, and contains all parent global-minority samples; sibling has none",
+    "minority_preserving": "both children contain at least one global-minority sample",
+    "hd1_norm": "median minority-to-opposite min-distance / parent radius",
+    "local_opp_support": "mean # opposite-class parent samples within 2*hd1 of a minority point",
+    "survival": "fraction of class samples whose leaf has n >= min_ball_count"
+  }
+}

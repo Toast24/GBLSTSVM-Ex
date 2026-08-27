@@ -1,0 +1,102 @@
+{
+  "n_runs": 51,
+  "n_heterogeneous_balls": 51,
+  "statistic_definition": {
+    "BC_overlap": "Bhattacharyya coefficient of diagonal Gaussians per class in ball",
+    "minority_hd1_norm": "median minority hd1 / ball radius within ball",
+    "kmeans_purity_gain": "max child purity - parent purity under frozen KMeans(k=2)"
+  },
+  "category_means": {
+    "adversarial_r_opp": {
+      "n": 19,
+      "mean_BC_overlap_het": 0.0003404402352796504,
+      "mean_minority_hd1_norm_het": 2.0821727578789533,
+      "mean_purity_het": 0.9709611748384929,
+      "mean_kmeans_purity_gain_het": 0.2757984161674395,
+      "frac_kmeans_minority_isolated_het": 0.0,
+      "delta_macro_f1_topo_vs_ca": -0.09231181410459852
+    },
+    "informative_r_opp": {
+      "n": 29,
+      "mean_BC_overlap_het": 0.017564173938340366,
+      "mean_minority_hd1_norm_het": 1.1305148178856144,
+      "mean_purity_het": 0.9713553386252418,
+      "mean_kmeans_purity_gain_het": 0.0851641038205167,
+      "frac_kmeans_minority_isolated_het": 0.0,
+      "delta_macro_f1_topo_vs_ca": 0.059028024484877234
+    },
+    "redundant_r_opp": {
+      "n": 3,
+      "mean_BC_overlap_het": 0.23813657576611302,
+      "mean_minority_hd1_norm_het": 1.1620977577126992,
+      "mean_purity_het": 0.9627991164998667,
+      "mean_kmeans_purity_gain_het": 0.02726375827304217,
+      "frac_kmeans_minority_isolated_het": 0.0,
+      "delta_macro_f1_topo_vs_ca": 0.0
+    }
+  },
+  "outcome_correlations": {
+    "BC_overlap (het mean)": {
+      "delta_macro_f1_topo_vs_ca": 0.08736251477954159,
+      "delta_gmean_topo_vs_ca": 0.24467906178134574,
+      "delta_minority_f1_topo_vs_ca": 0.22050272849307292
+    },
+    "minority_hd1_norm (het mean)": {
+      "delta_macro_f1_topo_vs_ca": -0.3403567289189672,
+      "delta_gmean_topo_vs_ca": -0.39433066079103524,
+      "delta_minority_f1_topo_vs_ca": -0.3425756655006325
+    },
+    "purity (het mean)": {
+      "delta_macro_f1_topo_vs_ca": -0.08835830728192359,
+      "delta_gmean_topo_vs_ca": 0.1924569158169397,
+      "delta_minority_f1_topo_vs_ca": 0.20877347229449544
+    },
+    "radius (het mean)": {
+      "delta_macro_f1_topo_vs_ca": 0.38515974174123613,
+      "delta_gmean_topo_vs_ca": 0.420786109153187,
+      "delta_minority_f1_topo_vs_ca": 0.596652697573928
+    },
+    "kmeans_purity_gain (het mean)": {
+      "delta_macro_f1_topo_vs_ca": -0.303316025091401,
+      "delta_gmean_topo_vs_ca": -0.3471539062921138,
+      "delta_minority_f1_topo_vs_ca": -0.4497611835154518
+    },
+    "frac kmeans minority isolated": {
+      "delta_macro_f1_topo_vs_ca": NaN,
+      "delta_gmean_topo_vs_ca": NaN,
+      "delta_minority_f1_topo_vs_ca": NaN
+    },
+    "mean n_opp": {
+      "delta_macro_f1_topo_vs_ca": 0.2492345164819578,
+      "delta_gmean_topo_vs_ca": 0.08041830984028096,
+      "delta_minority_f1_topo_vs_ca": -0.1325210745423269
+    },
+    "frac R_opp=0": {
+      "delta_macro_f1_topo_vs_ca": -0.11101566057241512,
+      "delta_gmean_topo_vs_ca": 0.019261574076011083,
+      "delta_minority_f1_topo_vs_ca": 0.048460902381397365
+    },
+    "mean R_opp": {
+      "delta_macro_f1_topo_vs_ca": 0.06054917423878126,
+      "delta_gmean_topo_vs_ca": -0.04195957425979356,
+      "delta_minority_f1_topo_vs_ca": -0.05914437449693104
+    }
+  },
+  "partial_corr_BC_given_purity_hd1": 0.02004989968385733,
+  "partial_corr_hd1_given_purity_BC": -0.33730034741899345,
+  "macro_f1_correlation_comparison": {
+    "purity alone": 0.08835830728192359,
+    "hd1_norm alone": 0.3403567289189672,
+    "BC_overlap alone": 0.08736251477954159,
+    "purity + hd1_norm (sum)": 0.3412032527057686,
+    "purity + hd1 + BC (sum)": 0.3376356283062035
+  },
+  "adv_inf_auroc": {
+    "BC_overlap": 0.32967032967032966,
+    "minority_hd1_norm": 0.7472527472527473,
+    "purity": 0.5054945054945055,
+    "frac R_opp=0": 0.515426497277677,
+    "mean n_opp": 0.542649727767695
+  },
+  "verdict": "BC_overlap does not materially outperform purity + minority_hd1_norm for predicting Topo success/failure or separating adversarial from informative runs. A Gaussian-aware split experiment is not strongly justified by these diagnostics."
+}

@@ -1,0 +1,767 @@
+{
+  "protocol": {
+    "purity": 0.95,
+    "min_ball_count": 2,
+    "c1": 100.0,
+    "c2": 0.01,
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "datasets": [
+      "diabetes",
+      "ecoli2",
+      "vehicle0"
+    ],
+    "primary_gaussian": "purity_compact",
+    "formulations": {
+      "compact": "exp(-r_tilde^2); FSVM-style spread on mean ball radius",
+      "purity_compact": "purity * exp(-r_tilde^2); fuzzy granular-ball quality",
+      "density": "n/max(n) * exp(-r_tilde^2); GB density with compactness (IGBkNN spirit)",
+      "inverse_spread": "exp(-r_tilde); exponential decay in normalized radius"
+    }
+  },
+  "diagnostics": [
+    {
+      "dataset": "diabetes",
+      "seed": 42,
+      "n_balls": 85,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.4995411897311649,
+        "std": 0.4016508553293969,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.598952879217761,
+        "p75": 0.9255896130219191,
+        "max": 0.9989131467004765
+      },
+      "muG_distribution": {
+        "mean": 0.36696646597039606,
+        "std": 0.2876739822137023,
+        "min": 3.989782450384857e-06,
+        "p25": 0.06470905868316537,
+        "median": 0.36787944117144233,
+        "p75": 0.5893276950483908,
+        "max": 0.9538439393913049
+      },
+      "muTopo_distribution": {
+        "mean": 0.22941304429711773,
+        "std": 0.25976631685841106,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.10349117123522228,
+        "p75": 0.4124663515454156,
+        "max": 0.8614803712820722
+      },
+      "corr_muG_muA": 0.17275988495336989,
+      "corr_muG_muTopo": 0.32489625488535784,
+      "corr_muA_muTopo": 0.7275635459941444,
+      "corr_muGTopo_muA": 0.5380804535102791,
+      "pred_change_G1_vs_B0": 0.008620689655172414,
+      "pred_change_G2_vs_B0": 0.017241379310344827,
+      "pred_change_G2_vs_G1": 0.008620689655172414,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": 0.17273829854096004,
+          "corr_muTopo": 0.32488610881092456
+        },
+        "purity_compact": {
+          "corr_muA": 0.17275988495336989,
+          "corr_muTopo": 0.32489625488535784
+        },
+        "density": {
+          "corr_muA": 0.19106073386170896,
+          "corr_muTopo": 0.34343730073033585
+        },
+        "inverse_spread": {
+          "corr_muA": 0.14574777847456588,
+          "corr_muTopo": 0.32600183920522935
+        }
+      }
+    },
+    {
+      "dataset": "diabetes",
+      "seed": 0,
+      "n_balls": 84,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.667472396897152,
+        "std": 0.3575825336900561,
+        "min": 0.0,
+        "p25": 0.5672140503977656,
+        "median": 0.8152485696745151,
+        "p75": 0.9570249150445277,
+        "max": 0.9998597679024592
+      },
+      "muG_distribution": {
+        "mean": 0.38601756579572805,
+        "std": 0.3125938719403938,
+        "min": 1.7473911681065825e-06,
+        "p25": 0.05270478436652494,
+        "median": 0.3679096952948557,
+        "p75": 0.6765995640197693,
+        "max": 0.9551475474754593
+      },
+      "muTopo_distribution": {
+        "mean": 0.32038270399725227,
+        "std": 0.29918563855494307,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.3589681053937772,
+        "p75": 0.48542148802695345,
+        "max": 0.9881580332903537
+      },
+      "corr_muG_muA": 0.3464192026425149,
+      "corr_muG_muTopo": 0.3806395040053805,
+      "corr_muA_muTopo": 0.6633579480605588,
+      "corr_muGTopo_muA": 0.4918760039611636,
+      "pred_change_G1_vs_B0": 0.0,
+      "pred_change_G2_vs_B0": 0.0,
+      "pred_change_G2_vs_G1": 0.0,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": 0.346376826293431,
+          "corr_muTopo": 0.38061958314612426
+        },
+        "purity_compact": {
+          "corr_muA": 0.3464192026425149,
+          "corr_muTopo": 0.3806395040053805
+        },
+        "density": {
+          "corr_muA": 0.26310339209314915,
+          "corr_muTopo": 0.2965818066860144
+        },
+        "inverse_spread": {
+          "corr_muA": 0.36143340055450957,
+          "corr_muTopo": 0.3833130138132205
+        }
+      }
+    },
+    {
+      "dataset": "diabetes",
+      "seed": 1,
+      "n_balls": 86,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.49446977986384966,
+        "std": 0.43576604314976736,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.6065493562405188,
+        "p75": 0.9462633350042025,
+        "max": 0.9998351068315833
+      },
+      "muG_distribution": {
+        "mean": 0.3651177409123626,
+        "std": 0.2760654492518147,
+        "min": 5.035864228973307e-10,
+        "p25": 0.10060977304257376,
+        "median": 0.3678800267722938,
+        "p75": 0.5602416950681433,
+        "max": 0.9489648280445122
+      },
+      "muTopo_distribution": {
+        "mean": 0.23923215390233346,
+        "std": 0.28563069557371373,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.41468466679422084,
+        "max": 0.9714492462586494
+      },
+      "corr_muG_muA": -0.12859411932810902,
+      "corr_muG_muTopo": -0.13387328870870893,
+      "corr_muA_muTopo": 0.7732135141540697,
+      "corr_muGTopo_muA": 0.5197601882544246,
+      "pred_change_G1_vs_B0": 0.02586206896551724,
+      "pred_change_G2_vs_B0": 0.02586206896551724,
+      "pred_change_G2_vs_G1": 0.0,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": -0.12859411932810902,
+          "corr_muTopo": -0.13387328870870893
+        },
+        "purity_compact": {
+          "corr_muA": -0.12859411932810902,
+          "corr_muTopo": -0.13387328870870893
+        },
+        "density": {
+          "corr_muA": -0.134138796167926,
+          "corr_muTopo": -0.11022053417807914
+        },
+        "inverse_spread": {
+          "corr_muA": -0.13123809145126691,
+          "corr_muTopo": -0.12366099984391975
+        }
+      }
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 42,
+      "n_balls": 13,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.5335570843609934,
+        "std": 0.3186700366138656,
+        "min": 0.0,
+        "p25": 0.5249003262800709,
+        "median": 0.6161935359937487,
+        "p75": 0.6758126227161689,
+        "max": 0.9675164487802607
+      },
+      "muG_distribution": {
+        "mean": 0.3614016928811885,
+        "std": 0.2812344450762217,
+        "min": 0.006358856715374289,
+        "p25": 0.06924357317942785,
+        "median": 0.36787944117144233,
+        "p75": 0.5323891551351884,
+        "max": 0.8224156672178335
+      },
+      "muTopo_distribution": {
+        "mean": 0.10743870478780829,
+        "std": 0.16487285185772332,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.2697631931130019,
+        "max": 0.43062544648748624
+      },
+      "corr_muG_muA": -0.16427599115202413,
+      "corr_muG_muTopo": 0.8083285837469386,
+      "corr_muA_muTopo": 0.15825188792440775,
+      "corr_muGTopo_muA": 0.15314609527706086,
+      "pred_change_G1_vs_B0": 0.0392156862745098,
+      "pred_change_G2_vs_B0": 0.3137254901960784,
+      "pred_change_G2_vs_G1": 0.27450980392156865,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": -0.1640351880041314,
+          "corr_muTopo": 0.8083753354572805
+        },
+        "purity_compact": {
+          "corr_muA": -0.16427599115202413,
+          "corr_muTopo": 0.8083285837469386
+        },
+        "density": {
+          "corr_muA": 0.15718323880284463,
+          "corr_muTopo": 0.707414240986928
+        },
+        "inverse_spread": {
+          "corr_muA": -0.18591068033982272,
+          "corr_muTopo": 0.7852042465608678
+        }
+      }
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 0,
+      "n_balls": 15,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.6380285993419327,
+        "std": 0.21888040612711449,
+        "min": 0.0,
+        "p25": 0.4983196275488262,
+        "median": 0.7026379512563611,
+        "p75": 0.7460761753736695,
+        "max": 0.9337671217483637
+      },
+      "muG_distribution": {
+        "mean": 0.312775560175343,
+        "std": 0.24607603297720837,
+        "min": 0.000521279185695456,
+        "p25": 0.028429269219835577,
+        "median": 0.36787944117144233,
+        "p75": 0.5391567465541734,
+        "max": 0.6912113553713548
+      },
+      "muTopo_distribution": {
+        "mean": 0.13709840480981578,
+        "std": 0.20241370429468653,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.29171519938269136,
+        "max": 0.5317674029762958
+      },
+      "corr_muG_muA": 0.39227761872073763,
+      "corr_muG_muTopo": 0.5344981829536795,
+      "corr_muA_muTopo": 0.10784875974915933,
+      "corr_muGTopo_muA": 0.1676543122805932,
+      "pred_change_G1_vs_B0": 0.09803921568627451,
+      "pred_change_G2_vs_B0": 0.0392156862745098,
+      "pred_change_G2_vs_G1": 0.09803921568627451,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": 0.39229188282395205,
+          "corr_muTopo": 0.5344981646253179
+        },
+        "purity_compact": {
+          "corr_muA": 0.39227761872073763,
+          "corr_muTopo": 0.5344981829536795
+        },
+        "density": {
+          "corr_muA": 0.37705904587395056,
+          "corr_muTopo": 0.6432440196378191
+        },
+        "inverse_spread": {
+          "corr_muA": 0.40692506470193507,
+          "corr_muTopo": 0.530740395885797
+        }
+      }
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 1,
+      "n_balls": 17,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.543999334465387,
+        "std": 0.33442079198463465,
+        "min": 0.0,
+        "p25": 0.5539792413476132,
+        "median": 0.5834054318983395,
+        "p75": 0.8599813852575611,
+        "max": 0.9650354741180487
+      },
+      "muG_distribution": {
+        "mean": 0.3326867198814099,
+        "std": 0.25513092985364383,
+        "min": 8.849651998517054e-05,
+        "p25": 0.10154530778154142,
+        "median": 0.36787944117144233,
+        "p75": 0.4633693692311755,
+        "max": 0.8292024283330419
+      },
+      "muTopo_distribution": {
+        "mean": 0.11314712274252417,
+        "std": 0.1588712236687304,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.3321521407618883,
+        "max": 0.3774293710336697
+      },
+      "corr_muG_muA": -0.08112935807560888,
+      "corr_muG_muTopo": 0.5870910004676053,
+      "corr_muA_muTopo": 0.20912128608724,
+      "corr_muGTopo_muA": 0.2163404204183736,
+      "pred_change_G1_vs_B0": 0.0392156862745098,
+      "pred_change_G2_vs_B0": 0.0,
+      "pred_change_G2_vs_G1": 0.0392156862745098,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": -0.08112262948669145,
+          "corr_muTopo": 0.5870913053229769
+        },
+        "purity_compact": {
+          "corr_muA": -0.08112935807560888,
+          "corr_muTopo": 0.5870910004676053
+        },
+        "density": {
+          "corr_muA": -0.13480622821146668,
+          "corr_muTopo": 0.5228826000798978
+        },
+        "inverse_spread": {
+          "corr_muA": -0.08847850486546234,
+          "corr_muTopo": 0.548579561378069
+        }
+      }
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "n_balls": 59,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.8181549135094826,
+        "std": 0.21090332245314927,
+        "min": 0.0,
+        "p25": 0.6590877291752575,
+        "median": 0.9202457700931076,
+        "p75": 0.9593848255897961,
+        "max": 0.9998665927132183
+      },
+      "muG_distribution": {
+        "mean": 0.3983310538143448,
+        "std": 0.22476104354815116,
+        "min": 2.1478871803431996e-17,
+        "p25": 0.25768137632559185,
+        "median": 0.36787944117144233,
+        "p75": 0.5471754953157411,
+        "max": 0.9034635760554126
+      },
+      "muTopo_distribution": {
+        "mean": 0.4498203672461316,
+        "std": 0.27436859672239783,
+        "min": 0.0,
+        "p25": 0.33685140595253377,
+        "median": 0.4255818779037318,
+        "p75": 0.6862340596339589,
+        "max": 0.9884497894870392
+      },
+      "corr_muG_muA": 0.1335264623984463,
+      "corr_muG_muTopo": 0.1951740839262554,
+      "corr_muA_muTopo": 0.6229868400562623,
+      "corr_muGTopo_muA": 0.4951793608542665,
+      "pred_change_G1_vs_B0": 0.1968503937007874,
+      "pred_change_G2_vs_B0": 0.18110236220472442,
+      "pred_change_G2_vs_G1": 0.12598425196850394,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": 0.13352645232636526,
+          "corr_muTopo": 0.19517405996707726
+        },
+        "purity_compact": {
+          "corr_muA": 0.1335264623984463,
+          "corr_muTopo": 0.1951740839262554
+        },
+        "density": {
+          "corr_muA": 0.06621001175204408,
+          "corr_muTopo": -0.08119277164186543
+        },
+        "inverse_spread": {
+          "corr_muA": 0.1509080375640239,
+          "corr_muTopo": 0.2485378844609838
+        }
+      }
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "n_balls": 59,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.7083509781213182,
+        "std": 0.3220295120323935,
+        "min": 0.0,
+        "p25": 0.6006171445722797,
+        "median": 0.9028806570171399,
+        "p75": 0.9464833470230981,
+        "max": 0.9947560881545554
+      },
+      "muG_distribution": {
+        "mean": 0.3767716889268078,
+        "std": 0.227007582907006,
+        "min": 1.324581448291524e-30,
+        "p25": 0.19558519034620533,
+        "median": 0.36787944117144233,
+        "p75": 0.5418304345984104,
+        "max": 0.8650921268035723
+      },
+      "muTopo_distribution": {
+        "mean": 0.37211839551482967,
+        "std": 0.2955475098840752,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.38161253793825545,
+        "p75": 0.5458931560736132,
+        "max": 0.901190003320927
+      },
+      "corr_muG_muA": -0.1154697373204702,
+      "corr_muG_muTopo": 0.08500486286338658,
+      "corr_muA_muTopo": 0.6966000171916672,
+      "corr_muGTopo_muA": 0.5068116912090274,
+      "pred_change_G1_vs_B0": 0.11023622047244094,
+      "pred_change_G2_vs_B0": 0.11023622047244094,
+      "pred_change_G2_vs_G1": 0.06299212598425197,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": -0.11546973729155623,
+          "corr_muTopo": 0.08500486280259738
+        },
+        "purity_compact": {
+          "corr_muA": -0.1154697373204702,
+          "corr_muTopo": 0.08500486286338658
+        },
+        "density": {
+          "corr_muA": -0.31950116665638056,
+          "corr_muTopo": -0.07083607222404245
+        },
+        "inverse_spread": {
+          "corr_muA": -0.12967249108150183,
+          "corr_muTopo": 0.1264898528703009
+        }
+      }
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "n_balls": 51,
+      "primary_gaussian": "purity_compact",
+      "muA_distribution": {
+        "mean": 0.7113952336816408,
+        "std": 0.30836550632954585,
+        "min": 0.0,
+        "p25": 0.5942318262768862,
+        "median": 0.7390089135661135,
+        "p75": 0.9650529992204802,
+        "max": 0.9942952661970672
+      },
+      "muG_distribution": {
+        "mean": 0.37787875368137724,
+        "std": 0.23796892934681532,
+        "min": 4.8982240614431424e-23,
+        "p25": 0.18241642821244697,
+        "median": 0.36787944117144233,
+        "p75": 0.5887713944374747,
+        "max": 0.8103047823473842
+      },
+      "muTopo_distribution": {
+        "mean": 0.4102085001386171,
+        "std": 0.28853052090152376,
+        "min": 0.0,
+        "p25": 0.2286609795458367,
+        "median": 0.40353261725310946,
+        "p75": 0.5890125057620806,
+        "max": 0.8770941761505073
+      },
+      "corr_muG_muA": -0.09326683086541734,
+      "corr_muG_muTopo": 0.24159601511153994,
+      "corr_muA_muTopo": 0.6870388806344524,
+      "corr_muGTopo_muA": 0.49151332183923685,
+      "pred_change_G1_vs_B0": 0.16535433070866143,
+      "pred_change_G2_vs_B0": 0.11811023622047244,
+      "pred_change_G2_vs_G1": 0.14173228346456693,
+      "formulation_correlations": {
+        "compact": {
+          "corr_muA": -0.09326683078420292,
+          "corr_muTopo": 0.24159601498149408
+        },
+        "purity_compact": {
+          "corr_muA": -0.09326683086541734,
+          "corr_muTopo": 0.24159601511153994
+        },
+        "density": {
+          "corr_muA": -0.1283452034296572,
+          "corr_muTopo": 0.03503045267129801
+        },
+        "inverse_spread": {
+          "corr_muA": -0.12191473073060173,
+          "corr_muTopo": 0.2721207671897639
+        }
+      }
+    }
+  ],
+  "failures_vs_b0": [
+    {
+      "dataset": "diabetes",
+      "seed": 42,
+      "model": "G1_Gaussian_CW",
+      "metric": "gmean",
+      "b0": 0.15617376188860607,
+      "value": 0.0,
+      "delta_vs_b0": -0.15617376188860607
+    },
+    {
+      "dataset": "diabetes",
+      "seed": 42,
+      "model": "G1_Gaussian_CW",
+      "metric": "minority_f1",
+      "b0": 0.047619047619047616,
+      "value": 0.0,
+      "delta_vs_b0": -0.047619047619047616
+    },
+    {
+      "dataset": "diabetes",
+      "seed": 42,
+      "model": "G1_Gaussian_CW",
+      "metric": "macro_f1",
+      "b0": 0.418546365914787,
+      "value": 0.39267015706806285,
+      "delta_vs_b0": -0.025876208846724147
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 42,
+      "model": "G2_Gaussian_Topo",
+      "metric": "gmean",
+      "b0": 0.8141195843820603,
+      "value": 0.7412277684026434,
+      "delta_vs_b0": -0.07289181597941696
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 42,
+      "model": "G2_Gaussian_Topo",
+      "metric": "minority_f1",
+      "b0": 0.631578947368421,
+      "value": 0.45161290322580644,
+      "delta_vs_b0": -0.17996604414261458
+    },
+    {
+      "dataset": "ecoli2",
+      "seed": 42,
+      "model": "G2_Gaussian_Topo",
+      "metric": "macro_f1",
+      "b0": 0.7736207989854154,
+      "value": 0.6060881417537483,
+      "delta_vs_b0": -0.1675326572316671
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "model": "G1_Gaussian_CW",
+      "metric": "gmean",
+      "b0": 0.6848884324825859,
+      "value": 0.6735044524148897,
+      "delta_vs_b0": -0.011383980067696253
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "model": "G1_Gaussian_CW",
+      "metric": "minority_f1",
+      "b0": 0.5882352941176471,
+      "value": 0.5555555555555556,
+      "delta_vs_b0": -0.0326797385620915
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "model": "G1_Gaussian_CW",
+      "metric": "macro_f1",
+      "b0": 0.7423935091277891,
+      "value": 0.7177777777777778,
+      "delta_vs_b0": -0.024615731350011272
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "model": "G1_Gaussian_CW",
+      "metric": "gmean",
+      "b0": 0.5713672033812024,
+      "value": 0.3145935030558458,
+      "delta_vs_b0": -0.25677370032535657
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "model": "G1_Gaussian_CW",
+      "metric": "minority_f1",
+      "b0": 0.47619047619047616,
+      "value": 0.17647058823529413,
+      "delta_vs_b0": -0.299719887955182
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "model": "G1_Gaussian_CW",
+      "metric": "macro_f1",
+      "b0": 0.6862084456424079,
+      "value": 0.5245989304812834,
+      "delta_vs_b0": -0.16160951516112454
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "model": "G1_Gaussian_CW",
+      "metric": "gmean",
+      "b0": 0.7745966692414834,
+      "value": 0.7046726714462265,
+      "delta_vs_b0": -0.06992399779525693
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "model": "G1_Gaussian_CW",
+      "metric": "minority_f1",
+      "b0": 0.75,
+      "value": 0.576271186440678,
+      "delta_vs_b0": -0.17372881355932202
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "model": "G1_Gaussian_CW",
+      "metric": "macro_f1",
+      "b0": 0.845873786407767,
+      "value": 0.7240330291177749,
+      "delta_vs_b0": -0.12184075728999211
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "model": "G2_Gaussian_Topo",
+      "metric": "gmean",
+      "b0": 0.6848884324825859,
+      "value": 0.6616650869474854,
+      "delta_vs_b0": -0.023223345535100526
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "model": "G2_Gaussian_Topo",
+      "metric": "minority_f1",
+      "b0": 0.5882352941176471,
+      "value": 0.56,
+      "delta_vs_b0": -0.028235294117647025
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 42,
+      "model": "G2_Gaussian_Topo",
+      "metric": "macro_f1",
+      "b0": 0.7423935091277891,
+      "value": 0.726078431372549,
+      "delta_vs_b0": -0.016315077755240104
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "model": "G2_Gaussian_Topo",
+      "metric": "gmean",
+      "b0": 0.5713672033812024,
+      "value": 0.5163977794943222,
+      "delta_vs_b0": -0.0549694238868802
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "model": "G2_Gaussian_Topo",
+      "metric": "minority_f1",
+      "b0": 0.47619047619047616,
+      "value": 0.42105263157894735,
+      "delta_vs_b0": -0.05513784461152882
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 0,
+      "model": "G2_Gaussian_Topo",
+      "metric": "macro_f1",
+      "b0": 0.6862084456424079,
+      "value": 0.6596003898635477,
+      "delta_vs_b0": -0.026608055778860162
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "model": "G2_Gaussian_Topo",
+      "metric": "gmean",
+      "b0": 0.7745966692414834,
+      "value": 0.6724832168730644,
+      "delta_vs_b0": -0.10211345236841896
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "model": "G2_Gaussian_Topo",
+      "metric": "minority_f1",
+      "b0": 0.75,
+      "value": 0.5957446808510638,
+      "delta_vs_b0": -0.1542553191489362
+    },
+    {
+      "dataset": "vehicle0",
+      "seed": 1,
+      "model": "G2_Gaussian_Topo",
+      "metric": "macro_f1",
+      "b0": 0.845873786407767,
+      "value": 0.7519786206187686,
+      "delta_vs_b0": -0.09389516578899837
+    }
+  ]
+}
