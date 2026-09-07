@@ -1,0 +1,153 @@
+{
+  "protocol": {
+    "read_only": true,
+    "reference_rho": 0.9,
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "branch_classes": [
+      "heavily_refined",
+      "lightly_refined",
+      "terminated_early"
+    ],
+    "classification": "terminated_early: not split by rho; heavily/lightly refined: split nodes by per-run descendant-ball tertiles and depth span",
+    "smoke_mode": false,
+    "failed": []
+  },
+  "n_rows": 16193,
+  "n_nodes": 16193,
+  "n_dataset_seed_pairs": 51,
+  "by_branch_class": [
+    {
+      "branch_class": "heavily_refined",
+      "n_nodes": 7193,
+      "frac_of_nodes": 0.44420428580250726,
+      "mean_depth": 8.00653413040456,
+      "mean_parent_samples": 32.65160572779091,
+      "mean_parent_purity": 0.6837140195017787,
+      "mean_parent_radius": 192.75137178593658,
+      "mean_parent_density": 4.587657064277873,
+      "mean_parent_entropy": 0.8614155134768428,
+      "mean_parent_boundary_score": 0.9127126427627085,
+      "mean_parent_minority_ratio": 0.43715506740478843,
+      "mean_n_descendant_balls": 5.473932990407341,
+      "mean_subtree_depth_span": 3.828722368969832,
+      "mean_final_purity": 0.9983234774293056,
+      "mean_final_boundary_score": 0.06721959710237436,
+      "mean_minority_survival": 0.44583124590052253
+    },
+    {
+      "branch_class": "lightly_refined",
+      "n_nodes": 5032,
+      "frac_of_nodes": 0.3107515593157537,
+      "mean_depth": 10.214825119236885,
+      "mean_parent_samples": 3.2772257551669317,
+      "mean_parent_purity": 0.5986292404659591,
+      "mean_parent_radius": 85.85419884726667,
+      "mean_parent_density": 6756756757.984861,
+      "mean_parent_entropy": 0.9366266454016856,
+      "mean_parent_boundary_score": 0.6395125111487919,
+      "mean_parent_minority_ratio": 0.48976527376059836,
+      "mean_n_descendant_balls": 0.1834260731319555,
+      "mean_subtree_depth_span": 0.18243243243243243,
+      "mean_final_purity": 0.9984963432773535,
+      "mean_final_boundary_score": 0.07980217468376323,
+      "mean_minority_survival": 0.46889641082967537
+    },
+    {
+      "branch_class": "terminated_early",
+      "n_nodes": 3968,
+      "frac_of_nodes": 0.24504415488173903,
+      "mean_depth": 10.155493951612904,
+      "mean_parent_samples": 5.546118951612903,
+      "mean_parent_purity": 0.995897395397318,
+      "mean_parent_radius": 129.78224128720447,
+      "mean_parent_density": 38302555512.80796,
+      "mean_parent_entropy": 0.020591491426515438,
+      "mean_parent_boundary_score": 0.052440639134574696,
+      "mean_parent_minority_ratio": 0.41328643036169016,
+      "mean_n_descendant_balls": 1.0,
+      "mean_subtree_depth_span": 0.0,
+      "mean_final_purity": 0.995897395397318,
+      "mean_final_boundary_score": 0.25809722656460055,
+      "mean_minority_survival": 1.0
+    }
+  ],
+  "split_vs_terminated": {
+    "parent_purity": {
+      "mean_split": 0.6486918020696115,
+      "mean_terminated": 0.995897395397318,
+      "delta_split_minus_terminated": -0.3472055933277065
+    },
+    "parent_entropy": {
+      "mean_split": 0.8923735843026758,
+      "mean_terminated": 0.020591491426515438,
+      "delta_split_minus_terminated": 0.8717820928761604
+    },
+    "parent_boundary_score": {
+      "mean_split": 2781186096.773216,
+      "mean_terminated": 0.25809722656460055,
+      "delta_split_minus_terminated": 2781186096.5151186
+    },
+    "parent_log_boundary_score": {
+      "mean_split": 0.8002592225352051,
+      "mean_terminated": 0.052440639134574696,
+      "delta_split_minus_terminated": 0.7478185834006303
+    },
+    "parent_density": {
+      "mean_split": 2781186097.274343,
+      "mean_terminated": 38302555512.80796,
+      "delta_split_minus_terminated": -35521369415.533615
+    },
+    "parent_minority_ratio": {
+      "mean_split": 0.4588102460045787,
+      "mean_terminated": 0.41328643036169016,
+      "delta_split_minus_terminated": 0.04552381564288854
+    },
+    "parent_samples": {
+      "mean_split": 20.560654396728015,
+      "mean_terminated": 5.546118951612903,
+      "delta_split_minus_terminated": 15.014535445115111
+    }
+  },
+  "correlations": {
+    "n_descendants_vs_parent_impurity": {
+      "pearson": -0.023180539910842006,
+      "spearman": -0.38431431154445234,
+      "n": 12225
+    },
+    "subtree_depth_vs_parent_boundary": {
+      "pearson": 0.22726627581774625,
+      "spearman": 0.32801828255209114,
+      "n": 12225
+    },
+    "final_purity_vs_parent_purity": {
+      "pearson": -0.15221873406441605,
+      "spearman": -0.10124276955930087,
+      "n": 8111
+    },
+    "minority_survival_vs_parent_minority_ratio": {
+      "pearson": 0.6598208525465775,
+      "spearman": 0.6535566878548621,
+      "n": 8111
+    }
+  },
+  "heavy_vs_light_geometry": {
+    "heavy_mean_final_purity": 0.9983234774293056,
+    "light_mean_final_purity": 0.9984963432773535,
+    "heavy_mean_final_boundary": 0.01820767653811188,
+    "light_mean_final_boundary": 0.02244993855980986,
+    "heavy_mean_minority_survival": 0.44583124590052253,
+    "light_mean_minority_survival": 0.46889641082967537,
+    "heavy_mean_parent_boundary": 0.9127126427627085,
+    "light_mean_parent_boundary": 0.6395125111487919
+  },
+  "answers": {
+    "q1_continue_splitting": "rho continues splitting when parent purity is **low** (split mean 0.649 vs terminated 0.996), entropy is **higher** (0.892 vs 0.021), and boundary score (log) is **elevated** (0.800 vs 0.052). Impurity predicts descendant count (spearman -0.384).",
+    "q2_deep_refinement_geometry": "Heavily refined branches reach higher final purity (0.998 vs lightly 0.998) but retain **higher** final final boundary (log) (0.018 vs 0.022) \u2014 refinement improves local purity while preserving mixed-boundary structure where needed.",
+    "q3_adaptive_allocation": "rho allocates refinement unevenly: 44.4% heavily refined, 24.5% terminated early. Parent boundary predicts subtree depth (spearman 0.328). **Yes** \u2014 rho implicitly performs adaptive resource allocation, concentrating splits on impure/high-entropy regions.",
+    "q4_replace_rho": "**Both branch priority and budget.** Ball-count budgets alone fail because they ignore *which* branches to refine (complexity budget experiment: same ball count, different F1). rho's purity gate is a branch-priority rule. A replacement should combine a global complexity ceiling with impurity/boundary-weighted split priority \u2014 not budget alone."
+  }
+}

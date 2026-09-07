@@ -1,0 +1,468 @@
+{
+  "protocol": {
+    "read_only": true,
+    "representations": [
+      "B0",
+      "rho0.80",
+      "rho0.85",
+      "rho0.90",
+      "rho0.95",
+      "SU3"
+    ],
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "su3_percentile": 75,
+    "purity_b0": 0.95,
+    "rho_values": {
+      "rho0.80": 0.8,
+      "rho0.85": 0.85,
+      "rho0.90": 0.9,
+      "rho0.95": 0.95
+    },
+    "classifier": "Gaussian-weighted GBLSTSVM (frozen)",
+    "parent_metrics": [
+      "parent_samples",
+      "parent_purity",
+      "parent_radius",
+      "parent_density",
+      "parent_entropy",
+      "parent_boundary_score"
+    ],
+    "child_metrics": [
+      "child_total_purity",
+      "child_weighted_purity",
+      "child_radius_change",
+      "child_density_change",
+      "child_entropy_change",
+      "child_boundary_score_change",
+      "child_minority_survival_change"
+    ],
+    "failed": []
+  },
+  "n_split_rows": 60825,
+  "n_run_rows": 306,
+  "by_representation": [
+    {
+      "representation": "B0",
+      "n_runs": 51,
+      "mean_n_splits": 267.72549019607845,
+      "mean_n_rejected": 0.0,
+      "mean_acceptance_rate": 1.0,
+      "mean_purity_gain": 0.14979297616910775,
+      "mean_log_boundary_change": -0.4964653624415077,
+      "mean_entropy_change": -0.3799962163181736,
+      "mean_radius_change": 85.07022737810907,
+      "mean_compactness_gain": 85.07022737810907,
+      "mean_parent_log_boundary": 1.3323269184307465,
+      "mean_separation": 37466223274232.94,
+      "mean_min_surv_change": -0.23882259844066628,
+      "mean_macro_f1": 0.5693473400971955,
+      "mean_minority_f1": 0.4272304696594882,
+      "mean_gmean": 0.4344579620853523,
+      "mean_n_balls": 88.84313725490196
+    },
+    {
+      "representation": "rho0.80",
+      "n_runs": 45,
+      "mean_n_splits": 160.17777777777778,
+      "mean_n_rejected": 0.0,
+      "mean_acceptance_rate": 1.0,
+      "mean_purity_gain": 0.17334408230744988,
+      "mean_log_boundary_change": -0.45045067665549327,
+      "mean_entropy_change": -0.3871687862675838,
+      "mean_radius_change": 27.664535014239593,
+      "mean_compactness_gain": 27.664535014239593,
+      "mean_parent_log_boundary": 1.41942020249599,
+      "mean_separation": 2426633749908.0786,
+      "mean_min_surv_change": -0.19503973243682443,
+      "mean_macro_f1": 0.5758563559591237,
+      "mean_minority_f1": 0.4777166564122844,
+      "mean_gmean": 0.43640205242811114,
+      "mean_n_balls": 56.955555555555556
+    },
+    {
+      "representation": "rho0.85",
+      "n_runs": 51,
+      "mean_n_splits": 201.11764705882354,
+      "mean_n_rejected": 0.0,
+      "mean_acceptance_rate": 1.0,
+      "mean_purity_gain": 0.1589850814924526,
+      "mean_log_boundary_change": -0.47035421573438785,
+      "mean_entropy_change": -0.3846716484467044,
+      "mean_radius_change": 87.52071341107948,
+      "mean_compactness_gain": 87.52071341107948,
+      "mean_parent_log_boundary": 1.383852384529491,
+      "mean_separation": 38539820543352.9,
+      "mean_min_surv_change": -0.2221963979313334,
+      "mean_macro_f1": 0.5823672737312401,
+      "mean_minority_f1": 0.4650756285749198,
+      "mean_gmean": 0.4660823609659436,
+      "mean_n_balls": 66.07843137254902
+    },
+    {
+      "representation": "rho0.90",
+      "n_runs": 51,
+      "mean_n_splits": 239.7058823529412,
+      "mean_n_rejected": 0.0,
+      "mean_acceptance_rate": 1.0,
+      "mean_purity_gain": 0.15415674325368825,
+      "mean_log_boundary_change": -0.4855345072550792,
+      "mean_entropy_change": -0.38535727826585026,
+      "mean_radius_change": 87.0386117714045,
+      "mean_compactness_gain": 87.0386117714045,
+      "mean_parent_log_boundary": 1.3346696941243619,
+      "mean_separation": 36728112913278.74,
+      "mean_min_surv_change": -0.23693808226177976,
+      "mean_macro_f1": 0.5967585263473575,
+      "mean_minority_f1": 0.46789963840129134,
+      "mean_gmean": 0.4748315034372715,
+      "mean_n_balls": 77.80392156862744
+    },
+    {
+      "representation": "rho0.95",
+      "n_runs": 51,
+      "mean_n_splits": 267.72549019607845,
+      "mean_n_rejected": 0.0,
+      "mean_acceptance_rate": 1.0,
+      "mean_purity_gain": 0.14979297616910775,
+      "mean_log_boundary_change": -0.4964653624415077,
+      "mean_entropy_change": -0.3799962163181736,
+      "mean_radius_change": 85.07022737810907,
+      "mean_compactness_gain": 85.07022737810907,
+      "mean_parent_log_boundary": 1.3323269184307465,
+      "mean_separation": 37466223274232.94,
+      "mean_min_surv_change": -0.23882259844066628,
+      "mean_macro_f1": 0.5693473400971955,
+      "mean_minority_f1": 0.4272304696594882,
+      "mean_gmean": 0.4344579620853523,
+      "mean_n_balls": 88.84313725490196
+    },
+    {
+      "representation": "SU3",
+      "n_runs": 51,
+      "mean_n_splits": 75.03921568627452,
+      "mean_n_rejected": 26.058823529411764,
+      "mean_acceptance_rate": 0.5120334083740492,
+      "mean_purity_gain": 0.0857652259508151,
+      "mean_log_boundary_change": -0.3533993620184701,
+      "mean_entropy_change": -0.2171829839283114,
+      "mean_radius_change": 136.45578472591578,
+      "mean_compactness_gain": 136.45578472591578,
+      "mean_parent_log_boundary": 1.788414484701321,
+      "mean_separation": 35639257961593.85,
+      "mean_min_surv_change": -0.0785707502024591,
+      "mean_macro_f1": 0.555774342104131,
+      "mean_minority_f1": 0.4147223447652793,
+      "mean_gmean": 0.44261913442229767,
+      "mean_n_balls": 41.94117647058823
+    }
+  ],
+  "split_correlations": {
+    "final_macro_f1": {
+      "mean_purity_gain": {
+        "pearson": 0.2489836082337875,
+        "pearson_p": 1.731866149309163e-05,
+        "spearman": 0.03480160251587032,
+        "spearman_p": 0.5543228938810199,
+        "n": 291
+      },
+      "mean_log_boundary_change": {
+        "pearson": -0.2909532484571939,
+        "pearson_p": 4.3804085392474446e-07,
+        "spearman": -0.17927157197750784,
+        "spearman_p": 0.0021413817694548535,
+        "n": 291
+      },
+      "mean_entropy_change": {
+        "pearson": -0.218776151909984,
+        "pearson_p": 0.00016879764400867063,
+        "spearman": -0.052892073761583336,
+        "spearman_p": 0.36864348369941635,
+        "n": 291
+      },
+      "mean_radius_change": {
+        "pearson": -0.13973695845087686,
+        "pearson_p": 0.01707038736132178,
+        "spearman": -0.10983545633712004,
+        "spearman_p": 0.06130995604439929,
+        "n": 291
+      },
+      "mean_compactness_gain": {
+        "pearson": -0.13973695845087686,
+        "pearson_p": 0.01707038736132178,
+        "spearman": -0.10983545633712004,
+        "spearman_p": 0.06130995604439929,
+        "n": 291
+      },
+      "mean_parent_log_boundary": {
+        "pearson": 0.39349712721665153,
+        "pearson_p": 3.243791220803216e-12,
+        "spearman": 0.2290439942457277,
+        "spearman_p": 8.049447931028625e-05,
+        "n": 291
+      },
+      "mean_separation": {
+        "pearson": -0.15807111689702957,
+        "pearson_p": 0.006894600903921965,
+        "spearman": -0.27219154136029416,
+        "spearman_p": 2.4465827107679046e-06,
+        "n": 291
+      },
+      "mean_min_surv_change": {
+        "pearson": 0.5537216593633634,
+        "pearson_p": 8.83041912156141e-25,
+        "spearman": 0.5590715258308195,
+        "spearman_p": 2.5163140030828134e-25,
+        "n": 291
+      },
+      "acceptance_rate": {
+        "pearson": 0.006038955034816081,
+        "pearson_p": 0.9183007603084096,
+        "spearman": 0.02113974045131329,
+        "spearman_p": 0.7195165555193943,
+        "n": 291
+      },
+      "n_proposed_splits": {
+        "pearson": -0.2995369046978065,
+        "pearson_p": 1.9110749581709238e-07,
+        "spearman": -0.580956814470907,
+        "spearman_p": 1.15991112004352e-27,
+        "n": 291
+      },
+      "n_rejected_splits": {
+        "pearson": -0.11657476690723993,
+        "pearson_p": 0.04694052151142791,
+        "spearman": -0.049667387795608774,
+        "spearman_p": 0.39859306527500216,
+        "n": 291
+      }
+    },
+    "final_minority_f1": {
+      "mean_purity_gain": {
+        "pearson": 0.25891370644296846,
+        "pearson_p": 7.667828971884345e-06,
+        "spearman": 0.2091973550623191,
+        "spearman_p": 0.00032674552831240595,
+        "n": 291
+      },
+      "mean_log_boundary_change": {
+        "pearson": -0.21867850255694166,
+        "pearson_p": 0.00016996297997512975,
+        "spearman": -0.2342235350985499,
+        "spearman_p": 5.469044074292451e-05,
+        "n": 291
+      },
+      "mean_entropy_change": {
+        "pearson": -0.22314363973212847,
+        "pearson_p": 0.00012370067802548463,
+        "spearman": -0.18591556898380407,
+        "spearman_p": 0.0014442906829761498,
+        "n": 291
+      },
+      "mean_radius_change": {
+        "pearson": -0.15663610368638808,
+        "pearson_p": 0.007427234451459555,
+        "spearman": -0.20867694297721587,
+        "spearman_p": 0.0003384026056490027,
+        "n": 291
+      },
+      "mean_compactness_gain": {
+        "pearson": -0.15663610368638808,
+        "pearson_p": 0.007427234451459555,
+        "spearman": -0.20867694297721587,
+        "spearman_p": 0.0003384026056490027,
+        "n": 291
+      },
+      "mean_parent_log_boundary": {
+        "pearson": 0.29477333657597177,
+        "pearson_p": 3.0384109691683466e-07,
+        "spearman": 0.2878230493409432,
+        "spearman_p": 5.888016840605918e-07,
+        "n": 291
+      },
+      "mean_separation": {
+        "pearson": -0.1597265016441485,
+        "pearson_p": 0.00632277922337829,
+        "spearman": -0.3103382593823212,
+        "spearman_p": 6.47258112900807e-08,
+        "n": 291
+      },
+      "mean_min_surv_change": {
+        "pearson": 0.40986895498861003,
+        "pearson_p": 3.2340713830370285e-13,
+        "spearman": 0.3871515710721847,
+        "spearman_p": 7.666029377579297e-12,
+        "n": 291
+      },
+      "acceptance_rate": {
+        "pearson": 0.015753137049775125,
+        "pearson_p": 0.7890161809477347,
+        "spearman": 0.05082947173628155,
+        "spearman_p": 0.3876359908557355,
+        "n": 291
+      },
+      "n_proposed_splits": {
+        "pearson": -0.16068775171797722,
+        "pearson_p": 0.006010575097701571,
+        "spearman": -0.3764963228761645,
+        "spearman_p": 3.1187258403186343e-11,
+        "n": 291
+      },
+      "n_rejected_splits": {
+        "pearson": -0.1290009319828621,
+        "pearson_p": 0.02778412129764204,
+        "spearman": -0.07248883319109971,
+        "spearman_p": 0.2176253376657375,
+        "n": 291
+      }
+    },
+    "final_gmean": {
+      "mean_purity_gain": {
+        "pearson": 0.19006836596979654,
+        "pearson_p": 0.0011215345424514258,
+        "spearman": 0.04499994986158284,
+        "spearman_p": 0.444435224935799,
+        "n": 291
+      },
+      "mean_log_boundary_change": {
+        "pearson": -0.19046248698354748,
+        "pearson_p": 0.0010946369125078167,
+        "spearman": -0.14709178281530097,
+        "spearman_p": 0.012002301588464825,
+        "n": 291
+      },
+      "mean_entropy_change": {
+        "pearson": -0.16384793408944526,
+        "pearson_p": 0.0050792104509043276,
+        "spearman": -0.045242185312270845,
+        "spearman_p": 0.44198480217908853,
+        "n": 291
+      },
+      "mean_radius_change": {
+        "pearson": -0.015223612649329366,
+        "pearson_p": 0.7959495751293232,
+        "spearman": -0.10096613615759872,
+        "spearman_p": 0.0855531483473369,
+        "n": 291
+      },
+      "mean_compactness_gain": {
+        "pearson": -0.015223612649329366,
+        "pearson_p": 0.7959495751293232,
+        "spearman": -0.10096613615759872,
+        "spearman_p": 0.0855531483473369,
+        "n": 291
+      },
+      "mean_parent_log_boundary": {
+        "pearson": 0.30559429391503573,
+        "pearson_p": 1.0469633116589705e-07,
+        "spearman": 0.20397498582251597,
+        "spearman_p": 0.00046271746637087206,
+        "n": 291
+      },
+      "mean_separation": {
+        "pearson": -0.017067060283199688,
+        "pearson_p": 0.7718848867417181,
+        "spearman": -0.24906237557883654,
+        "spearman_p": 1.7209356449894995e-05,
+        "n": 291
+      },
+      "mean_min_surv_change": {
+        "pearson": 0.5331160146934413,
+        "pearson_p": 9.055244552056976e-23,
+        "spearman": 0.5429239105739859,
+        "spearman_p": 1.0399109953942734e-23,
+        "n": 291
+      },
+      "acceptance_rate": {
+        "pearson": -0.02397397069293828,
+        "pearson_p": 0.6838143632702026,
+        "spearman": 0.010135005084210787,
+        "spearman_p": 0.8633191891653016,
+        "n": 291
+      },
+      "n_proposed_splits": {
+        "pearson": -0.2844884372880932,
+        "pearson_p": 8.037416141373436e-07,
+        "spearman": -0.5750176661040785,
+        "spearman_p": 5.197563037273365e-27,
+        "n": 291
+      },
+      "n_rejected_splits": {
+        "pearson": -0.1090189097216276,
+        "pearson_p": 0.06327442417561639,
+        "spearman": -0.04058306509861205,
+        "spearman_p": 0.49044594676045605,
+        "n": 291
+      }
+    }
+  },
+  "accepted_vs_rejected": {
+    "n_accepted": 59496,
+    "n_rejected": 1329,
+    "purity_gain": {
+      "accepted_mean": 0.14420056979300666,
+      "rejected_mean": 0.17182471053210466
+    },
+    "child_log_boundary_change": {
+      "accepted_mean": -0.3103910218024993,
+      "rejected_mean": -0.18097135225273536
+    },
+    "child_entropy_change": {
+      "accepted_mean": -0.3599202727882543,
+      "rejected_mean": -0.39997093532830413
+    },
+    "child_radius_change": {
+      "accepted_mean": 50.7931507948971,
+      "rejected_mean": 57.52848048686662
+    },
+    "compactness_gain": {
+      "accepted_mean": 50.7931507948971,
+      "rejected_mean": 57.52848048686662
+    },
+    "center_radius_separation": {
+      "accepted_mean": 19184346673020.766,
+      "rejected_mean": 60213297594790.07
+    },
+    "utility": {
+      "accepted_mean": 14.831147683717461,
+      "rejected_mean": 8.847923129243787
+    },
+    "parent_log_boundary": {
+      "accepted_mean": 0.8032163516216108,
+      "rejected_mean": 0.5586406418812125
+    }
+  },
+  "top_vs_bottom": {
+    "macro_f1_median": 0.5565217391304348,
+    "top_half": {
+      "mean_purity_gain": 0.15341521044109144,
+      "mean_log_boundary_change": -0.5598113323708309,
+      "mean_entropy_change": -0.3720012632601088,
+      "mean_radius_change": 34.535740305419104,
+      "mean_compactness_gain": 34.535740305419104,
+      "mean_parent_log_boundary": 1.810587928843641,
+      "mean_separation": 8136939067448.2295
+    },
+    "bottom_half": {
+      "mean_purity_gain": 0.13847981267242795,
+      "mean_log_boundary_change": -0.3369347237054508,
+      "mean_entropy_change": -0.34483990213848775,
+      "mean_radius_change": 141.96926961989658,
+      "mean_compactness_gain": 141.96926961989658,
+      "mean_parent_log_boundary": 0.873846765227958,
+      "mean_separation": 58270069528695.55
+    },
+    "purity_increasing_splits_favor_top": true,
+    "boundary_preserving_splits_favor_top": false,
+    "compactness_improving_splits_favor_top": false
+  },
+  "answers": {
+    "q1_split_property_sources": "Successful representations are most associated with: purity gain is weakly associated with macro F1 (spearman=0.035); boundary-preserving splits (log-boundary \u0394 spearman=-0.179, parent log-boundary spearman=0.229); more splits correlate with worse outcomes (n_splits spearman=-0.581). Parent boundary structure (log-boundary) is the strongest positive signal; purity gain alone is insufficient and over-splitting hurts.",
+    "q2_why_rho90": "rho=0.90 achieves mean macro F1 0.597 (B0=0.569, rho=0.95=0.569, \u0394 vs B0=+0.0274). It proposes 239.7 splits vs B0 267.7, with mean log-boundary change -0.4855 and mean radius change 87.0386. Stopping at \u03c1=0.90 retains boundary-rich mixed balls while avoiding the over-fragmentation and excessive heterogeneity of \u03c1=0.95 / B0.",
+    "q3_why_su3_fails": "SU3 mean macro F1 0.556 vs B0 0.569 (\u0394=-0.0201). SU3 rejects 26.1 splits/run (acceptance 51.2%), producing fewer balls (41.9 vs B0 88.8) with lower purity gain (\u0394=-0.0640) and different boundary structure (\u0394 log-boundary=+0.1431). The SU3 gate filters on compactness/separation utility, not boundary score \u2014 it removes splits that would refine boundary structure while retaining heterogeneous coarse balls. Fewer, larger balls with suppressed boundary refinement hurt Gaussian-weighted twin-hyperplane geometry. Rejected splits have lower log-boundary change (-0.1810) than accepted (-0.3104).",
+    "q4_future_objective": "A future split objective should optimize boundary structure over purity: parent log-boundary (spearman=0.229) correlates positively with macro F1, while more splits (spearman=-0.581) correlate negatively. Combine: (1) preserve or increase log-boundary score (entropy \u00d7 density), (2) moderate compactness gain without over-fragmentation, (3) protect minority survival (mean_min_surv_change spearman=0.559), (4) stop recursion near \u03c1\u22480.90 rather than pursuing \u03c1\u21921. Reject splits that reduce boundary structure or create del_ball-vulnerable minority peels."
+  }
+}

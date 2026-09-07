@@ -1,0 +1,360 @@
+{
+  "protocol": {
+    "read_only": true,
+    "diagnostic_only": true,
+    "smoke_mode": false,
+    "purity_b0_su3": 0.95,
+    "min_ball_count": 2,
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "representations": [
+      "B0",
+      "SU3",
+      "rho0.80",
+      "rho0.85",
+      "rho0.90",
+      "rho0.95"
+    ],
+    "rho_values": {
+      "rho0.80": 0.8,
+      "rho0.85": 0.85,
+      "rho0.90": 0.9,
+      "rho0.95": 0.95
+    },
+    "weighting": "Gaussian purity_compact",
+    "su3_rule": "reject if utility <= percentile(75) of B0 proposals",
+    "c1": 100.0,
+    "c2": 0.01,
+    "prediction_rule": "reference",
+    "weight_placement": "opposite_only",
+    "failed": [],
+    "no_tuning": true
+  },
+  "n_rows": 306,
+  "correlations": {
+    "mean_purity": {
+      "macro_f1": {
+        "pearson": 0.038173678100041755,
+        "pearson_p": 0.5165789415592881,
+        "spearman": -0.1294766994193414,
+        "spearman_p": 0.027209092090727492,
+        "n": 291
+      },
+      "minority_f1": {
+        "pearson": 0.021653043068171417,
+        "pearson_p": 0.7130025513559481,
+        "spearman": -0.12284079817794274,
+        "spearman_p": 0.036222015567714344,
+        "n": 291
+      },
+      "gmean": {
+        "pearson": 0.00036112397490834376,
+        "pearson_p": 0.9951059668212415,
+        "spearman": -0.14216244798937586,
+        "spearman_p": 0.015223789731938584,
+        "n": 291
+      }
+    },
+    "mean_radius": {
+      "macro_f1": {
+        "pearson": -0.1293751048624658,
+        "pearson_p": 0.027331017452395558,
+        "spearman": -0.0284916675409474,
+        "spearman_p": 0.6283590292475829,
+        "n": 291
+      },
+      "minority_f1": {
+        "pearson": -0.14375591689248834,
+        "pearson_p": 0.014108088065716475,
+        "spearman": -0.09764382514328862,
+        "spearman_p": 0.0964156486650889,
+        "n": 291
+      },
+      "gmean": {
+        "pearson": -0.013671001121867867,
+        "pearson_p": 0.8163695396750151,
+        "spearman": 0.017370169887619455,
+        "spearman_p": 0.7679481826919172,
+        "n": 291
+      }
+    },
+    "radius_variance": {
+      "macro_f1": {
+        "pearson": -0.13907761777101696,
+        "pearson_p": 0.017604993740140757,
+        "spearman": -0.06675855280722794,
+        "spearman_p": 0.2562995364373692,
+        "n": 291
+      },
+      "minority_f1": {
+        "pearson": -0.10622577309303417,
+        "pearson_p": 0.07038898653558884,
+        "spearman": -0.12737984806461217,
+        "spearman_p": 0.029822345129660744,
+        "n": 291
+      },
+      "gmean": {
+        "pearson": -0.018302842726721606,
+        "pearson_p": 0.7558725910686148,
+        "spearman": -0.02769665126259547,
+        "spearman_p": 0.6379791010903728,
+        "n": 291
+      }
+    },
+    "mean_density": {
+      "macro_f1": {
+        "pearson": 0.07843083286246293,
+        "pearson_p": 0.1821293448700761,
+        "spearman": 0.10013356672584967,
+        "spearman_p": 0.08817826736888054,
+        "n": 291
+      },
+      "minority_f1": {
+        "pearson": -0.010801869547501465,
+        "pearson_p": 0.8544227013968638,
+        "spearman": 0.18726143457969985,
+        "spearman_p": 0.0013313880732273016,
+        "n": 291
+      },
+      "gmean": {
+        "pearson": -0.0050656587983878435,
+        "pearson_p": 0.9314328000194524,
+        "spearman": 0.07444736414813356,
+        "spearman_p": 0.20541688127385152,
+        "n": 291
+      }
+    },
+    "mean_entropy": {
+      "macro_f1": {
+        "pearson": 0.06493777165033152,
+        "pearson_p": 0.2695266144873289,
+        "spearman": 0.17280103736930835,
+        "spearman_p": 0.003102894492529568,
+        "n": 291
+      },
+      "minority_f1": {
+        "pearson": 0.06275877422378641,
+        "pearson_p": 0.2859588221197872,
+        "spearman": 0.1570185738583829,
+        "spearman_p": 0.007281798482952887,
+        "n": 291
+      },
+      "gmean": {
+        "pearson": 0.08874856292334606,
+        "pearson_p": 0.13094066645191818,
+        "spearman": 0.18400706727351232,
+        "spearman_p": 0.0016194799787826702,
+        "n": 291
+      }
+    },
+    "fraction_mixed_balls": {
+      "macro_f1": {
+        "pearson": 0.35274714901054544,
+        "pearson_p": 5.952617489917025e-10,
+        "spearman": 0.30772061029584846,
+        "spearman_p": 8.448432005094398e-08,
+        "n": 291
+      },
+      "minority_f1": {
+        "pearson": 0.2898597632046782,
+        "pearson_p": 4.859190414525089e-07,
+        "spearman": 0.26082870456570173,
+        "spearman_p": 6.527624067172502e-06,
+        "n": 291
+      },
+      "gmean": {
+        "pearson": 0.3416188716295807,
+        "pearson_p": 2.1843483598640524e-09,
+        "spearman": 0.31654470136248386,
+        "spearman_p": 3.405913342301335e-08,
+        "n": 291
+      }
+    },
+    "mean_margin_proxy": {
+      "macro_f1": {
+        "pearson": -0.05788063653995051,
+        "pearson_p": 0.34521594994393395,
+        "spearman": -0.03472662646337008,
+        "spearman_p": 0.5713850518765166,
+        "n": 268
+      },
+      "minority_f1": {
+        "pearson": -0.21900911986883492,
+        "pearson_p": 0.00030322429133656235,
+        "spearman": -0.2050710404229741,
+        "spearman_p": 0.0007316626965975187,
+        "n": 268
+      },
+      "gmean": {
+        "pearson": -0.1098315934512834,
+        "pearson_p": 0.07264563652349422,
+        "spearman": -0.07184702697798825,
+        "spearman_p": 0.24111506252671672,
+        "n": 268
+      }
+    },
+    "minority_survival": {
+      "macro_f1": {
+        "pearson": 0.5714573846750706,
+        "pearson_p": 1.2588338145276508e-26,
+        "spearman": 0.5741825236937531,
+        "spearman_p": 6.40228628543006e-27,
+        "n": 291
+      },
+      "minority_f1": {
+        "pearson": 0.4535129454071113,
+        "pearson_p": 3.620466262888931e-16,
+        "spearman": 0.46820778167586613,
+        "spearman_p": 2.924330716343835e-17,
+        "n": 291
+      },
+      "gmean": {
+        "pearson": 0.5479353330773495,
+        "pearson_p": 3.347628898339181e-24,
+        "spearman": 0.575356256964301,
+        "spearman_p": 4.775516575324258e-27,
+        "n": 291
+      }
+    }
+  },
+  "by_representation": [
+    {
+      "representation": "B0",
+      "n_runs": 51,
+      "mean_n_balls": 88.84313725490196,
+      "mean_purity": 0.9970611801224372,
+      "mean_radius": 187.9908729666654,
+      "mean_density": 35430059497.71073,
+      "mean_n_heterogeneous_balls": 1.0,
+      "mean_fraction_mixed": 0.08732003842772267,
+      "mean_margin_proxy": 1.6994811870036202,
+      "mean_minority_survival": 0.5829429728913098,
+      "mean_macro_f1": 0.5693473400971953,
+      "mean_minority_f1": 0.4272304696594882,
+      "mean_gmean": 0.4344579620853523,
+      "mean_accuracy": 0.6840659276644434
+    },
+    {
+      "representation": "SU3",
+      "n_runs": 51,
+      "mean_n_balls": 41.94117647058823,
+      "mean_purity": 0.7622747316045553,
+      "mean_radius": 389.59026331068196,
+      "mean_density": 1250966141.7747803,
+      "mean_n_heterogeneous_balls": 26.568627450980394,
+      "mean_fraction_mixed": 0.7741341703385101,
+      "mean_margin_proxy": 1.7152314054573292,
+      "mean_minority_survival": 0.988711020713745,
+      "mean_macro_f1": 0.555774342104131,
+      "mean_minority_f1": 0.4147223447652793,
+      "mean_gmean": 0.4426191344222977,
+      "mean_accuracy": 0.6668577808892064
+    },
+    {
+      "representation": "rho0.80",
+      "n_runs": 51,
+      "mean_n_balls": 50.372549019607845,
+      "mean_purity": 0.9312989756422027,
+      "mean_radius": 908.0186997391763,
+      "mean_density": 19865415245.330486,
+      "mean_n_heterogeneous_balls": 15.333333333333334,
+      "mean_fraction_mixed": 0.5063803292399703,
+      "mean_margin_proxy": 1.2331896330157388,
+      "mean_minority_survival": 0.8073126868637235,
+      "mean_macro_f1": 0.5758563559591237,
+      "mean_minority_f1": 0.4777166564122843,
+      "mean_gmean": 0.43640205242811114,
+      "mean_accuracy": 0.6790922819543206
+    },
+    {
+      "representation": "rho0.85",
+      "n_runs": 51,
+      "mean_n_balls": 66.07843137254902,
+      "mean_purity": 0.9769439061685737,
+      "mean_radius": 219.30292946826222,
+      "mean_density": 28694967217.41627,
+      "mean_n_heterogeneous_balls": 9.588235294117647,
+      "mean_fraction_mixed": 0.26634283433868067,
+      "mean_margin_proxy": 1.46447800741078,
+      "mean_minority_survival": 0.689471437328367,
+      "mean_macro_f1": 0.5823672737312401,
+      "mean_minority_f1": 0.46507562857491974,
+      "mean_gmean": 0.4660823609659436,
+      "mean_accuracy": 0.6817880979759925
+    },
+    {
+      "representation": "rho0.90",
+      "n_runs": 51,
+      "mean_n_balls": 77.80392156862744,
+      "mean_purity": 0.9921701135893566,
+      "mean_radius": 206.0065330221942,
+      "mean_density": 23307632061.384537,
+      "mean_n_heterogeneous_balls": 4.235294117647059,
+      "mean_fraction_mixed": 0.1491789297021827,
+      "mean_margin_proxy": 1.5290241854277689,
+      "mean_minority_survival": 0.6202590644200102,
+      "mean_macro_f1": 0.5967585263473575,
+      "mean_minority_f1": 0.46789963840129134,
+      "mean_gmean": 0.4748315034372715,
+      "mean_accuracy": 0.7001833495301815
+    },
+    {
+      "representation": "rho0.95",
+      "n_runs": 51,
+      "mean_n_balls": 88.84313725490196,
+      "mean_purity": 0.9970611801224372,
+      "mean_radius": 187.9908729666654,
+      "mean_density": 35430059497.71073,
+      "mean_n_heterogeneous_balls": 1.0,
+      "mean_fraction_mixed": 0.08732003842772267,
+      "mean_margin_proxy": 1.6994811870036202,
+      "mean_minority_survival": 0.5829429728913098,
+      "mean_macro_f1": 0.5693473400971953,
+      "mean_minority_f1": 0.4272304696594882,
+      "mean_gmean": 0.4344579620853523,
+      "mean_accuracy": 0.6840659276644434
+    }
+  ],
+  "optimal_geometry": {
+    "verdict": "C",
+    "detail": "Top performers carry more heterogeneous (mixed-label) balls.",
+    "top_half_profile": {
+      "mean_purity": 0.9591970279459667,
+      "mean_radius": 103.14570191368132,
+      "mean_margin_proxy": 1.488195157747767,
+      "fraction_mixed": 0.3516502329407912,
+      "mean_density": 27894590173.074966
+    },
+    "bottom_half_profile": {
+      "mean_purity": 0.9489834438016417,
+      "mean_radius": 331.82120617124167,
+      "mean_margin_proxy": 1.6273756882628567,
+      "fraction_mixed": 0.19938825779109676,
+      "mean_density": 22516870307.747955
+    },
+    "macro_f1_median_split": 0.5565217391304348
+  },
+  "su3_failure": {
+    "paired_delta_su3_minus_b0": {
+      "mean_radius": 201.5993903440166,
+      "fraction_mixed_balls": 0.6868141319107874,
+      "mean_margin_proxy": -0.04731060337235582,
+      "mean_density": -34179093355.935955,
+      "n_heterogeneous_balls": 25.568627450980394,
+      "mean_purity": -0.23478644851788186,
+      "minority_survival": 0.4057680478224352,
+      "macro_f1": -0.02008248276202605
+    },
+    "mechanism_checks": {
+      "radius_increases": true,
+      "heterogeneity_increases": true,
+      "margin_decreases": true,
+      "density_decreases": true
+    },
+    "summary": "SU3 failure co-occurs with: radius_increases, heterogeneity_increases, margin_decreases, density_decreases (macro F1 \u0394=-0.0201 vs B0)."
+  },
+  "b0_vs_su3_explanation": "B0 Gaussian macro F1 (0.569) exceeds SU3 (0.556) despite SU3 improving minority survival (\u0394=+0.406). SU3 tends to retain larger balls (\u0394 radius=+201.5994). SU3 reduces the margin proxy (\u0394=-0.0473), weakening class separation geometry. SU3 increases mixed-ball fraction (\u0394=+0.6868). Interpretation: minority sample retention alone does not yield better balls for Gaussian-weighted twin hyperplanes; geometry (radius, margin, heterogeneity) appears to dominate macro classification."
+}

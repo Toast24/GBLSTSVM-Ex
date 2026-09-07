@@ -1,0 +1,99 @@
+{
+  "n_validation_rows": 6418,
+  "n_test_rows": 1818,
+  "n_runs": 170,
+  "paired_comparisons": [
+    {
+      "focal": "validation_selected_max",
+      "baseline": "full_rho90",
+      "n_pairs": 151,
+      "mean_delta_macro_f1": 0.038978981889736,
+      "median_delta_macro_f1": 0.040544563222765284,
+      "wins": 87,
+      "ties": 8,
+      "losses": 56,
+      "pct_wins": 57.615894039735096,
+      "wilcoxon_stat": 3621.0,
+      "wilcoxon_p": 0.002089608568073366
+    },
+    {
+      "focal": "validation_selected_1se",
+      "baseline": "full_rho90",
+      "n_pairs": 151,
+      "mean_delta_macro_f1": 0.038978981889736,
+      "median_delta_macro_f1": 0.040544563222765284,
+      "wins": 87,
+      "ties": 8,
+      "losses": 56,
+      "pct_wins": 57.615894039735096,
+      "wilcoxon_stat": 3621.0,
+      "wilcoxon_p": 0.002089608568073366
+    },
+    {
+      "focal": "fixed_K6",
+      "baseline": "full_rho90",
+      "n_pairs": 139,
+      "mean_delta_macro_f1": 0.0241241815866112,
+      "median_delta_macro_f1": 0.032830317200716386,
+      "wins": 79,
+      "ties": 5,
+      "losses": 55,
+      "pct_wins": 56.83453237410072,
+      "wilcoxon_stat": 3581.0,
+      "wilcoxon_p": 0.036538096683919066
+    },
+    {
+      "focal": "fixed_K8",
+      "baseline": "full_rho90",
+      "n_pairs": 144,
+      "mean_delta_macro_f1": 0.01876291787521494,
+      "median_delta_macro_f1": 0.026101644304055815,
+      "wins": 79,
+      "ties": 12,
+      "losses": 53,
+      "pct_wins": 54.861111111111114,
+      "wilcoxon_stat": 3473.0,
+      "wilcoxon_p": 0.0374807265670095
+    },
+    {
+      "focal": "fixed_K10",
+      "baseline": "full_rho90",
+      "n_pairs": 141,
+      "mean_delta_macro_f1": 0.03670922388268823,
+      "median_delta_macro_f1": 0.050762356996580826,
+      "wins": 83,
+      "ties": 4,
+      "losses": 54,
+      "pct_wins": 58.86524822695036,
+      "wilcoxon_stat": 3315.0,
+      "wilcoxon_p": 0.002424268828853684
+    },
+    {
+      "focal": "validation_selected_max",
+      "baseline": "sample_stratified_matched",
+      "n_pairs": 151,
+      "mean_delta_macro_f1": 0.19232513772164853,
+      "median_delta_macro_f1": 0.19681349578256807,
+      "wins": 129,
+      "ties": 4,
+      "losses": 18,
+      "pct_wins": 85.43046357615894,
+      "wilcoxon_stat": 681.0,
+      "wilcoxon_p": 3.550119316259197e-20
+    },
+    {
+      "focal": "validation_selected_1se",
+      "baseline": "sample_stratified_matched",
+      "n_pairs": 151,
+      "mean_delta_macro_f1": 0.19232513772164853,
+      "median_delta_macro_f1": 0.19681349578256807,
+      "wins": 129,
+      "ties": 4,
+      "losses": 18,
+      "pct_wins": 85.43046357615894,
+      "wilcoxon_stat": 681.0,
+      "wilcoxon_p": 3.550119316259197e-20
+    }
+  ],
+  "interpretation": "Automated interpretation: A\n\n**Case A** \u2014 Validation-selected granular compression significantly improves over full rho90 and over matched sample compression. Evidence supports a granular-specific contribution.\n\nvalidation_selected_max vs full_rho90: \u0394=+0.0390 (sig=True)\nvalidation_selected_max vs sample_matched: \u0394=+0.1923 (sig=True)\nvalidation_selected_1se vs full_rho90: \u0394=+0.0390"
+}

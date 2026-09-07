@@ -1,0 +1,255 @@
+{
+  "protocol": {
+    "read_only": true,
+    "representation": "rho0.90",
+    "K_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32,
+      48
+    ],
+    "random_reps": 10,
+    "ball_methods": [
+      "random_k",
+      "entropy_k",
+      "boundary_k",
+      "entropy_boundary_k",
+      "purity_k",
+      "stratified_random_k"
+    ],
+    "sample_methods": [
+      "sample_random_k",
+      "sample_stratified_k"
+    ],
+    "sample_target": "n_samples from entropy_k selection",
+    "entropy_boundary_score": "norm(entropy)*norm(boundary_score) within rho90 pool",
+    "boundary_score": "entropy * density (ball_utility_landscape)",
+    "kmeans_prototype": "skipped \u2014 no existing utility",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "smoke_mode": false,
+    "classifier": "Gaussian GBLSTSVM (purity_compact)",
+    "c1": 100.0,
+    "c2": 0.01
+  },
+  "n_raw_rows": 31654,
+  "full_rho90_stats": {
+    "mean_macro_f1": 0.5842196778595634,
+    "frac_collapsed": 0.058823529411764705,
+    "mean_n_balls": 77.34117647058824
+  },
+  "k_regime_table": [
+    {
+      "K": 2,
+      "random_k": 0.6468875860232431,
+      "entropy_k": 0.6468875860232431,
+      "boundary_k": 0.6468875860232431,
+      "entropy_boundary_k": 0.6468875860232431,
+      "purity_k": 0.6468875860232431,
+      "stratified_random_k": 0.5383480430712837,
+      "sample_random_k": 0.6524474422450247
+    },
+    {
+      "K": 3,
+      "random_k": 0.5995742442080058,
+      "entropy_k": 0.5995742442080058,
+      "boundary_k": 0.5995742442080058,
+      "entropy_boundary_k": 0.5995742442080058,
+      "purity_k": 0.5995742442080058,
+      "stratified_random_k": 0.5175476884522265,
+      "sample_random_k": 0.6230061583564012
+    },
+    {
+      "K": 4,
+      "random_k": 0.5835610758216243,
+      "entropy_k": 0.5835610758216242,
+      "boundary_k": 0.5835610758216242,
+      "entropy_boundary_k": 0.5835610758216242,
+      "purity_k": 0.5835610758216242,
+      "stratified_random_k": 0.5610260266441465,
+      "sample_random_k": 0.6205779513758923
+    },
+    {
+      "K": 5,
+      "random_k": 0.6058721740712091,
+      "entropy_k": 0.6058721740712091,
+      "boundary_k": 0.6058721740712091,
+      "entropy_boundary_k": 0.6058721740712091,
+      "purity_k": 0.6058721740712091,
+      "stratified_random_k": 0.568475529582865,
+      "sample_random_k": 0.6160489859230619
+    },
+    {
+      "K": 6,
+      "random_k": 0.6084602159814462,
+      "entropy_k": 0.6084602159814463,
+      "boundary_k": 0.6084602159814463,
+      "entropy_boundary_k": 0.6084602159814463,
+      "purity_k": 0.6084602159814463,
+      "stratified_random_k": 0.594711005161155,
+      "sample_random_k": 0.6025063221536671
+    },
+    {
+      "K": 8,
+      "random_k": 0.5953643048325411,
+      "entropy_k": 0.595364304832541,
+      "boundary_k": 0.595364304832541,
+      "entropy_boundary_k": 0.595364304832541,
+      "purity_k": 0.595364304832541,
+      "stratified_random_k": 0.5998658494995233,
+      "sample_random_k": 0.615740365878889
+    },
+    {
+      "K": 10,
+      "random_k": 0.595166506132336,
+      "entropy_k": 0.5951665061323359,
+      "boundary_k": 0.5951665061323359,
+      "entropy_boundary_k": 0.5951665061323359,
+      "purity_k": 0.5951665061323359,
+      "stratified_random_k": 0.5982116047665642,
+      "sample_random_k": 0.6066735590381219
+    },
+    {
+      "K": 12,
+      "random_k": 0.5997120436809901,
+      "entropy_k": 0.5997120436809901,
+      "boundary_k": 0.5997120436809901,
+      "entropy_boundary_k": 0.5997120436809901,
+      "purity_k": 0.5997120436809901,
+      "stratified_random_k": 0.6095455999086923,
+      "sample_random_k": 0.5983022387328037
+    },
+    {
+      "K": 16,
+      "random_k": 0.5731502987926534,
+      "entropy_k": 0.5731502987926534,
+      "boundary_k": 0.5731502987926534,
+      "entropy_boundary_k": 0.5731502987926534,
+      "purity_k": 0.5731502987926534,
+      "stratified_random_k": 0.5765445368986543,
+      "sample_random_k": 0.5862015957105611
+    },
+    {
+      "K": 20,
+      "random_k": 0.5351002459646211,
+      "entropy_k": 0.5351002459646212,
+      "boundary_k": 0.5351002459646212,
+      "entropy_boundary_k": 0.5351002459646212,
+      "purity_k": 0.5351002459646212,
+      "stratified_random_k": 0.55583218323366,
+      "sample_random_k": 0.5618013870316743
+    },
+    {
+      "K": 24,
+      "random_k": 0.5321023196217213,
+      "entropy_k": 0.5321023196217214,
+      "boundary_k": 0.5321023196217214,
+      "entropy_boundary_k": 0.5321023196217214,
+      "purity_k": 0.5321023196217214,
+      "stratified_random_k": 0.5538564562934088,
+      "sample_random_k": 0.5571328456062162
+    },
+    {
+      "K": 32,
+      "random_k": 0.5431465333146062,
+      "entropy_k": 0.5431465333146062,
+      "boundary_k": 0.5431465333146062,
+      "entropy_boundary_k": 0.5431465333146062,
+      "purity_k": 0.5431465333146062,
+      "stratified_random_k": 0.5547439072018195,
+      "sample_random_k": 0.543994660015704
+    },
+    {
+      "K": 48,
+      "random_k": 0.543296462879072,
+      "entropy_k": 0.5432964628790721,
+      "boundary_k": 0.5432964628790721,
+      "entropy_boundary_k": 0.5432964628790721,
+      "purity_k": 0.5432964628790721,
+      "stratified_random_k": 0.5413896252749587,
+      "sample_random_k": 0.5508562668496076
+    }
+  ],
+  "optima_by_method": {
+    "boundary_k": {
+      "K_max_mean_macro_f1": 2.0,
+      "max_mean_macro_f1": 0.6468875860232431,
+      "K_max_median_macro_f1": 6.0,
+      "max_median_macro_f1": 0.6141025641025641
+    },
+    "entropy_boundary_k": {
+      "K_max_mean_macro_f1": 2.0,
+      "max_mean_macro_f1": 0.6468875860232431,
+      "K_max_median_macro_f1": 6.0,
+      "max_median_macro_f1": 0.6141025641025641
+    },
+    "entropy_k": {
+      "K_max_mean_macro_f1": 2.0,
+      "max_mean_macro_f1": 0.6468875860232431,
+      "K_max_median_macro_f1": 6.0,
+      "max_median_macro_f1": 0.6141025641025641
+    },
+    "full_rho90": {
+      "K_max_mean_macro_f1": NaN,
+      "max_mean_macro_f1": 0.5842196778595634,
+      "K_max_median_macro_f1": NaN,
+      "max_median_macro_f1": 0.587535271745798
+    },
+    "purity_k": {
+      "K_max_mean_macro_f1": 2.0,
+      "max_mean_macro_f1": 0.6468875860232431,
+      "K_max_median_macro_f1": 6.0,
+      "max_median_macro_f1": 0.6141025641025641
+    },
+    "random_k": {
+      "K_max_mean_macro_f1": 2.0,
+      "max_mean_macro_f1": 0.6468875860232431,
+      "K_max_median_macro_f1": 6.0,
+      "max_median_macro_f1": 0.6141025641025641
+    },
+    "sample_random_k": {
+      "K_max_mean_macro_f1": 2.0,
+      "max_mean_macro_f1": 0.6524474422450247,
+      "K_max_median_macro_f1": 2.0,
+      "max_median_macro_f1": 0.6272157190635451
+    },
+    "sample_stratified_k": {
+      "K_max_mean_macro_f1": 2.0,
+      "max_mean_macro_f1": 0.672813738819308,
+      "K_max_median_macro_f1": 2.0,
+      "max_median_macro_f1": 0.6929400386847195
+    },
+    "stratified_random_k": {
+      "K_max_mean_macro_f1": 12.0,
+      "max_mean_macro_f1": 0.6095455999086923,
+      "K_max_median_macro_f1": 10.0,
+      "max_median_macro_f1": 0.6013090229079008
+    }
+  },
+  "answers": {
+    "qA_compression_improves": "Full rho90 mean F1 **0.584**. At K\u226410, mean F1 by method: sample_stratified_k=0.623, sample_random_k=0.620, boundary_k=0.605, entropy_boundary_k=0.605, purity_k=0.605, entropy_k=0.605, random_k=0.605, stratified_random_k=0.568. Compression to K=12 improves over full rho90 (\u0394=+0.042 for entropy_k).",
+    "qB_selection_vs_random": "Entropy vs random (paired across K): mean \u0394 +0.000; boundary vs random: +0.000. **Weak/no** \u2014 selection advantage over random is small or inconsistent.",
+    "qC_granular_vs_sample": "Entropy_k vs sample-random (matched train samples): mean \u0394 -0.011. **No** \u2014 sample-level compression is competitive; granular structure adds little.",
+    "qD_mechanism": "Decomposition: (1) **compression** \u2014 fewer balls/samples regularize vs full rho90; (2) **ball selection** \u2014 entropy/boundary ranking vs random; (3) **granular structure** \u2014 ball subset vs subsampled-then-granulated samples. Primarily **representation compression** (fewer balls vs full rho90). Ball ranking is neutral at fixed K; sample-level controls are competitive.",
+    "q_dataset_consistency": "532 dataset\u00d7method\u00d7K cells show \u22658/10 positive seeds vs full rho90. See dataset_level_results.csv \u2014 no cherry-picking."
+  }
+}

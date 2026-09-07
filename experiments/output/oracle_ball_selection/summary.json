@@ -1,0 +1,208 @@
+{
+  "protocol": {
+    "read_only": true,
+    "diagnostic_only": true,
+    "smoke_mode": false,
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "representations": [
+      "B0",
+      "rho0.80",
+      "rho0.85",
+      "rho0.90",
+      "rho0.95",
+      "SU3"
+    ],
+    "selection_ratios": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "ranking_criteria": [
+      "purity",
+      "boundary_score",
+      "density",
+      "entropy",
+      "boundary_compact",
+      "random",
+      "lobo_oracle"
+    ],
+    "weighting": "Gaussian purity_compact",
+    "lobo_cache": "C:\\Users\\kedar\\Desktop\\BITS\\Acads\\BharatSOP\\GBLSTSVM\\experiments\\output\\ball_utility_landscape\\ball_records.csv",
+    "c1": 100.0,
+    "c2": 0.01,
+    "failed": [],
+    "no_new_algorithms": true
+  },
+  "n_rows": 8568,
+  "oracle_recovery": {
+    "B0": {
+      "all_balls_macro_f1": 0.5693473400971953,
+      "lobo_oracle_50pct_macro_f1": 0.5936443914407044,
+      "lobo_oracle_75pct_macro_f1": 0.6367226993535828,
+      "recoverable_gain_50pct": 0.024297051343509013,
+      "recoverable_gain_75pct": 0.06737535925638749
+    },
+    "rho0.80": {
+      "all_balls_macro_f1": 0.5758563559591237,
+      "lobo_oracle_50pct_macro_f1": 0.6351460802295764,
+      "lobo_oracle_75pct_macro_f1": 0.6320409392528984,
+      "recoverable_gain_50pct": 0.05928972427045276,
+      "recoverable_gain_75pct": 0.05618458329377474
+    },
+    "rho0.85": {
+      "all_balls_macro_f1": 0.5823672737312401,
+      "lobo_oracle_50pct_macro_f1": 0.5977309106778911,
+      "lobo_oracle_75pct_macro_f1": 0.6195992829386808,
+      "recoverable_gain_50pct": 0.015363636946650994,
+      "recoverable_gain_75pct": 0.03723200920744074
+    },
+    "rho0.90": {
+      "all_balls_macro_f1": 0.5967585263473575,
+      "lobo_oracle_50pct_macro_f1": 0.6029014162612175,
+      "lobo_oracle_75pct_macro_f1": 0.6490723166071638,
+      "recoverable_gain_50pct": 0.006142889913860028,
+      "recoverable_gain_75pct": 0.052313790259806314
+    },
+    "rho0.95": {
+      "all_balls_macro_f1": 0.5693473400971953,
+      "lobo_oracle_50pct_macro_f1": 0.5936443914407044,
+      "lobo_oracle_75pct_macro_f1": 0.6367226993535828,
+      "recoverable_gain_50pct": 0.024297051343509013,
+      "recoverable_gain_75pct": 0.06737535925638749
+    },
+    "SU3": {
+      "all_balls_macro_f1": 0.555774342104131,
+      "lobo_oracle_50pct_macro_f1": 0.594709516688668,
+      "lobo_oracle_75pct_macro_f1": 0.598474458683372,
+      "recoverable_gain_50pct": 0.03893517458453699,
+      "recoverable_gain_75pct": 0.042700116579241
+    }
+  },
+  "criterion_vs_oracle_50pct": [
+    {
+      "ranking_criterion": "boundary_compact",
+      "selection_ratio": 0.5,
+      "mean_macro_f1": 0.5834209114390365,
+      "mean_oracle_macro_f1": 0.6025544670518949,
+      "mean_gap_to_oracle": 0.019133555612858278,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "boundary_score",
+      "selection_ratio": 0.5,
+      "mean_macro_f1": 0.5821279933655528,
+      "mean_oracle_macro_f1": 0.6025544670518949,
+      "mean_gap_to_oracle": 0.020426473686341966,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "entropy",
+      "selection_ratio": 0.5,
+      "mean_macro_f1": 0.5789705810009623,
+      "mean_oracle_macro_f1": 0.6025544670518949,
+      "mean_gap_to_oracle": 0.02358388605093242,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "random",
+      "selection_ratio": 0.5,
+      "mean_macro_f1": 0.5669133631340395,
+      "mean_oracle_macro_f1": 0.6025544670518949,
+      "mean_gap_to_oracle": 0.035641103917855306,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "density",
+      "selection_ratio": 0.5,
+      "mean_macro_f1": 0.5612203763877098,
+      "mean_oracle_macro_f1": 0.6025544670518949,
+      "mean_gap_to_oracle": 0.04133409066418491,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "purity",
+      "selection_ratio": 0.5,
+      "mean_macro_f1": 0.559431679946665,
+      "mean_oracle_macro_f1": 0.6025544670518949,
+      "mean_gap_to_oracle": 0.04312278710522981,
+      "n_pairs": 291
+    }
+  ],
+  "criterion_vs_oracle_75pct": [
+    {
+      "ranking_criterion": "boundary_compact",
+      "selection_ratio": 0.75,
+      "mean_macro_f1": 0.5874743012601424,
+      "mean_oracle_macro_f1": 0.6296417059862047,
+      "mean_gap_to_oracle": 0.0421674047260624,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "entropy",
+      "selection_ratio": 0.75,
+      "mean_macro_f1": 0.587173706355821,
+      "mean_oracle_macro_f1": 0.6296417059862047,
+      "mean_gap_to_oracle": 0.04246799963038366,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "boundary_score",
+      "selection_ratio": 0.75,
+      "mean_macro_f1": 0.5867717391593451,
+      "mean_oracle_macro_f1": 0.6296417059862047,
+      "mean_gap_to_oracle": 0.04286996682685959,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "purity",
+      "selection_ratio": 0.75,
+      "mean_macro_f1": 0.5755916044477974,
+      "mean_oracle_macro_f1": 0.6296417059862047,
+      "mean_gap_to_oracle": 0.05405010153840727,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "density",
+      "selection_ratio": 0.75,
+      "mean_macro_f1": 0.5734992973583183,
+      "mean_oracle_macro_f1": 0.6296417059862047,
+      "mean_gap_to_oracle": 0.056142408627886484,
+      "n_pairs": 291
+    },
+    {
+      "ranking_criterion": "random",
+      "selection_ratio": 0.75,
+      "mean_macro_f1": 0.5726717601293019,
+      "mean_oracle_macro_f1": 0.6296417059862047,
+      "mean_gap_to_oracle": 0.056969945856902834,
+      "n_pairs": 291
+    }
+  ],
+  "boundary_vs_all": {
+    "mean_delta_boundary_50pct_vs_all": 0.006647227453331243,
+    "mean_delta_boundary_75pct_vs_all": 0.011290973247123606,
+    "fraction_improved_at_50pct": 0.47079037800687284,
+    "fraction_improved_at_75pct": 0.3951890034364261
+  },
+  "bottleneck": {
+    "verdict": "both",
+    "detail": "Oracle subsampling recovers macro F1 over all-ball training, and best-generation representation (rho0.90) still outperforms SU3 at 100% \u2014 both selection and generation limit performance.",
+    "best_generation_representation": "rho0.90",
+    "best_generation_macro_f1": 0.5967585263473575,
+    "mean_oracle_recoverable_gain_50pct": 0.028054254733753132,
+    "mean_boundary_selection_gain_50pct": 0.006647227453331243,
+    "all_representation_all_ball_macro_f1": {
+      "B0": 0.5693473400971953,
+      "rho0.80": 0.5758563559591237,
+      "rho0.85": 0.5823672737312401,
+      "rho0.90": 0.5967585263473575,
+      "rho0.95": 0.5693473400971953,
+      "SU3": 0.555774342104131
+    }
+  }
+}

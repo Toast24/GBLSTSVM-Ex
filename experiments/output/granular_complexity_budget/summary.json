@@ -1,0 +1,172 @@
+{
+  "protocol": {
+    "read_only": true,
+    "reference_rho": 0.9,
+    "budget_pcts": [
+      25,
+      50,
+      75,
+      100,
+      125,
+      150
+    ],
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "classifier": "Gaussian-weighted GBLSTSVM (frozen)",
+    "budget_definition": "target balls = pct/100 * rho0.90 final ball count",
+    "extension_phase": "budgets >100% use extra splits with purity < 0.95 beyond rho0.90 tree",
+    "failed": []
+  },
+  "n_rows": 306,
+  "by_budget": [
+    {
+      "budget_pct": 25,
+      "n_runs": 51,
+      "mean_actual_balls": 19.41176470588235,
+      "mean_split_count": 23.784313725490197,
+      "mean_minority_survival": 0.9925577934588082,
+      "mean_majority_survival": 0.9932563097611369,
+      "mean_purity": 0.7696472245928481,
+      "mean_radius": 607.4000430757426,
+      "mean_density": 5952380985.510423,
+      "mean_fraction_mixed": 0.8310372134569723,
+      "mean_boundary_score": 14.925735347148542,
+      "mean_log_boundary_score": 1.4895315222509535,
+      "mean_macro_f1": 0.5714500521378115,
+      "mean_minority_f1": 0.4799096424197325,
+      "mean_gmean": 0.5173837787206633,
+      "mean_accuracy": 0.6423791374313406
+    },
+    {
+      "budget_pct": 50,
+      "n_runs": 51,
+      "mean_actual_balls": 38.84313725490196,
+      "mean_split_count": 56.31372549019608,
+      "mean_minority_survival": 0.9702938973832321,
+      "mean_majority_survival": 0.9778447369578737,
+      "mean_purity": 0.7962511399504112,
+      "mean_radius": 374.0131671791108,
+      "mean_density": 7892074052.936635,
+      "mean_fraction_mixed": 0.7260872544907451,
+      "mean_boundary_score": 2450980400.7656627,
+      "mean_log_boundary_score": 1.6612458929912521,
+      "mean_macro_f1": 0.5238264656134551,
+      "mean_minority_f1": 0.42119005584520197,
+      "mean_gmean": 0.41049806839767117,
+      "mean_accuracy": 0.6290708409099154
+    },
+    {
+      "budget_pct": 75,
+      "n_runs": 51,
+      "mean_actual_balls": 58.450980392156865,
+      "mean_split_count": 100.07843137254902,
+      "mean_minority_survival": 0.9188157189765632,
+      "mean_majority_survival": 0.9432577733542158,
+      "mean_purity": 0.8475137296250904,
+      "mean_radius": 300.34742320944997,
+      "mean_density": 12439815381.542595,
+      "mean_fraction_mixed": 0.5979620017252034,
+      "mean_boundary_score": 1705029842.2884028,
+      "mean_log_boundary_score": 1.4082914723346176,
+      "mean_macro_f1": 0.5421842295945599,
+      "mean_minority_f1": 0.42108581532732337,
+      "mean_gmean": 0.41400714537779904,
+      "mean_accuracy": 0.6552898979162529
+    },
+    {
+      "budget_pct": 100,
+      "n_runs": 51,
+      "mean_actual_balls": 77.80392156862744,
+      "mean_split_count": 166.11764705882354,
+      "mean_minority_survival": 0.8283888214212066,
+      "mean_majority_survival": 0.8860375235860931,
+      "mean_purity": 0.8849697844228928,
+      "mean_radius": 240.06529864300455,
+      "mean_density": 12527162245.89812,
+      "mean_fraction_mixed": 0.45767502185762093,
+      "mean_boundary_score": 1265022140.9675224,
+      "mean_log_boundary_score": 1.2505091034911615,
+      "mean_macro_f1": 0.546265804797974,
+      "mean_minority_f1": 0.4023206016480011,
+      "mean_gmean": 0.38806822242809363,
+      "mean_accuracy": 0.6754168211136892
+    },
+    {
+      "budget_pct": 125,
+      "n_runs": 51,
+      "mean_actual_balls": 90.07843137254902,
+      "mean_split_count": 231.37254901960785,
+      "mean_minority_survival": 0.6929523559795812,
+      "mean_majority_survival": 0.8130338069261925,
+      "mean_purity": 0.9381272607237042,
+      "mean_radius": 190.48470659990411,
+      "mean_density": 14076240999.670506,
+      "mean_fraction_mixed": 0.2720205474904452,
+      "mean_boundary_score": 2.2793183380300257,
+      "mean_log_boundary_score": 0.6097723161542823,
+      "mean_macro_f1": 0.5639756117019791,
+      "mean_minority_f1": 0.42360470727370814,
+      "mean_gmean": 0.4217935668353144,
+      "mean_accuracy": 0.6794649884339989
+    },
+    {
+      "budget_pct": 150,
+      "n_runs": 51,
+      "mean_actual_balls": 90.82352941176471,
+      "mean_split_count": 237.01960784313727,
+      "mean_minority_survival": 0.6802824424312746,
+      "mean_majority_survival": 0.8054871499514337,
+      "mean_purity": 0.9405016406419187,
+      "mean_radius": 187.3021464590551,
+      "mean_density": 14629294696.253511,
+      "mean_fraction_mixed": 0.26106244348146074,
+      "mean_boundary_score": 2.230010796899456,
+      "mean_log_boundary_score": 0.5838429173074006,
+      "mean_macro_f1": 0.5542403439769565,
+      "mean_minority_f1": 0.40888223442703286,
+      "mean_gmean": 0.40518167236152697,
+      "mean_accuracy": 0.6748337069732708
+    }
+  ],
+  "predictor_correlations": {
+    "macro_f1_vs_n_balls": {
+      "pearson": -0.18304270842800344,
+      "spearman": -0.49391040824591664,
+      "n": 283
+    },
+    "macro_f1_vs_mean_log_boundary_score": {
+      "pearson": 0.039537910742118716,
+      "spearman": 0.09117581701383717,
+      "n": 283
+    },
+    "macro_f1_vs_split_count": {
+      "pearson": -0.15974758798904878,
+      "spearman": -0.4554727199396724,
+      "n": 283
+    },
+    "n_balls_vs_log_boundary_at_same_budget": {
+      "pearson": -0.14225794593731458,
+      "spearman": -0.42044425866034385,
+      "n": 283
+    },
+    "n_rows_excluded_trivial": 23
+  },
+  "peak_budget": {
+    "peak_macro_f1_budget_pct": 25,
+    "peak_mean_macro_f1": 0.5714500521378115,
+    "peak_nontrivial_budget_pct": 125,
+    "peak_nontrivial_macro_f1": 0.5639756117019791,
+    "budget_100_macro_f1": 0.546265804797974,
+    "peak_at_or_before_100_pct": 100,
+    "peak_before_max_refinement": false
+  },
+  "answers": {
+    "q1_ball_count_range": "**Answer A (ball count) dominates.** Macro F1 vs n_balls spearman=-0.494, vs split_count spearman=-0.455. Mean balls range from 19.4 (25%) to 90.8 (150%). Peak at 25% (F1=0.571) includes under-granulation artefacts (\u22643 balls on 8 runs); among 50\u2013100% budgets, peak is 100%.",
+    "q2_peak_before_max": "Performance is relatively flat between 75\u2013125% budgets: best 50\u2013100% budget is 100% vs rho0.90 reference 100% (F1=0.546). 75%: F1=0.542, 100%: 0.546, 125%: 0.564. Over-refinement beyond rho0.90 (125\u2013150%) does not consistently improve F1.",
+    "q3_boundary_vs_ball_count": "**Ball count explains performance better than boundary score** (spearman -0.494 vs 0.091 for log-boundary). Geometry quality at a fixed budget is secondary to complexity level: fewer balls consistently yield higher macro F1. Boundary score still carries weak positive signal but is much weaker than fragmentation.",
+    "q4_stopping_criterion": "A global stopping criterion should optimize **cumulative ball-count budget** near 75\u2013100% of the rho0.90 reference (~78 balls mean), not maximum purity or per-split utility. Split count (spearman=-0.455) and ball count (-0.494) are the primary negative controls; log-boundary (0.091) is a secondary positive signal. Stop when the budget is exhausted, not when local purity stops improving."
+  }
+}

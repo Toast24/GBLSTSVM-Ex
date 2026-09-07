@@ -1,0 +1,148 @@
+{
+  "protocol": {
+    "read_only": true,
+    "schedulers": [
+      "rho90",
+      "adaptive_entropy"
+    ],
+    "rho_reference": 0.9,
+    "min_ball_count_del_ball": 2,
+    "entropy_budget": "100% of rho90 split count per dataset\u00d7seed",
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "smoke_mode": false,
+    "failed": []
+  },
+  "n_split_records": 12474,
+  "n_run_summaries": 102,
+  "n_dataset_seed_pairs": 51,
+  "by_scheduler": [
+    {
+      "scheduler": "rho90",
+      "n_runs": 51,
+      "mean_successful_splits": 239.7058823529412,
+      "mean_failed_splits": 0.0,
+      "mean_singleton_failures": 0.0,
+      "mean_invalid_geometry_failures": 0.0,
+      "frac_terminated_no_candidates": 0.0,
+      "frac_budget_met": 1.0,
+      "mean_final_n_balls": 77.80392156862744,
+      "mean_final_n_splittable": 0.0,
+      "mean_depth": 3.6928722226163426,
+      "mean_max_depth": 7.411764705882353,
+      "mean_frac_singleton_child": 0.4627891230650802,
+      "mean_frac_both_survive": 0.5372108769349199
+    },
+    {
+      "scheduler": "adaptive_entropy",
+      "n_runs": 51,
+      "mean_successful_splits": 3.607843137254902,
+      "mean_failed_splits": 0.3333333333333333,
+      "mean_singleton_failures": 0.3333333333333333,
+      "mean_invalid_geometry_failures": 0.0,
+      "frac_terminated_no_candidates": 0.9411764705882353,
+      "frac_budget_met": 0.058823529411764705,
+      "mean_final_n_balls": 4.607843137254902,
+      "mean_final_n_splittable": 0.0,
+      "mean_depth": 1.803921568627451,
+      "mean_max_depth": 3.607843137254902,
+      "mean_frac_singleton_child": 0.0,
+      "mean_frac_both_survive": 1.0
+    }
+  ],
+  "failure_breakdown": {
+    "n_records": 249,
+    "outcome_counts": {
+      "success": 184,
+      "no_remaining_candidates": 48,
+      "child_deletion_singleton": 17
+    },
+    "frac_success": 0.7389558232931727,
+    "frac_singleton": 0.06827309236947791,
+    "frac_invalid_geometry": 0.0,
+    "frac_no_candidates": 0.1927710843373494
+  },
+  "parent_geometry_success_vs_failed": {
+    "parent_depth": {
+      "mean_success": 2.0217391304347827,
+      "mean_failed": 3.9411764705882355
+    },
+    "parent_samples": {
+      "mean_success": 231.0923913043478,
+      "mean_failed": 45.529411764705884
+    },
+    "parent_purity": {
+      "mean_success": 0.6839619051242761,
+      "mean_failed": 0.6313754553204681
+    },
+    "parent_entropy": {
+      "mean_success": 0.853162836139778,
+      "mean_failed": 0.9140324560514688
+    },
+    "parent_radius": {
+      "mean_success": 871.0988985702477,
+      "mean_failed": 951.0254074889506
+    },
+    "parent_minority_ratio": {
+      "mean_success": 0.4363640087531548,
+      "mean_failed": 0.44040325616412573
+    },
+    "parent_boundary_score": {
+      "mean_success": 42.5581395392695,
+      "mean_failed": 5.029917318752859
+    },
+    "failed_parent_depth_vs_success_corr": {
+      "pearson": 0.2786926286581835,
+      "spearman": 0.2502562798125403,
+      "n": 201
+    },
+    "failed_parent_entropy_vs_success_corr": {
+      "pearson": 0.10795847812250399,
+      "spearman": 0.11387822913329099,
+      "n": 201
+    }
+  },
+  "candidate_trajectory": {
+    "rho90": {
+      "mean_successful_splits": 239.7058823529412,
+      "mean_candidates_after_first": 1.5294117647058822,
+      "mean_candidates_after_last": 0.0,
+      "mean_splittable_after_last": 0.0
+    },
+    "adaptive_entropy": {
+      "mean_successful_splits": 3.68,
+      "mean_candidates_after_first": 0.76,
+      "mean_candidates_after_last": 0.32,
+      "mean_splittable_after_last": 0.32
+    }
+  },
+  "depth_comparison": {
+    "rho90": {
+      "mean_depth": 3.6928722226163426,
+      "mean_max_depth": 7.411764705882353
+    },
+    "adaptive_entropy": {
+      "mean_depth": 1.803921568627451,
+      "mean_max_depth": 3.607843137254902
+    }
+  },
+  "del_ball_impact": {
+    "rho90_frac_singleton_child": 0.5075664621676892,
+    "rho90_frac_both_survive": 0.49243353783231086,
+    "entropy_frac_singleton_child": 0.0,
+    "entropy_frac_both_survive": 1.0,
+    "rho90_accepts_singleton_splits": true,
+    "entropy_rejects_singleton_splits": true
+  },
+  "answers": {
+    "q1_why_stops_early": "Online entropy stops after **3.6** splits on average vs rho90 **239.7** (budget = rho90 count). **94%** of runs hit `no_remaining_candidates` before budget is met; only **6%** meet budget. Singleton failures contribute **0.33** failed splits/run vs **0.33** total failures. **Primary cause: candidate exhaustion** \u2014 entropy-priority deep-splits high-entropy branches until no ball remains below \u03c1=0.90, not split rejection.",
+    "q2_unstable_branches": "Failed adaptive splits have parent depth 3.94 vs success 2.02, parent entropy 0.914 vs 0.853. **Yes \u2014 entropy selects deeper, smaller parents** that are more likely to produce singleton children and terminate refinement paths on failure.",
+    "q3_del_ball_removal": "rho90 accepts splits with singleton children in **50.8%** of splits; entropy rejects them pre-commit (only **0.0%** of its successful splits produce singleton children). rho90 both-survive rate: **49.2%**; entropy: **100.0%**. **Yes \u2014 del_ball would remove refinement paths** that rho90 preserves by accepting singleton-producing splits; adaptive pre-rejection plus `split_done` on failure permanently removes branches.",
+    "q4a_candidate_preservation": "After last successful split, entropy leaves **0.3** splittable balls (heap candidates **0.3**). **Candidate preservation** \u2014 do not mark failed-split parents `split_done`; re-queue siblings and relax purity only after genuine exhaustion.",
+    "q4b_softer_deletion": "Singleton rejection blocks **6.8%** of entropy split attempts. **Softer deletion** \u2014 accept singleton splits like rho90 and defer to del_ball, or retry with alternate split geometry before abandoning the parent.",
+    "q4c_split_selection": "Entropy mean depth **1.80** vs rho90 **3.69**; max depth 3.6 vs 7.4. **Different split selection** alone is insufficient \u2014 BFS breadth-first maintains more parallel refinement paths; pure entropy depth-first exhausts candidates early. Combine entropy priority with breadth caps or minimum parent-size guards."
+  }
+}

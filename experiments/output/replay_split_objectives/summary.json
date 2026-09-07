@@ -1,0 +1,203 @@
+{
+  "protocol": {
+    "read_only": true,
+    "utility_rules": [
+      "rule1_purity_gain",
+      "rule2_boundary_gain",
+      "rule3_boundary_minority",
+      "rule4_boundary_minority_cost",
+      "rule5_rho090_actual"
+    ],
+    "reference_rhos": {
+      "rho0.80": 0.8,
+      "rho0.85": 0.85,
+      "rho0.95": 0.95
+    },
+    "proposal_purity": 0.95,
+    "frag_penalty": 0.1,
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "classifier": "Gaussian-weighted GBLSTSVM (frozen)",
+    "rule_definitions": {
+      "rule1_purity_gain": "accept if purity_gain > 0",
+      "rule2_boundary_gain": "accept if log_boundary_change > 0",
+      "rule3_boundary_minority": "accept if log_boundary_change + minority_survival > 1",
+      "rule4_boundary_minority_cost": "accept if log_boundary_change + minority_survival - split_cost > 1; split_cost = 0.1 + 0.01*log1p(n_accepted)",
+      "rule5_rho090_actual": "rho=0.90 stopping, accept all proposed splits"
+    },
+    "failed": []
+  },
+  "n_rows": 408,
+  "by_config": [
+    {
+      "config": "rule1_purity_gain",
+      "n_runs": 51,
+      "mean_n_balls": 2.2941176470588234,
+      "mean_minority_survival": 0.9998176014591883,
+      "mean_boundary_score": 47.42309774036805,
+      "mean_heterogeneity": 0.9676470588235294,
+      "mean_radius": 1492.2582013215615,
+      "mean_split_count": 1.3333333333333333,
+      "mean_macro_f1": 0.6875962325141163,
+      "mean_minority_f1": 0.6460420823624509,
+      "mean_gmean": 0.6735436564447934
+    },
+    {
+      "config": "rule2_boundary_gain",
+      "n_runs": 51,
+      "mean_n_balls": 2.6470588235294117,
+      "mean_minority_survival": 0.9996175800941448,
+      "mean_boundary_score": 59.95325777678059,
+      "mean_heterogeneity": 0.9214964773788303,
+      "mean_radius": 1400.6586289304926,
+      "mean_split_count": 1.7647058823529411,
+      "mean_macro_f1": 0.5501214182357492,
+      "mean_minority_f1": 0.5271059068404818,
+      "mean_gmean": 0.5327165964263452
+    },
+    {
+      "config": "rule3_boundary_minority",
+      "n_runs": 51,
+      "mean_n_balls": 2.6470588235294117,
+      "mean_minority_survival": 0.9998176014591883,
+      "mean_boundary_score": 59.937754950291634,
+      "mean_heterogeneity": 0.9209362532891945,
+      "mean_radius": 1405.8937689932195,
+      "mean_split_count": 1.7058823529411764,
+      "mean_macro_f1": 0.5590534605353931,
+      "mean_minority_f1": 0.5301659019141657,
+      "mean_gmean": 0.54455639914765
+    },
+    {
+      "config": "rule4_boundary_minority_cost",
+      "n_runs": 51,
+      "mean_n_balls": 1.3725490196078431,
+      "mean_minority_survival": 1.0,
+      "mean_boundary_score": 60.12541746816585,
+      "mean_heterogeneity": 0.9774509803921569,
+      "mean_radius": 1615.076509966963,
+      "mean_split_count": 0.37254901960784315,
+      "mean_macro_f1": 0.6176454896730579,
+      "mean_minority_f1": 0.5797968591211033,
+      "mean_gmean": 0.6124380269345785
+    },
+    {
+      "config": "rule5_rho090_actual",
+      "n_runs": 51,
+      "mean_n_balls": 77.80392156862744,
+      "mean_minority_survival": 0.6202590644200101,
+      "mean_boundary_score": 2.0998029431018392,
+      "mean_heterogeneity": 0.14917892970218266,
+      "mean_radius": 206.0065330221942,
+      "mean_split_count": 239.7058823529412,
+      "mean_macro_f1": 0.5967585263473575,
+      "mean_minority_f1": 0.46789963840129134,
+      "mean_gmean": 0.4748315034372715
+    },
+    {
+      "config": "rho0.80",
+      "n_runs": 51,
+      "mean_n_balls": 50.372549019607845,
+      "mean_minority_survival": 0.8073126868637235,
+      "mean_boundary_score": 24.9573564899966,
+      "mean_heterogeneity": 0.5063803292399703,
+      "mean_radius": 908.0186997391763,
+      "mean_split_count": 141.33333333333334,
+      "mean_macro_f1": 0.5758563559591237,
+      "mean_minority_f1": 0.4777166564122843,
+      "mean_gmean": 0.4364020524281111
+    },
+    {
+      "config": "rho0.85",
+      "n_runs": 51,
+      "mean_n_balls": 66.07843137254902,
+      "mean_minority_survival": 0.689471437328367,
+      "mean_boundary_score": 3.243047425149847,
+      "mean_heterogeneity": 0.2663428343386806,
+      "mean_radius": 219.30292946826222,
+      "mean_split_count": 201.11764705882354,
+      "mean_macro_f1": 0.5823672737312401,
+      "mean_minority_f1": 0.46507562857491974,
+      "mean_gmean": 0.4660823609659436
+    },
+    {
+      "config": "rho0.95",
+      "n_runs": 51,
+      "mean_n_balls": 88.84313725490196,
+      "mean_minority_survival": 0.5829429728913097,
+      "mean_boundary_score": 1.4964254318884305,
+      "mean_heterogeneity": 0.08732003842772267,
+      "mean_radius": 187.9908729666654,
+      "mean_split_count": 267.72549019607845,
+      "mean_macro_f1": 0.5693473400971953,
+      "mean_minority_f1": 0.4272304696594882,
+      "mean_gmean": 0.43445796208535226
+    }
+  ],
+  "geometry_distance_to_rho90": {
+    "rule1_purity_gain": {
+      "n_balls": 75.50980392156863,
+      "split_count": 238.37254901960785,
+      "mean_boundary_score": 45.32329479726621,
+      "heterogeneity": 0.8184681291213467,
+      "mean_radius": 1286.2516682993673
+    },
+    "rule2_boundary_gain": {
+      "n_balls": 75.15686274509804,
+      "split_count": 237.94117647058823,
+      "mean_boundary_score": 57.85345483367875,
+      "heterogeneity": 0.7723175476766476,
+      "mean_radius": 1194.6520959082984
+    },
+    "rule3_boundary_minority": {
+      "n_balls": 75.15686274509804,
+      "split_count": 238.0,
+      "mean_boundary_score": 57.83795200718979,
+      "heterogeneity": 0.7717573235870118,
+      "mean_radius": 1199.8872359710253
+    },
+    "rule4_boundary_minority_cost": {
+      "n_balls": 76.43137254901961,
+      "split_count": 239.33333333333334,
+      "mean_boundary_score": 58.02561452506401,
+      "heterogeneity": 0.8282720506899741,
+      "mean_radius": 1409.0699769447685
+    },
+    "rule5_rho090_actual": {
+      "n_balls": 0.0,
+      "split_count": 0.0,
+      "mean_boundary_score": 0.0,
+      "heterogeneity": 0.0,
+      "mean_radius": 0.0
+    },
+    "rho0.80": {
+      "n_balls": 27.431372549019606,
+      "split_count": 98.37254901960785,
+      "mean_boundary_score": 22.85755354689476,
+      "heterogeneity": 0.35720139953778773,
+      "mean_radius": 702.7010445424844
+    },
+    "rho0.85": {
+      "n_balls": 11.92156862745098,
+      "split_count": 38.588235294117645,
+      "mean_boundary_score": 1.1432444820480083,
+      "heterogeneity": 0.1182041085164584,
+      "mean_radius": 26.01234658638351
+    },
+    "rho0.95": {
+      "n_balls": 11.705882352941176,
+      "split_count": 28.96078431372549,
+      "mean_boundary_score": 0.6036193140137754,
+      "heterogeneity": 0.06185889127446001,
+      "mean_radius": 19.753026742380417
+    }
+  },
+  "answers": {
+    "q1_reproduce_rho90": "**No.** Per-split utility gates cannot reproduce rho0.90 without an explicit rho cutoff. The best utility rule (rule1_purity_gain) accepts only 1.3 splits/run vs 239.7 for rho0.90 (2.3 vs 77.8 balls). Elevated macro F1 (0.688) on utility rules is an artefact of near-trivial granulation (1\u20133 balls), not rho0.90-equivalent structure. Geometry distance to rho0.90 remains large (mean |\u0394|=313.3).",
+    "q2_necessary_terms": "Necessary terms for rho0.90-equivalent structure: all per-split utility rules collapse to 1\u20133 balls (fail to granulate); purity-only accepts even fewer splits than boundary-only; minority survival term changes acceptance rate; fragmentation penalty further reduces splits (0.4 vs 1.7); rho0.90 actual (rule5) is the only config with realistic split depth (~240 splits). Classifier ranking among rho baselines: rho0.90 (0.597) > rho0.85 (0.582) > rho0.95 (0.569).",
+    "q3_failing_assumption": "The failing assumption is **per-split greediness without global depth control**: utility rules accept 1.3 splits/run (near root-only), while rho0.95 over-splits at 268 (macro F1 0.569 vs rho0.90 0.597). Purity-gain gating rejects almost all KMeans proposals (weighted child purity rarely exceeds parent at a single step). Boundary-gain gating is similarly too conservative. What works is **stopping recursion near \u03c1\u22480.90** \u2014 a global depth/purity ceiling \u2014 not local accept/reject on individual split quality. Future algorithms need cumulative fragmentation budgets, not myopic per-split utility."
+  }
+}

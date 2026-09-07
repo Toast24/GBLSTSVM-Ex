@@ -1,0 +1,233 @@
+{
+  "protocol": {
+    "read_only": true,
+    "priority_policies": [
+      "entropy",
+      "entropy_x_frac",
+      "entropy_x_sqrt_frac",
+      "entropy_x_log_n"
+    ],
+    "rho_reference": 0.9,
+    "entropy_budget": "100% of rho90 split count per dataset\u00d7seed",
+    "collapse_ball_threshold": 3,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "smoke_mode": false,
+    "failed": []
+  },
+  "n_split_records": 3228,
+  "n_run_summaries": 680,
+  "n_dataset_seed_pairs": 170,
+  "by_priority_policy": [
+    {
+      "priority_policy": "entropy",
+      "n_runs": 170,
+      "frac_collapsed": 0.5529411764705883,
+      "mean_macro_f1": 0.6138171208119002,
+      "mean_minority_f1": 0.5042753978039538,
+      "mean_gmean": 0.5748499630144591,
+      "mean_n_balls": 4.482352941176471,
+      "mean_split_count": 3.4823529411764707,
+      "frac_budget_met": 0.058823529411764705,
+      "mean_failed_splits": 0.3235294117647059,
+      "frac_terminated_no_candidates": 0.9411764705882353,
+      "mean_parent_n_samples": 317.75383025608926,
+      "mean_parent_sample_fraction": 0.6126369523811895,
+      "mean_parent_entropy": 0.8662528429861542,
+      "mean_split_minority_survival": 1.0,
+      "frac_heap_policy_disagreement": 0.0
+    },
+    {
+      "priority_policy": "entropy_x_frac",
+      "n_runs": 170,
+      "frac_collapsed": 0.5529411764705883,
+      "mean_macro_f1": 0.6138171208119002,
+      "mean_minority_f1": 0.5042753978039538,
+      "mean_gmean": 0.5748499630144591,
+      "mean_n_balls": 4.482352941176471,
+      "mean_split_count": 3.4823529411764707,
+      "frac_budget_met": 0.058823529411764705,
+      "mean_failed_splits": 0.3235294117647059,
+      "frac_terminated_no_candidates": 0.9411764705882353,
+      "mean_parent_n_samples": 317.75383025608926,
+      "mean_parent_sample_fraction": 0.6126369523811895,
+      "mean_parent_entropy": 0.8662528429861542,
+      "mean_split_minority_survival": 1.0,
+      "frac_heap_policy_disagreement": 0.0
+    },
+    {
+      "priority_policy": "entropy_x_sqrt_frac",
+      "n_runs": 170,
+      "frac_collapsed": 0.5529411764705883,
+      "mean_macro_f1": 0.6138171208119002,
+      "mean_minority_f1": 0.5042753978039538,
+      "mean_gmean": 0.5748499630144591,
+      "mean_n_balls": 4.482352941176471,
+      "mean_split_count": 3.4823529411764707,
+      "frac_budget_met": 0.058823529411764705,
+      "mean_failed_splits": 0.3235294117647059,
+      "frac_terminated_no_candidates": 0.9411764705882353,
+      "mean_parent_n_samples": 317.75383025608926,
+      "mean_parent_sample_fraction": 0.6126369523811895,
+      "mean_parent_entropy": 0.8662528429861542,
+      "mean_split_minority_survival": 1.0,
+      "frac_heap_policy_disagreement": 0.0
+    },
+    {
+      "priority_policy": "entropy_x_log_n",
+      "n_runs": 170,
+      "frac_collapsed": 0.5529411764705883,
+      "mean_macro_f1": 0.6138171208119002,
+      "mean_minority_f1": 0.5042753978039538,
+      "mean_gmean": 0.5748499630144591,
+      "mean_n_balls": 4.482352941176471,
+      "mean_split_count": 3.4823529411764707,
+      "frac_budget_met": 0.058823529411764705,
+      "mean_failed_splits": 0.3235294117647059,
+      "frac_terminated_no_candidates": 0.9411764705882353,
+      "mean_parent_n_samples": 317.75383025608926,
+      "mean_parent_sample_fraction": 0.6126369523811895,
+      "mean_parent_entropy": 0.8662528429861542,
+      "mean_split_minority_survival": 1.0,
+      "frac_heap_policy_disagreement": 0.0
+    }
+  ],
+  "small_ball_failure_analysis": {
+    "by_policy": [
+      {
+        "priority_policy": "entropy",
+        "frac_failed": 0.08500772797527048,
+        "mean_parent_n_samples_success": 251.1858108108108,
+        "mean_parent_n_samples_failed": 49.472727272727276,
+        "mean_parent_sample_fraction_success": 0.43129054542597955,
+        "mean_parent_sample_fraction_failed": 0.12610691980384908,
+        "failure_vs_parent_samples_corr": {
+          "pearson": -0.1214513259863046,
+          "spearman": -0.34892207701857547,
+          "n": 647
+        }
+      },
+      {
+        "priority_policy": "entropy_x_frac",
+        "frac_failed": 0.08500772797527048,
+        "mean_parent_n_samples_success": 251.1858108108108,
+        "mean_parent_n_samples_failed": 49.472727272727276,
+        "mean_parent_sample_fraction_success": 0.43129054542597955,
+        "mean_parent_sample_fraction_failed": 0.12610691980384908,
+        "failure_vs_parent_samples_corr": {
+          "pearson": -0.1214513259863046,
+          "spearman": -0.34892207701857547,
+          "n": 647
+        }
+      },
+      {
+        "priority_policy": "entropy_x_sqrt_frac",
+        "frac_failed": 0.08500772797527048,
+        "mean_parent_n_samples_success": 251.1858108108108,
+        "mean_parent_n_samples_failed": 49.472727272727276,
+        "mean_parent_sample_fraction_success": 0.43129054542597955,
+        "mean_parent_sample_fraction_failed": 0.12610691980384908,
+        "failure_vs_parent_samples_corr": {
+          "pearson": -0.1214513259863046,
+          "spearman": -0.34892207701857547,
+          "n": 647
+        }
+      },
+      {
+        "priority_policy": "entropy_x_log_n",
+        "frac_failed": 0.08500772797527048,
+        "mean_parent_n_samples_success": 251.1858108108108,
+        "mean_parent_n_samples_failed": 49.472727272727276,
+        "mean_parent_sample_fraction_success": 0.43129054542597955,
+        "mean_parent_sample_fraction_failed": 0.12610691980384908,
+        "failure_vs_parent_samples_corr": {
+          "pearson": -0.1214513259863046,
+          "spearman": -0.34892207701857547,
+          "n": 647
+        }
+      }
+    ]
+  },
+  "compact_reliability": {
+    "entropy": {
+      "mean_n_balls": 4.482352941176471,
+      "delta_balls_vs_entropy": 0.0,
+      "mean_macro_f1": 0.6138171208119002,
+      "delta_macro_f1_vs_entropy": 0.0,
+      "frac_collapsed": 0.5529411764705883,
+      "delta_collapse_vs_entropy": 0.0,
+      "f1_per_ball": 0.1853920743247732
+    },
+    "entropy_x_frac": {
+      "mean_n_balls": 4.482352941176471,
+      "delta_balls_vs_entropy": 0.0,
+      "mean_macro_f1": 0.6138171208119002,
+      "delta_macro_f1_vs_entropy": 0.0,
+      "frac_collapsed": 0.5529411764705883,
+      "delta_collapse_vs_entropy": 0.0,
+      "f1_per_ball": 0.1853920743247732
+    },
+    "entropy_x_sqrt_frac": {
+      "mean_n_balls": 4.482352941176471,
+      "delta_balls_vs_entropy": 0.0,
+      "mean_macro_f1": 0.6138171208119002,
+      "delta_macro_f1_vs_entropy": 0.0,
+      "frac_collapsed": 0.5529411764705883,
+      "delta_collapse_vs_entropy": 0.0,
+      "f1_per_ball": 0.1853920743247732
+    },
+    "entropy_x_log_n": {
+      "mean_n_balls": 4.482352941176471,
+      "delta_balls_vs_entropy": 0.0,
+      "mean_macro_f1": 0.6138171208119002,
+      "delta_macro_f1_vs_entropy": 0.0,
+      "frac_collapsed": 0.5529411764705883,
+      "delta_collapse_vs_entropy": 0.0,
+      "f1_per_ball": 0.1853920743247732
+    }
+  },
+  "policy_trajectory_equivalence": {
+    "vs_entropy": [
+      {
+        "priority_policy": "entropy_x_frac",
+        "n_runs": 170,
+        "n_diff_split_count": 0,
+        "n_diff_n_balls": 0,
+        "n_diff_macro_f1": 0,
+        "trajectory_identical_to_entropy": true
+      },
+      {
+        "priority_policy": "entropy_x_sqrt_frac",
+        "n_runs": 170,
+        "n_diff_split_count": 0,
+        "n_diff_n_balls": 0,
+        "n_diff_macro_f1": 0,
+        "trajectory_identical_to_entropy": true
+      },
+      {
+        "priority_policy": "entropy_x_log_n",
+        "n_runs": 170,
+        "n_diff_split_count": 0,
+        "n_diff_n_balls": 0,
+        "n_diff_macro_f1": 0,
+        "trajectory_identical_to_entropy": true
+      }
+    ]
+  },
+  "answers": {
+    "q1_support_aware_avoid_collapse": "Pure entropy collapses **55.3%** of runs (4.5 balls). **entropy_x_frac**: collapse 55.3% (entropy 55.3%), macro F1 0.614; **entropy_x_sqrt_frac**: collapse 55.3% (entropy 55.3%), macro F1 0.614; **entropy_x_log_n**: collapse 55.3% (entropy 55.3%), macro F1 0.614. Support-aware priorities do not materially reduce collapse on this sweep.",
+    "q2_best_ambiguity_coverage_balance": "Best ambiguity\u2013coverage tradeoff: **entropy** (macro F1 0.614, mean parent fraction 0.613, collapse 55.3%). Highest raw F1: **entropy** (0.614).",
+    "q3_small_unstable_balls": "Entropy failures: parent n=49.5 vs success n=251.2; sample fraction failed=0.126 vs success=0.431. **Yes** \u2014 smaller parents are more likely to fail (negative size\u2013failure correlation).",
+    "q4_compact_and_reliable": "Entropy baseline: 4.5 balls, F1 0.614, collapse 55.3%. **entropy**: 4.5 balls (\u0394 +0.0), F1 0.614 (\u0394 +0.000), collapse 55.3%. Compactness\u2013reliability tradeoff remains; priority alone is insufficient."
+  }
+}

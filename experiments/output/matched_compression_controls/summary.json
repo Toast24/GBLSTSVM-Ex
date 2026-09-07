@@ -1,0 +1,431 @@
+{
+  "protocol": {
+    "read_only": true,
+    "methods": [
+      "random",
+      "purity",
+      "entropy",
+      "boundary",
+      "stratified_random",
+      "full_rho90",
+      "online_entropy"
+    ],
+    "matched_controls": [
+      "random",
+      "purity",
+      "entropy",
+      "boundary",
+      "stratified_random"
+    ],
+    "target_n_balls": "online entropy v2 ball count per dataset\u00d7seed",
+    "rho90_source": "rho0.90",
+    "online_entropy": "adaptive entropy v2, budget=rho90 split count",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "collapse_ball_threshold": 3,
+    "smoke_mode": false,
+    "classifier": "Gaussian-weighted GBLSTSVM (purity_compact)",
+    "c1": 100.0,
+    "c2": 0.01,
+    "failed": []
+  },
+  "n_rows": 1190,
+  "n_dataset_seed_pairs": 170,
+  "by_method": [
+    {
+      "method": "random",
+      "n_runs": 170,
+      "mean_n_balls": 4.688235294117647,
+      "mean_target_n_balls": 4.688235294117647,
+      "frac_collapsed": 0.5117647058823529,
+      "mean_macro_f1": 0.5967917988748161,
+      "mean_minority_f1": 0.5288055767339686,
+      "mean_gmean": 0.5801851754842877,
+      "mean_f1_per_ball": 0.1587235580209555,
+      "mean_purity": 0.9920167491071354,
+      "mean_entropy": 0.04371006512310306,
+      "mean_boundary_score": 2.963006854027932,
+      "mean_fraction_mixed": 0.15236928104575162
+    },
+    {
+      "method": "purity",
+      "n_runs": 170,
+      "mean_n_balls": 4.688235294117647,
+      "mean_target_n_balls": 4.688235294117647,
+      "frac_collapsed": 0.49411764705882355,
+      "mean_macro_f1": 0.583640834868592,
+      "mean_minority_f1": 0.4943237992513849,
+      "mean_gmean": 0.5458403606335207,
+      "mean_f1_per_ball": 0.1517615773410505,
+      "mean_purity": 0.9974003599316642,
+      "mean_entropy": 0.015395028558805757,
+      "mean_boundary_score": 1.1074908317801755,
+      "mean_fraction_mixed": 0.0607843137254902
+    },
+    {
+      "method": "entropy",
+      "n_runs": 170,
+      "mean_n_balls": 4.688235294117647,
+      "mean_target_n_balls": 4.688235294117647,
+      "frac_collapsed": 0.5470588235294118,
+      "mean_macro_f1": 0.6405920458361536,
+      "mean_minority_f1": 0.5303254724931188,
+      "mean_gmean": 0.6008183538815045,
+      "mean_f1_per_ball": 0.17890442286965527,
+      "mean_purity": 0.9432152573343698,
+      "mean_entropy": 0.28333715283996,
+      "mean_boundary_score": 5.078801124135318,
+      "mean_fraction_mixed": 0.7335014005602241
+    },
+    {
+      "method": "boundary",
+      "n_runs": 170,
+      "mean_n_balls": 4.688235294117647,
+      "mean_target_n_balls": 4.688235294117647,
+      "frac_collapsed": 0.5705882352941176,
+      "mean_macro_f1": 0.6465498321611849,
+      "mean_minority_f1": 0.5352064121977502,
+      "mean_gmean": 0.6061958407240128,
+      "mean_f1_per_ball": 0.17736075114905156,
+      "mean_purity": 0.9475256066034724,
+      "mean_entropy": 0.26672678009373385,
+      "mean_boundary_score": 6.169077359870161,
+      "mean_fraction_mixed": 0.7335014005602241
+    },
+    {
+      "method": "stratified_random",
+      "n_runs": 170,
+      "mean_n_balls": 4.688235294117647,
+      "mean_target_n_balls": 4.688235294117647,
+      "frac_collapsed": 0.4470588235294118,
+      "mean_macro_f1": 0.5729394515238315,
+      "mean_minority_f1": 0.48224328884636575,
+      "mean_gmean": 0.5452941901128648,
+      "mean_f1_per_ball": 0.1692489135367536,
+      "mean_purity": 0.9914113745321923,
+      "mean_entropy": 0.0459117286224415,
+      "mean_boundary_score": 1.7691966511415451,
+      "mean_fraction_mixed": 0.14475723622782447
+    },
+    {
+      "method": "full_rho90",
+      "n_runs": 170,
+      "mean_n_balls": 77.34117647058824,
+      "mean_target_n_balls": 4.688235294117647,
+      "frac_collapsed": 0.058823529411764705,
+      "mean_macro_f1": 0.5842196778595634,
+      "mean_minority_f1": 0.4633363268898264,
+      "mean_gmean": 0.4564902369116983,
+      "mean_f1_per_ball": 0.04512764232326781,
+      "mean_purity": 0.9908751741682056,
+      "mean_entropy": 0.04900438797230076,
+      "mean_boundary_score": 2.506710223468566,
+      "mean_fraction_mixed": 0.15901746557167337
+    },
+    {
+      "method": "online_entropy",
+      "n_runs": 170,
+      "mean_n_balls": 4.688235294117647,
+      "mean_target_n_balls": 4.688235294117647,
+      "frac_collapsed": 0.5176470588235295,
+      "mean_macro_f1": 0.610264336547281,
+      "mean_minority_f1": 0.49622253604519234,
+      "mean_gmean": 0.5692586367322224,
+      "mean_f1_per_ball": 0.17875141907615405,
+      "mean_purity": 0.7856738725795954,
+      "mean_entropy": 0.5902121730139104,
+      "mean_boundary_score": 15.566088668651574,
+      "mean_fraction_mixed": 0.7840592903828197,
+      "mean_minus_random": -0.0028512724121714976,
+      "frac_positive_minus_random": 0.2647058823529412,
+      "mean_minus_purity": 0.010091557603057449,
+      "frac_positive_minus_purity": 0.2823529411764706,
+      "mean_minus_entropy_selection": -0.028683375560851272,
+      "frac_positive_minus_entropy_selection": 0.2,
+      "mean_minus_boundary_selection": -0.029487588496731845,
+      "frac_positive_minus_boundary_selection": 0.19411764705882353,
+      "mean_minus_stratified_random": 0.010397396470085961,
+      "frac_positive_minus_stratified_random": 0.31176470588235294,
+      "mean_minus_full_rho90": 0.021502532820264906,
+      "frac_positive_minus_full_rho90": 0.4411764705882353
+    }
+  ],
+  "control_comparisons": [
+    {
+      "control": "random",
+      "mean_delta": -0.0028512724121714976,
+      "frac_online_wins": 0.4326923076923077,
+      "frac_online_losses": 0.46153846153846156,
+      "n_pairs": 104
+    },
+    {
+      "control": "purity",
+      "mean_delta": 0.010091557603057449,
+      "frac_online_wins": 0.4752475247524752,
+      "frac_online_losses": 0.42574257425742573,
+      "n_pairs": 101
+    },
+    {
+      "control": "entropy",
+      "mean_delta": -0.028683375560851272,
+      "frac_online_wins": 0.3469387755102041,
+      "frac_online_losses": 0.5408163265306123,
+      "n_pairs": 98
+    },
+    {
+      "control": "boundary",
+      "mean_delta": -0.029487588496731845,
+      "frac_online_wins": 0.3548387096774194,
+      "frac_online_losses": 0.5268817204301075,
+      "n_pairs": 93
+    },
+    {
+      "control": "stratified_random",
+      "mean_delta": 0.010397396470085961,
+      "frac_online_wins": 0.40458015267175573,
+      "frac_online_losses": 0.5190839694656488,
+      "n_pairs": 131
+    },
+    {
+      "control": "full_rho90",
+      "mean_delta": 0.021502532820264906,
+      "frac_online_wins": 0.5725190839694656,
+      "frac_online_losses": 0.3511450381679389,
+      "n_pairs": 131
+    }
+  ],
+  "f1_vs_n_balls_correlation": {
+    "random": {
+      "pearson": NaN,
+      "spearman": NaN,
+      "n": 170
+    },
+    "purity": {
+      "pearson": NaN,
+      "spearman": NaN,
+      "n": 170
+    },
+    "entropy": {
+      "pearson": NaN,
+      "spearman": NaN,
+      "n": 170
+    },
+    "boundary": {
+      "pearson": NaN,
+      "spearman": NaN,
+      "n": 170
+    },
+    "stratified_random": {
+      "pearson": NaN,
+      "spearman": NaN,
+      "n": 170
+    },
+    "full_rho90": {
+      "pearson": -0.2364476680347263,
+      "spearman": -0.594074125280313,
+      "n": 170
+    },
+    "online_entropy": {
+      "pearson": NaN,
+      "spearman": NaN,
+      "n": 170
+    }
+  },
+  "by_dataset": [
+    {
+      "dataset": "australian",
+      "n_seeds": 10,
+      "mean_minus_random": 0.05335407389648439,
+      "mean_minus_full_rho90": 0.07476925947789942,
+      "n_win_vs_random": 1,
+      "n_loss_vs_random": 1,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "breast_cancer",
+      "n_seeds": 10,
+      "mean_minus_random": -0.03479542452432475,
+      "mean_minus_full_rho90": 0.09288724973656484,
+      "n_win_vs_random": 2,
+      "n_loss_vs_random": 3,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "breast_cancer_wisconsin_diagnostic",
+      "n_seeds": 10,
+      "mean_minus_random": 0.15266911006528366,
+      "mean_minus_full_rho90": 0.0782196576545134,
+      "n_win_vs_random": 3,
+      "n_loss_vs_random": 2,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "consistent_win"
+    },
+    {
+      "dataset": "breast_cancer_wisconsin_original",
+      "n_seeds": 10,
+      "mean_minus_random": 0.0,
+      "mean_minus_full_rho90": 0.0,
+      "n_win_vs_random": 0,
+      "n_loss_vs_random": 0,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "chronic_kidney_disease",
+      "n_seeds": 10,
+      "mean_minus_random": NaN,
+      "mean_minus_full_rho90": -0.22208360942916625,
+      "n_win_vs_random": 0,
+      "n_loss_vs_random": 0,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "congressional_voting_records",
+      "n_seeds": 10,
+      "mean_minus_random": 0.10362918312637033,
+      "mean_minus_full_rho90": 0.02978405865046111,
+      "n_win_vs_random": 7,
+      "n_loss_vs_random": 1,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "credit_approval",
+      "n_seeds": 10,
+      "mean_minus_random": -0.010215600391348084,
+      "mean_minus_full_rho90": -0.12170612613342771,
+      "n_win_vs_random": 2,
+      "n_loss_vs_random": 2,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "diabetes",
+      "n_seeds": 10,
+      "mean_minus_random": -0.04717493087048096,
+      "mean_minus_full_rho90": 0.042564758871670945,
+      "n_win_vs_random": 4,
+      "n_loss_vs_random": 6,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "ecoli2",
+      "n_seeds": 10,
+      "mean_minus_random": -0.04158368044866356,
+      "mean_minus_full_rho90": 0.04366755283667513,
+      "n_win_vs_random": 2,
+      "n_loss_vs_random": 2,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "german_credit",
+      "n_seeds": 10,
+      "mean_minus_random": -0.08393425600431924,
+      "mean_minus_full_rho90": 0.026787108362041553,
+      "n_win_vs_random": 0,
+      "n_loss_vs_random": 7,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "heart",
+      "n_seeds": 10,
+      "mean_minus_random": -0.05927736143993441,
+      "mean_minus_full_rho90": -0.055022505635061836,
+      "n_win_vs_random": 5,
+      "n_loss_vs_random": 5,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "ionosphere",
+      "n_seeds": 10,
+      "mean_minus_random": 0.10589352046895578,
+      "mean_minus_full_rho90": -0.007189523589958335,
+      "n_win_vs_random": 7,
+      "n_loss_vs_random": 2,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "messidor_features",
+      "n_seeds": 10,
+      "mean_minus_random": -0.06357368554347095,
+      "mean_minus_full_rho90": 0.12365665470178015,
+      "n_win_vs_random": 5,
+      "n_loss_vs_random": 5,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "consistent_win"
+    },
+    {
+      "dataset": "spambase",
+      "n_seeds": 10,
+      "mean_minus_random": -0.043483336633425046,
+      "mean_minus_full_rho90": -0.06747142441559736,
+      "n_win_vs_random": 3,
+      "n_loss_vs_random": 5,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "consistent_loss"
+    },
+    {
+      "dataset": "tic_tac_toe",
+      "n_seeds": 10,
+      "mean_minus_random": -0.010387260263589285,
+      "mean_minus_full_rho90": 0.23357263053165306,
+      "n_win_vs_random": 3,
+      "n_loss_vs_random": 5,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "consistent_win"
+    },
+    {
+      "dataset": "vehicle0",
+      "n_seeds": 10,
+      "mean_minus_random": 0.0759093511127148,
+      "mean_minus_full_rho90": -0.09183966581026215,
+      "n_win_vs_random": 1,
+      "n_loss_vs_random": 1,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    },
+    {
+      "dataset": "wholesale_customers",
+      "n_seeds": 10,
+      "mean_minus_random": -0.10417047184170469,
+      "mean_minus_full_rho90": -0.0001688009979286531,
+      "n_win_vs_random": 0,
+      "n_loss_vs_random": 1,
+      "vs_random_class": "unstable",
+      "vs_full_rho90_class": "unstable"
+    }
+  ],
+  "dataset_classification_counts": {
+    "consistent_win_vs_random": 0,
+    "consistent_loss_vs_random": 0,
+    "unstable_vs_random": 17
+  },
+  "answers": {
+    "q1_vs_random": "Paired online \u2212 random: mean \u0394F1 **-0.003**, online wins **43.3%** of pairs. **Mixed** \u2014 online entropy does not consistently dominate random at matched size.",
+    "q2_vs_purity": "vs purity: \u0394F1 **+0.010**, wins **47.5%**. **No** \u2014 purity subsampling is competitive with online entropy.",
+    "q3_vs_boundary": "vs boundary: \u0394F1 **-0.029**, wins **35.5%**. **No** \u2014 boundary selection matches online entropy at equal ball counts.",
+    "q4_vs_stratified_random": "vs stratified random: \u0394F1 **+0.010**, wins **40.5%**. **Yes** \u2014 online entropy beats class-stratified random subsampling.",
+    "q5_compression_conclusion": "**Not solely compression** \u2014 controls do not fully match online entropy; some selection signal remains beyond ball-count reduction.",
+    "q6_structural_selection_conclusion": "**No consistent structural advantage** \u2014 online entropy does not reliably beat matched rho90 subsets; compactness drives the effect.",
+    "q7_dataset_consistency": "**0** datasets show consistent online advantage vs random (\u22658/10 seeds); **17** are unstable. Largest mean \u0394F1 vs random: breast_cancer_wisconsin_diagnostic (+0.153), chronic_kidney_disease (+nan), ionosphere (+0.106).",
+    "paired_vs_full_rho90": "Online \u2212 full rho90: mean \u0394F1 +0.022 (online 0.610 vs rho 0.584); collapse online 51.8% vs rho 5.9%."
+  }
+}

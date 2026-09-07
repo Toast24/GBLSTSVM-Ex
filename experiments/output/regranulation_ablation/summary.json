@@ -1,0 +1,49 @@
+{
+  "protocol": {
+    "K_values": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "K_meaning": "K = number of rho90 balls selected by entropy_k (not sample count)",
+    "sample_selection": "sample_stratified_k (deterministic_rng_seed method=sample_stratified_k)",
+    "regranulate_rhos": {
+      "regranulate_rho80": 0.8,
+      "regranulate_rho85": 0.85,
+      "regranulate_rho90": 0.9,
+      "regranulate_rho95": 0.95,
+      "regranulate_rho98": 0.98
+    },
+    "classifier": "Gaussian GBLSTSVM (purity_compact)",
+    "c1": 100.0,
+    "c2": 0.01
+  },
+  "n_raw_rows": 6820,
+  "hash_verification_passed": true,
+  "case": "B",
+  "conclusion": "> Re-granulation materially changes the compressed representation, but there is no evidence that granular structure provides an advantage beyond ordinary sample-level compression.",
+  "meta": {
+    "mean_delta_vs_singleton": 0.13469029544640587,
+    "mean_delta_vs_sample_compression": -0.002872430750417899,
+    "significant_vs_singleton": true,
+    "significant_vs_sample_compression": false,
+    "performance_tracks_ball_count": false,
+    "post_hoc_descriptive_optimum": {
+      "method": "regranulate_rho80",
+      "rho": 0.8,
+      "K": 2,
+      "n_runs": 170,
+      "mean_macro_f1": 0.6655620646988406,
+      "median_macro_f1": 0.6651785714285714,
+      "std_macro_f1": 0.16144045050402703,
+      "frac_collapsed": 0.7176470588235294,
+      "mean_n_balls": 4.141176470588236,
+      "median_n_balls": 2.0,
+      "mean_actual_retained_samples": 96.4235294117647
+    }
+  },
+  "final_report": "\n============================================================\nRE-GRANULATION ABLATION\n============================================================\n\nRuns:\n    17 datasets \u00d7 10 seeds \u00d7 6 K values \u00d7 methods\n\nSelected samples identical across branches:\n    YES\n\nSingleton:\n    Mean F1: 0.4775\n    Collapse: 0.000\n    Mean balls: 143.3\n\nRegranulate rho=0.80:\n    Mean F1: 0.6211\n    Collapse: 0.372\n    Mean balls: 10.6\n    Delta vs singleton: +0.1339\n\nRegranulate rho=0.85:\n    Mean F1: 0.6193\n    Collapse: 0.218\n    Mean balls: 13.7\n    Delta vs singleton: +0.1401\n\nRegranulate rho=0.90:\n    Mean F1: 0.6179\n    Collapse: 0.202\n    Mean balls: 15.6\n    Delta vs singleton: +0.1397\n\nRegranulate rho=0.95:\n    Mean F1: 0.6116\n    Collapse: 0.197\n    Mean balls: 17.8\n    Delta vs singleton: +0.1337\n\nRegranulate rho=0.98:\n    Mean F1: 0.6038\n    Collapse: 0.189\n    Mean balls: 19.5\n    Delta vs singleton: +0.1259\n\n\nSample-level compression baseline:\n    Mean F1: 0.6179\n\nBest descriptive rho (post-hoc descriptive optimum):\n    regranulate_rho80 (mean F1=0.6656)\n\nDoes re-granulation beat singleton?\n    YES\n\nDoes re-granulation beat sample compression?\n    NO\n\nDoes performance primarily track ball count?\n    UNCLEAR\n\nFINAL CASE:\n    B\n\nSCIENTIFIC CONCLUSION:\n    > Re-granulation materially changes the compressed representation, but there is no evidence that granular structure provides an advantage beyond ordinary sample-level compression.\n\nRECOMMENDED NEXT STEP:\n    Treat gains as sample-compression effect; stop granular-specific branch.\n============================================================\n"
+}

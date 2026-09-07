@@ -1,0 +1,122 @@
+{
+  "protocol": {
+    "read_only": true,
+    "diagnostic_only": true,
+    "smoke_mode": false,
+    "analysis": "leave_one_ball_out",
+    "purity_b0_su3": 0.95,
+    "min_ball_count": 2,
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "representations": [
+      "B0",
+      "rho0.80",
+      "rho0.85",
+      "rho0.90",
+      "rho0.95",
+      "SU3"
+    ],
+    "weighting": "Gaussian purity_compact",
+    "su3_rule": "reject if utility <= percentile(75) of B0 proposals",
+    "c1": 100.0,
+    "c2": 0.01,
+    "prediction_rule": "reference",
+    "weight_placement": "opposite_only",
+    "failed": [],
+    "no_tuning": true,
+    "no_new_algorithms": true
+  },
+  "n_ball_rows": 21108,
+  "n_lobo_ok": 21042,
+  "n_configurations": 306,
+  "useful_ball_analysis": {
+    "n_balls": 21042,
+    "top10pct_positive_influence": {
+      "purity": 0.9519236772486125,
+      "radius": 303.43359401255003,
+      "normalized_radius": 9.498401364175388,
+      "density": 32763651116.460236,
+      "entropy": 0.14086058849315441,
+      "opposite_class_fraction": 0.5619467148316944,
+      "boundary_score": 1.0543847279432623,
+      "support_score": 32773125268.940834,
+      "margin_score": 1.5895438102087383,
+      "is_mixed": 0.20902612826603326
+    },
+    "top10pct_negative_influence": {
+      "purity": 0.9574750873055052,
+      "radius": 248.4620447179638,
+      "normalized_radius": 8.434189529321028,
+      "density": 23752969130.56021,
+      "entropy": 0.12078287470067472,
+      "opposite_class_fraction": 0.6111465712292228,
+      "boundary_score": 0.6215447953300378,
+      "support_score": 23752969139.831985,
+      "margin_score": 1.5575342084766395,
+      "is_mixed": 0.17292161520190025
+    },
+    "delta_purity_pos_minus_neg": -0.005551410056892747,
+    "delta_radius_pos_minus_neg": 54.971549294586225,
+    "delta_boundary_pos_minus_neg": 0.4328399326132245,
+    "delta_mixed_rate_pos_minus_neg": 0.03610451306413301
+  },
+  "mixed_ball_analysis": {
+    "positive_influence_top_quartile": {
+      "entropy": 0.08537921895195856,
+      "opposite_class_fraction": 0.5726568508709655,
+      "boundary_score": 0.30122314436053765,
+      "mixed_rate": 0.1242686494392979
+    },
+    "all_balls": {
+      "entropy": 0.09478544718547124,
+      "opposite_class_fraction": 0.5790139814410014,
+      "boundary_score": 0.33164387185057803,
+      "mixed_rate": 0.13677407090580743
+    },
+    "mixed_balls_only": {
+      "entropy": 0.6930074286576393,
+      "opposite_class_fraction": 0.5700528830721168,
+      "boundary_score": 2.424756897664998,
+      "mixed_rate": 1.0
+    },
+    "pure_balls_only": {
+      "entropy": 0.0,
+      "opposite_class_fraction": 0.5804338251486457,
+      "boundary_score": 0.0,
+      "mixed_rate": 0.0
+    },
+    "positive_has_higher_entropy": false,
+    "positive_has_higher_opposite_fraction": false,
+    "positive_has_higher_boundary_score": false,
+    "mixed_ball_mean_usefulness": 0.0019765761118633574,
+    "pure_ball_mean_usefulness": -0.0006663894495238182
+  },
+  "purity_analysis": {
+    "purity_vs_usefulness": {
+      "pearson": -0.00986892241932743,
+      "pearson_p": 0.15228067523453423,
+      "spearman": -0.009149931613708194,
+      "spearman_p": 0.18443417162427717,
+      "n": 21042
+    },
+    "purity_misleading": true,
+    "interpretation": "Purity is weakly or negatively associated with ball usefulness; maximizing purity alone is not supported as an optimization target."
+  },
+  "missing_objective": {
+    "maximize": [
+      "boundary_score (entropy \u00d7 density)",
+      "margin_score (opposite/same center separation)",
+      "entropy / class heterogeneity",
+      "boundary-aware mixed support"
+    ],
+    "minimize": [
+      "blind purity maximization",
+      "purity-only granulation objective"
+    ],
+    "evidence_summary": "Evidence-based landscape (no algorithm): maximize boundary_score (entropy \u00d7 density) + margin_score (opposite/same center separation) + entropy / class heterogeneity + boundary-aware mixed support; minimize blind purity maximization + purity-only granulation objective.",
+    "formula_sketch": "utility_proxy \u2248 +boundary_score (entropy \u00d7 density) + margin_score (opposite/same center separation) - blind purity maximization"
+  }
+}
