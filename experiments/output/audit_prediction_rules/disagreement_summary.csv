@@ -1,0 +1,3 @@
+scope,n_samples,n_disagree,disagree_rate,norm_w1,norm_w2,norm_ratio_w1_over_w2,n_reference_zero,n_disagree_where_abs_equal,n_disagree_where_abs_unequal,c1,c2,n_predictions_pooled,n_agree_pooled,n_disagree_pooled,disagree_rate_pooled
+synthetic_train,100.0,29.0,0.29,0.6425464160341889,0.0005744834495886652,1118.476809896364,0.0,0.0,29.0,1000.0,1e-05,,,,
+benchmark_test_pooled,,,,,,,,,,,,21730.0,18669.0,3061.0,0.14086516336861482

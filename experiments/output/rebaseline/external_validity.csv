@@ -1,0 +1,7 @@
+dataset,mean_accuracy_pct,published_linear_acc,within_3pp
+spambase,86.96092619392186,90.88,False
+tic_tac_toe,60.76388888888889,99.65,False
+ecoli2,83.52941176470588,89.11,False
+breast_cancer,64.88372093023257,74.42,False
+ionosphere,81.32075471698114,,
+heart,77.3170731707317,,

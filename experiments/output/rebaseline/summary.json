@@ -1,0 +1,217 @@
+{
+  "n_runs": 1360,
+  "summary": [
+    {
+      "scale": false,
+      "predict_rule": "raw",
+      "tune_c": false,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.5842196778595634,
+      "mean_accuracy": 0.6895715443826066,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.058823529411764705,
+      "mean_w_norm_ratio": 9.567962934059885,
+      "disagree_frac": 0.12127160792509545
+    },
+    {
+      "scale": false,
+      "predict_rule": "raw",
+      "tune_c": true,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.7406511026313825,
+      "mean_accuracy": 0.783134432957581,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.058823529411764705,
+      "mean_w_norm_ratio": 3.5111435404706506,
+      "disagree_frac": 0.12401411350587568
+    },
+    {
+      "scale": false,
+      "predict_rule": "norm",
+      "tune_c": false,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.6510826895492132,
+      "mean_accuracy": 0.7239906661721371,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.058823529411764705,
+      "mean_w_norm_ratio": 9.567962934059885,
+      "disagree_frac": 0.12127160792509545
+    },
+    {
+      "scale": false,
+      "predict_rule": "norm",
+      "tune_c": true,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.7480523111618618,
+      "mean_accuracy": 0.7761130010615328,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.058823529411764705,
+      "mean_w_norm_ratio": 8.53423698938293,
+      "disagree_frac": 0.12569340740311366
+    },
+    {
+      "scale": true,
+      "predict_rule": "raw",
+      "tune_c": false,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.6480842392260259,
+      "mean_accuracy": 0.7382429874484174,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.13529411764705881,
+      "mean_w_norm_ratio": 4.941854187241244,
+      "disagree_frac": 0.053332682167828695
+    },
+    {
+      "scale": true,
+      "predict_rule": "raw",
+      "tune_c": true,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.7726989030762078,
+      "mean_accuracy": 0.8082490025780387,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.13529411764705881,
+      "mean_w_norm_ratio": 1.2652951376273271,
+      "disagree_frac": 0.09382555212366538
+    },
+    {
+      "scale": true,
+      "predict_rule": "norm",
+      "tune_c": false,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.667521533355401,
+      "mean_accuracy": 0.7450772065485938,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.13529411764705881,
+      "mean_w_norm_ratio": 4.941854187241244,
+      "disagree_frac": 0.053332682167828695
+    },
+    {
+      "scale": true,
+      "predict_rule": "norm",
+      "tune_c": true,
+      "n_runs": 170,
+      "n_non_degenerate": 170,
+      "mean_macro_f1": 0.7735743482918341,
+      "mean_accuracy": 0.8040357812588924,
+      "degenerate_rate": 0.0,
+      "tiny_rate": 0.13529411764705881,
+      "mean_w_norm_ratio": 31.06629386540978,
+      "disagree_frac": 0.12429458273352313
+    }
+  ],
+  "per_dataset_norm_tune": [
+    {
+      "dataset": "australian",
+      "mean_macro_f1": 0.8437596599373425
+    },
+    {
+      "dataset": "breast_cancer",
+      "mean_macro_f1": 0.5732130908981464
+    },
+    {
+      "dataset": "breast_cancer_wisconsin_diagnostic",
+      "mean_macro_f1": 0.8707867575445644
+    },
+    {
+      "dataset": "breast_cancer_wisconsin_original",
+      "mean_macro_f1": 0.9464955582075001
+    },
+    {
+      "dataset": "chronic_kidney_disease",
+      "mean_macro_f1": 0.926537555192023
+    },
+    {
+      "dataset": "congressional_voting_records",
+      "mean_macro_f1": 0.9088388082778875
+    },
+    {
+      "dataset": "credit_approval",
+      "mean_macro_f1": 0.8724222977846356
+    },
+    {
+      "dataset": "diabetes",
+      "mean_macro_f1": 0.7081981464678274
+    },
+    {
+      "dataset": "ecoli2",
+      "mean_macro_f1": 0.7563025546466711
+    },
+    {
+      "dataset": "german_credit",
+      "mean_macro_f1": 0.6595645594627636
+    },
+    {
+      "dataset": "heart",
+      "mean_macro_f1": 0.7684069285225607
+    },
+    {
+      "dataset": "ionosphere",
+      "mean_macro_f1": 0.7709375179441421
+    },
+    {
+      "dataset": "messidor_features",
+      "mean_macro_f1": 0.6937350873250676
+    },
+    {
+      "dataset": "spambase",
+      "mean_macro_f1": 0.8621247886805508
+    },
+    {
+      "dataset": "tic_tac_toe",
+      "mean_macro_f1": 0.5769297907228104
+    },
+    {
+      "dataset": "vehicle0",
+      "mean_macro_f1": 0.9312789747905947
+    },
+    {
+      "dataset": "wholesale_customers",
+      "mean_macro_f1": 0.48123184455608997
+    }
+  ],
+  "external_validity": [
+    {
+      "dataset": "spambase",
+      "mean_accuracy_pct": 86.96092619392186,
+      "published_linear_acc": 90.88,
+      "within_3pp": false
+    },
+    {
+      "dataset": "tic_tac_toe",
+      "mean_accuracy_pct": 60.76388888888889,
+      "published_linear_acc": 99.65,
+      "within_3pp": false
+    },
+    {
+      "dataset": "ecoli2",
+      "mean_accuracy_pct": 83.52941176470588,
+      "published_linear_acc": 89.11,
+      "within_3pp": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "mean_accuracy_pct": 64.88372093023257,
+      "published_linear_acc": 74.42,
+      "within_3pp": false
+    },
+    {
+      "dataset": "ionosphere",
+      "mean_accuracy_pct": 81.32075471698114,
+      "published_linear_acc": null,
+      "within_3pp": null
+    },
+    {
+      "dataset": "heart",
+      "mean_accuracy_pct": 77.3170731707317,
+      "published_linear_acc": null,
+      "within_3pp": null
+    }
+  ]
+}

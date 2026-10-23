@@ -24,6 +24,8 @@ from experiments.phase8_common import (
 ROOT = Path(__file__).resolve().parents[1]
 UCI_DIR = ROOT / "datasets" / "uci"
 
+ONEHOT_DEFAULT = True
+
 # Paper names that are not available in the repository (do not block screening).
 UNAVAILABLE_DATASET_ALIASES = {
     "breast-cancer",
@@ -69,19 +71,23 @@ def discover_available_datasets() -> list[dict]:
     return found
 
 
-def _encode_features(df: pd.DataFrame) -> pd.DataFrame:
-    out = df.copy()
-    for col in out.columns:
-        series = out[col]
-        if series.dtype == object or not np.issubdtype(series.dtype, np.number):
+def _encode_features(df: pd.DataFrame, *, onehot: bool = ONEHOT_DEFAULT) -> pd.DataFrame:
+    parts: list[pd.DataFrame] = []
+    for col in df.columns:
+        series = df[col]
+        if series.dtype == object or not pd.api.types.is_numeric_dtype(series.dtype):
             cleaned = series.astype(str).str.strip()
             cleaned = cleaned.replace({"": np.nan, "?": np.nan, "nan": np.nan, "NaN": np.nan})
-            codes, _ = pd.factorize(cleaned, sort=True)
-            out[col] = codes.astype(float)
-            out.loc[cleaned.isna(), col] = np.nan
+            if onehot:
+                parts.append(pd.get_dummies(cleaned, prefix=col, dtype=float))
+            else:
+                codes, _ = pd.factorize(cleaned, sort=True)
+                coded = pd.Series(codes.astype(float), index=df.index, name=col)
+                coded.loc[cleaned.isna()] = np.nan
+                parts.append(coded.to_frame())
         else:
-            out[col] = pd.to_numeric(series, errors="coerce")
-    return out
+            parts.append(pd.to_numeric(series, errors="coerce").to_frame(name=col))
+    return pd.concat(parts, axis=1)
 
 
 def _impute_missing(X: np.ndarray) -> np.ndarray:
@@ -139,7 +145,11 @@ def _reduce_to_binary(y_raw: pd.Series) -> tuple[np.ndarray, dict]:
     return y_num, info
 
 
-def load_uci_dataset(path: Path) -> tuple[np.ndarray, np.ndarray, dict]:
+def load_uci_dataset(
+    path: Path,
+    *,
+    onehot: bool = ONEHOT_DEFAULT,
+) -> tuple[np.ndarray, np.ndarray, dict]:
     df = pd.read_csv(path)
     target_cols = [c for c in df.columns if c.startswith("target_")]
     if len(target_cols) != 1:
@@ -147,7 +157,7 @@ def load_uci_dataset(path: Path) -> tuple[np.ndarray, np.ndarray, dict]:
 
     target_col = target_cols[0]
     feature_df = df.drop(columns=target_cols)
-    feature_df = _encode_features(feature_df)
+    feature_df = _encode_features(feature_df, onehot=onehot)
     y_num, label_info = _reduce_to_binary(df[target_col])
 
     if label_info.get("binary_reduction"):
@@ -169,6 +179,7 @@ def load_uci_dataset(path: Path) -> tuple[np.ndarray, np.ndarray, dict]:
         "duplicates_retained": True,
         "source": "uci",
         "target_column": target_col,
+        "onehot": onehot,
         **label_info,
     }
     return X, y_num, info
@@ -177,6 +188,8 @@ def load_uci_dataset(path: Path) -> tuple[np.ndarray, np.ndarray, dict]:
 def load_dataset_split_from_descriptor(
     descriptor: dict,
     seed: int,
+    *,
+    onehot: bool = ONEHOT_DEFAULT,
 ) -> DatasetSplit:
     path: Path = descriptor["path"]
     source: Literal["data_dir", "uci"] = descriptor["source"]
@@ -184,7 +197,7 @@ def load_dataset_split_from_descriptor(
     if source == "data_dir":
         return load_dataset_split_by_name(path.name, seed=seed)
 
-    X, y_raw, info = load_uci_dataset(path)
+    X, y_raw, info = load_uci_dataset(path, onehot=onehot)
     y, label_mapping = map_to_binary(y_raw, info)
     X_train, X_val, X_test, y_train, y_val, y_test = stratified_three_way_split(X, y, seed)
     y_train_n = normalize_labels(y_train)
@@ -213,8 +226,13 @@ def load_dataset_split_by_name(name: str, seed: int) -> DatasetSplit:
     return load_dataset_split(name, seed=seed)
 
 
-def try_load_descriptor(descriptor: dict, seed: int) -> tuple[DatasetSplit | None, str | None]:
+def try_load_descriptor(
+    descriptor: dict,
+    seed: int,
+    *,
+    onehot: bool = ONEHOT_DEFAULT,
+) -> tuple[DatasetSplit | None, str | None]:
     try:
-        return load_dataset_split_from_descriptor(descriptor, seed=seed), None
+        return load_dataset_split_from_descriptor(descriptor, seed=seed, onehot=onehot), None
     except Exception as exc:  # noqa: BLE001
         return None, f"{type(exc).__name__}: {exc}"

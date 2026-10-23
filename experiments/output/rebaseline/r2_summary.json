@@ -1,0 +1,46 @@
+{
+  "external": [
+    {
+      "dataset": "tic_tac_toe",
+      "ordinal_acc_pct": 60.76388888888887,
+      "onehot_acc_pct": 98.47222222222221,
+      "published_linear_acc": 99.65,
+      "gap_to_published_pp": -1.1777777777777914
+    },
+    {
+      "dataset": "breast_cancer",
+      "ordinal_acc_pct": 63.95348837209303,
+      "onehot_acc_pct": 63.95348837209303,
+      "published_linear_acc": 74.42,
+      "gap_to_published_pp": -10.466511627906975
+    },
+    {
+      "dataset": "congressional_voting_records",
+      "ordinal_acc_pct": 90.75757575757576,
+      "onehot_acc_pct": 90.60606060606062,
+      "published_linear_acc": null,
+      "gap_to_published_pp": NaN
+    },
+    {
+      "dataset": "ecoli2",
+      "ordinal_acc_pct": 84.11764705882354,
+      "onehot_acc_pct": 84.11764705882354,
+      "published_linear_acc": 89.11,
+      "gap_to_published_pp": -4.992352941176463
+    }
+  ],
+  "protocol": [
+    {
+      "dataset": "spambase",
+      "mean_accuracy_pct": 86.90079652425777,
+      "published_linear_acc": 90.88,
+      "gap_to_published_pp": -3.9792034757422243
+    },
+    {
+      "dataset": "ecoli2",
+      "mean_accuracy_pct": 82.67326732673267,
+      "published_linear_acc": 89.11,
+      "gap_to_published_pp": -6.436732673267329
+    }
+  ]
+}

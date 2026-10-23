@@ -27,7 +27,16 @@ from .granular_balls import (
     generate_granular_balls,
 )
 
-PredictionRule = Literal["paper", "reference"]
+PredictionRule = Literal["paper", "reference", "raw", "norm"]
+
+
+def resolve_prediction_rule(rule: PredictionRule | str) -> Literal["paper", "reference"]:
+    """Map rebaseline aliases: raw=reference, norm=paper."""
+    if rule in ("raw", "reference"):
+        return "reference"
+    if rule in ("norm", "paper"):
+        return "paper"
+    raise ValueError(f"Unknown prediction rule: {rule!r}")
 
 
 def _normalize_labels(y: np.ndarray) -> np.ndarray:
@@ -107,14 +116,15 @@ def predict_twin_hyperplanes(
     """
     Twin-hyperplane decision.
 
-    paper: argmin_i |w_i^T x + b_i| / ||w_i||  (published rule)
-    reference: sign(|w2^T x + b2| - |w1^T x + b1|)  (repository rule)
+    paper / norm: argmin_i |w_i^T x + b_i| / ||w_i||  (published rule)
+    reference / raw: sign(|w2^T x + b2| - |w1^T x + b1|)  (repository rule)
     """
     X = np.asarray(X, dtype=float)
     y1 = X @ w1 + b1
     y2 = X @ w2 + b2
 
-    if rule == "reference":
+    resolved = resolve_prediction_rule(rule)
+    if resolved == "reference":
         return np.sign(np.abs(y2) - np.abs(y1))
 
     norm1 = np.linalg.norm(w1)

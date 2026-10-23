@@ -364,6 +364,9 @@ def fit_gaussian_gblstsvm(
     y_test: np.ndarray,
     minority_label: float,
     seed: int,
+    c1: float | None = None,
+    c2: float | None = None,
+    prediction_rule: str | None = None,
 ) -> dict[str, Any]:
     y = normalize_labels(y_train)
     if not balls:
@@ -396,25 +399,34 @@ def fit_gaussian_gblstsvm(
     weights_neg = kappa_neg_b * mu_neg
 
     centers_pos, radii_pos, centers_neg, radii_neg = balls_to_class_arrays(balls)
+    use_c1 = float(c1 if c1 is not None else DEFAULT_C1)
+    use_c2 = float(c2 if c2 is not None else DEFAULT_C2)
+    use_rule = prediction_rule if prediction_rule is not None else PREDICTION_RULE
     np.random.seed(seed)
     w1, b1, w2, b2 = solve_cw_gblstsvm_systems(
         centers_pos,
         radii_pos,
         centers_neg,
         radii_neg,
-        DEFAULT_C1,
-        DEFAULT_C2,
+        use_c1,
+        use_c2,
         weights_pos,
         weights_neg,
         reg_term=REG_TERM,
         weight_placement=WEIGHT_PLACEMENT,
     )
-    y_pred = predict_twin_hyperplanes(X_test, w1, b1, w2, b2, rule=PREDICTION_RULE)
+    y_pred = predict_twin_hyperplanes(X_test, w1, b1, w2, b2, rule=use_rule)
     scores = np.abs(X_test @ w2 + b2) - np.abs(X_test @ w1 + b1)
     metrics = evaluate(y_test, y_pred, scores, minority_label)
     metrics["minority_f1"] = _class_f1(y_test, y_pred, minority_label)
     metrics["classifier_ok"] = True
     metrics["classifier_error"] = None
+    metrics["c1"] = use_c1
+    metrics["c2"] = use_c2
+    metrics["w1"] = w1
+    metrics["w2"] = w2
+    metrics["b1"] = b1
+    metrics["b2"] = b2
     return metrics
 
 

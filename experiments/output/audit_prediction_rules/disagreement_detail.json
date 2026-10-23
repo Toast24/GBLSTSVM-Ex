@@ -1,0 +1,106 @@
+{
+  "deterministic_synthetic": {
+    "n_samples": 100,
+    "n_disagree": 29,
+    "disagree_rate": 0.29,
+    "norm_w1": 0.6425464160341889,
+    "norm_w2": 0.0005744834495886652,
+    "norm_ratio_w1_over_w2": 1118.476809896364,
+    "n_reference_zero": 0,
+    "n_disagree_where_abs_equal": 0,
+    "n_disagree_where_abs_unequal": 29,
+    "context": "synthetic_train_all_points",
+    "c1": 1000.0,
+    "c2": 1e-05
+  },
+  "benchmark_test_pooled": {
+    "n_predictions_pooled": 21730,
+    "n_agree_pooled": 18669,
+    "n_disagree_pooled": 3061,
+    "disagree_rate_pooled": 0.14086516336861482
+  },
+  "per_class_synthetic": {
+    "n_predictions": 100,
+    "n_agree": 71,
+    "n_disagree": 29,
+    "disagree_rate": 0.29,
+    "cm_repo_rows_ref_cols": [
+      [
+        71,
+        29
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "disagree_rate_true_-1": 0.0,
+    "disagree_rate_true_1": 0.58
+  },
+  "seed_level_descriptive": {
+    "mean_disagree_rate": 0.13613318752196912,
+    "median_disagree_rate": 0.10085708590791305,
+    "std_disagree_rate": 0.12571610614532064
+  },
+  "disagreement_example_diagnostics": [
+    {
+      "sample_index": 5,
+      "abs_f1": 1.5728187026944969,
+      "abs_f2": 0.04657172077312681,
+      "d1_norm": 3.4314176877581932,
+      "d2_norm": 3.629345603376089,
+      "norm_w1": 0.4583582780684585,
+      "norm_w2": 0.012831988425077203,
+      "raw_winner_class": "-1",
+      "norm_winner_class": "+1",
+      "repo_pred": -1.0,
+      "ref_pred": 1.0,
+      "normalization_flipped_winner": true,
+      "dataset": "breast_cancer",
+      "seed": 1
+    },
+    {
+      "sample_index": 8,
+      "abs_f1": 1.1867926408411134,
+      "abs_f2": 0.03396774033169498,
+      "d1_norm": 2.589224843592459,
+      "d2_norm": 2.6471143213714843,
+      "norm_w1": 0.4583582780684585,
+      "norm_w2": 0.012831988425077203,
+      "raw_winner_class": "-1",
+      "norm_winner_class": "+1",
+      "repo_pred": -1.0,
+      "ref_pred": 1.0,
+      "normalization_flipped_winner": true,
+      "dataset": "breast_cancer",
+      "seed": 1
+    },
+    {
+      "sample_index": 23,
+      "abs_f1": 1.4086146238373607,
+      "abs_f2": 0.04805142017345223,
+      "d1_norm": 3.07317374036163,
+      "d2_norm": 3.7446589399618424,
+      "norm_w1": 0.4583582780684585,
+      "norm_w2": 0.012831988425077203,
+      "raw_winner_class": "-1",
+      "norm_winner_class": "+1",
+      "repo_pred": -1.0,
+      "ref_pred": 1.0,
+      "normalization_flipped_winner": true,
+      "dataset": "breast_cancer",
+      "seed": 1
+    }
+  ],
+  "synthetic_summarize": {
+    "n_samples": 100,
+    "n_disagree": 29,
+    "disagree_rate": 0.29,
+    "norm_w1": 0.6425464160341889,
+    "norm_w2": 0.0005744834495886652,
+    "norm_ratio_w1_over_w2": 1118.476809896364,
+    "n_reference_zero": 0,
+    "n_disagree_where_abs_equal": 0,
+    "n_disagree_where_abs_unequal": 29
+  }
+}

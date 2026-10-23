@@ -1,0 +1,6 @@
+method,n_pairs,repo_collapsed,ref_collapsed,both_collapsed,repo_only,ref_only,neither
+RAW_LSTSVM,170,0,0,0,0,0,170
+L0_CENTER_UNIT,170,0,0,0,0,0,170
+L1_POPULATION,170,0,0,0,0,0,170
+L2_POPULATION_SCATTER,170,0,0,0,0,0,170
+L3_MOMENT_EXACT,170,0,0,0,0,0,170

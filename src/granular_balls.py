@@ -24,6 +24,7 @@ class BallInfo:
     label: float
     purity: float
     num_samples: int
+    scatter: np.ndarray | None = None
 
 
 class GranularBall:
@@ -34,6 +35,8 @@ class GranularBall:
         self.data_no_label = data[:, :-2]
         self.num, self.dim = self.data_no_label.shape
         self.center = self.data_no_label.mean(0)
+        diff = self.data_no_label - self.center
+        self.scatter = diff.T @ diff
         self.label, self.purity, self.r = self._label_purity_radius()
 
     def _label_purity_radius(self) -> Tuple[float, float, float]:
@@ -137,6 +140,7 @@ def generate_granular_balls(
                 label=label,
                 purity=ball.purity,
                 num_samples=ball.num,
+                scatter=ball.scatter.copy(),
             )
         )
     return balls
@@ -176,10 +180,43 @@ def generate_granular_balls_with_membership(
                 label=label,
                 purity=ball.purity,
                 num_samples=ball.num,
+                scatter=ball.scatter.copy(),
             )
         )
         memberships.append(np.asarray(ball.data[:, -1], dtype=int))
     return balls, memberships
+
+
+def decompose_granular_balls(balls: Sequence) -> list[BallInfo]:
+    """Build ladder BallInfo list with per-class stats from GranularBall data."""
+    out: list[BallInfo] = []
+    for ball in balls:
+        feats = ball.data_no_label
+        labels = ball.data[:, -2]
+        for cls in np.unique(labels):
+            mask = labels == cls
+            sub = feats[mask]
+            n_j = int(sub.shape[0])
+            center = sub.mean(0)
+            diff = sub - center
+            scatter = diff.T @ diff
+            dist = np.sqrt(np.sum(np.square(diff), axis=1))
+            radius = float(np.sum(dist) / max(n_j, 1))
+            label = -1.0 if cls == -1 else 1.0
+            count = Counter(labels[mask])
+            maj = max(count, key=count.get)
+            purity = count[maj] / n_j
+            out.append(
+                BallInfo(
+                    center=center.copy(),
+                    radius=radius,
+                    label=label,
+                    purity=float(purity),
+                    num_samples=n_j,
+                    scatter=scatter,
+                )
+            )
+    return out
 
 
 def balls_to_class_arrays(

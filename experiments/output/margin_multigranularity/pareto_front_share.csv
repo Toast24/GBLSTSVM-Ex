@@ -1,0 +1,10 @@
+learner,method,sum,count,share
+GBLSTSVM,P1_svm_aware,4,30,0.133
+GBLSTSVM,P2_margin_multi,4,30,0.133
+GBLSTSVM,purity,24,43,0.558
+SVM-lin,P1_svm_aware,7,30,0.233
+SVM-lin,P2_margin_multi,3,30,0.1
+SVM-lin,purity,24,43,0.558
+SVM-rbf,P1_svm_aware,8,30,0.267
+SVM-rbf,P2_margin_multi,6,30,0.2
+SVM-rbf,purity,22,43,0.512

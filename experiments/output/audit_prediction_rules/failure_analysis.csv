@@ -1,0 +1,3 @@
+prediction_rule,total_runs,finite_runs,nan_runs,exception_runs,collapsed_runs,collapse_rate,classifier_failures
+RULE_REPO,170,170,0,0,34,0.2,0
+RULE_REFERENCE,170,170,0,0,18,0.10588235294117647,0

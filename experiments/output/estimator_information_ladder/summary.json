@@ -1,0 +1,80 @@
+{
+  "verdict": "B \u2014 PARTIAL ESTIMATOR-MISMATCH EVIDENCE",
+  "paired": [
+    {
+      "comparison": "L1_POPULATION_minus_L0_CENTER_UNIT",
+      "n_datasets": 17,
+      "mean_delta": 0.011688479748862515,
+      "median_delta": 0.007851211711659834,
+      "std_delta": 0.025376390981645718,
+      "wins": 11,
+      "ties": 0,
+      "losses": 6,
+      "wilcoxon_stat": 38.0,
+      "wilcoxon_p": 0.0714111328125,
+      "bootstrap_95_ci_low": 0.0011981936035384872,
+      "bootstrap_95_ci_high": 0.02483354317935001,
+      "cohens_d": 0.4606044948178792
+    },
+    {
+      "comparison": "L2_POPULATION_SCATTER_minus_L1_POPULATION",
+      "n_datasets": 17,
+      "mean_delta": 0.030963067892144515,
+      "median_delta": 0.012960865232283025,
+      "std_delta": 0.050221430006963656,
+      "wins": 14,
+      "ties": 0,
+      "losses": 3,
+      "wilcoxon_stat": 18.0,
+      "wilcoxon_p": 0.00384521484375,
+      "bootstrap_95_ci_low": 0.011110543757843332,
+      "bootstrap_95_ci_high": 0.05615527333299875,
+      "cohens_d": 0.6165309886085417
+    },
+    {
+      "comparison": "L2_POPULATION_SCATTER_minus_L0_CENTER_UNIT",
+      "n_datasets": 17,
+      "mean_delta": 0.04265154764100703,
+      "median_delta": 0.016110227584850378,
+      "std_delta": 0.06561741154690198,
+      "wins": 14,
+      "ties": 0,
+      "losses": 3,
+      "wilcoxon_stat": 19.0,
+      "wilcoxon_p": 0.004638671875,
+      "bootstrap_95_ci_low": 0.015093399698383499,
+      "bootstrap_95_ci_high": 0.07463544908768535,
+      "cohens_d": 0.6500035072226306
+    },
+    {
+      "comparison": "L3_MOMENT_EXACT_minus_RAW_LSTSVM",
+      "n_datasets": 17,
+      "mean_delta": -0.0010619154613992145,
+      "median_delta": -0.0011372059516884803,
+      "std_delta": 0.018832446522251692,
+      "wins": 7,
+      "ties": 1,
+      "losses": 9,
+      "wilcoxon_stat": 61.0,
+      "wilcoxon_p": 0.7173808884143212,
+      "bootstrap_95_ci_low": -0.009044951553657768,
+      "bootstrap_95_ci_high": 0.008023406627152653,
+      "cohens_d": -0.05638754689084653
+    },
+    {
+      "comparison": "L1_POPULATION_minus_MATCHED_K_SAMPLES",
+      "n_datasets": 17,
+      "mean_delta": 0.012029107001721384,
+      "median_delta": 0.005651421929566069,
+      "std_delta": 0.04481435708049656,
+      "wins": 9,
+      "ties": 0,
+      "losses": 8,
+      "wilcoxon_stat": 59.0,
+      "wilcoxon_p": 0.4306793212890625,
+      "bootstrap_95_ci_low": -0.005413710049037031,
+      "bootstrap_95_ci_high": 0.03462289358814913,
+      "cohens_d": 0.2684208317402838
+    }
+  ]
+}

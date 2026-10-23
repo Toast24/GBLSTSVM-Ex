@@ -11,6 +11,7 @@ Chronological log of research sessions. Each session documents hypotheses, exper
 | [5](Session_5_Split_Utility_Implementation_and_Entropy_Granulation.md) | Split-Utility Implementation and Entropy Granulation | Aug–Sep 2026 | Complete |
 | [6](Session_6_Compression_K_Sensitivity_and_Validation.md) | Compression K-Sensitivity and Validation | Sep 2026 | Complete |
 | [7](Session_7_Control_Reconciliation_and_Regranulation_Ablated.md) | Control Reconciliation and Re-Granulation Ablation | 7 Sep 2026 | **Terminal** |
+| [8](Session_8_Angle_Gate_and_Paper_Strategy.md) | Angle Gate, Clean Compression Geometry, Paper Strategy | 29 Sep 2026 | Complete |
 
 ## Research arc (Sessions 4–7)
 

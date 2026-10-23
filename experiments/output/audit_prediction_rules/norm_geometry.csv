@@ -1,0 +1,5 @@
+correlation_pair,spearman_r,spearman_p,level
+mean_disagree_rate vs mean_norm_ratio,0.26960784313725494,0.2953357994714052,dataset
+mean_disagree_rate vs mean_log_norm_ratio,0.28186274509803927,0.27305989737995473,dataset
+mean_disagree_rate vs imbalance_ratio,-0.27467816321609656,0.2859909923691463,dataset
+mean_disagree_rate vs mean_delta_macro_f1,0.41421568627450983,0.09833118794961312,dataset

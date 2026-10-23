@@ -1,0 +1,117 @@
+{
+  "n_dataset_seed_pairs": 170,
+  "n_run_rows": 1700,
+  "methods": [
+    "FULL_RHO90",
+    "FIXED_K6",
+    "FIXED_K8",
+    "FIXED_K10",
+    "FIXED_K12",
+    "VALIDATION_SELECTED_MAX",
+    "VALIDATION_SELECTED_1SE",
+    "PRE_REGISTERED_K10_RULE",
+    "SIZE_BASED_RULE",
+    "FRACTION_OF_RHO90_RULE"
+  ],
+  "K_candidates": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "spearman": {
+    "K_selected_vs_macro_f1_rho": -0.11685531646659016,
+    "K_selected_vs_macro_f1_p": 2.4736838631523636e-05,
+    "n_balls_final_vs_macro_f1_rho": -0.11685531646659016,
+    "n_balls_final_vs_macro_f1_p": 2.4736838631523636e-05
+  },
+  "interpretation": "## Scientific verdict\n\n- **Compression vs full rho90**: mean delta=+0.0392, Wilcoxon p=0.001072, significant improvement.\n- **Validation MAX vs FIXED_K6**: mean delta=+0.0208, W/T/L=61/31/39.\n- **Validation MAX vs FIXED_K10**: mean delta=+0.0110.\n- **MAX vs 1SE agreement**: 95.9% of runs select the same K.\n- **Simple rules vs MAX**: SIZE delta=+0.0060; FRACTION delta=+0.0084.\n- **Validation vs oracle-K agreement**: 31.2%.\n- **PRE_REGISTERED_K10 == FIXED_K10**: True.\n- **Spearman(K, macro F1)**: -0.117; **Spearman(n_balls, macro F1)**: -0.117.",
+  "paired_comparisons": [
+    {
+      "focal": "VALIDATION_SELECTED_MAX",
+      "baseline": "FULL_RHO90",
+      "n_pairs": 147,
+      "mean_delta_macro_f1": 0.03919739180299391,
+      "median_delta_macro_f1": 0.024491999228841377,
+      "std_delta_macro_f1": 0.16530020417674735,
+      "wins": 79,
+      "ties": 14,
+      "losses": 54,
+      "wilcoxon_stat": 2999.0,
+      "wilcoxon_p": 0.0010716301461148015,
+      "cohens_d": 0.23632057817826557
+    },
+    {
+      "focal": "VALIDATION_SELECTED_MAX",
+      "baseline": "FIXED_K6",
+      "n_pairs": 131,
+      "mean_delta_macro_f1": 0.020756115031934884,
+      "median_delta_macro_f1": 0.0,
+      "std_delta_macro_f1": 0.10359232544036015,
+      "wins": 61,
+      "ties": 31,
+      "losses": 39,
+      "wilcoxon_stat": 1788.0,
+      "wilcoxon_p": 0.011275411911637126,
+      "cohens_d": 0.19959723236504193
+    },
+    {
+      "focal": "VALIDATION_SELECTED_MAX",
+      "baseline": "FIXED_K10",
+      "n_pairs": 129,
+      "mean_delta_macro_f1": 0.011043095727803893,
+      "median_delta_macro_f1": 0.0,
+      "std_delta_macro_f1": 0.10557908076066275,
+      "wins": 55,
+      "ties": 29,
+      "losses": 45,
+      "wilcoxon_stat": 2113.0,
+      "wilcoxon_p": 0.156602882017336,
+      "cohens_d": 0.10418929278209062
+    },
+    {
+      "focal": "VALIDATION_SELECTED_MAX",
+      "baseline": "FIXED_K12",
+      "n_pairs": 129,
+      "mean_delta_macro_f1": 0.00599227140765914,
+      "median_delta_macro_f1": 0.0,
+      "std_delta_macro_f1": 0.09512668062109962,
+      "wins": 44,
+      "ties": 41,
+      "losses": 44,
+      "wilcoxon_stat": 1853.0,
+      "wilcoxon_p": 0.6621912389664522,
+      "cohens_d": 0.06274790966939227
+    },
+    {
+      "focal": "VALIDATION_SELECTED_MAX",
+      "baseline": "SIZE_BASED_RULE",
+      "n_pairs": 129,
+      "mean_delta_macro_f1": 0.00599227140765914,
+      "median_delta_macro_f1": 0.0,
+      "std_delta_macro_f1": 0.09512668062109962,
+      "wins": 44,
+      "ties": 41,
+      "losses": 44,
+      "wilcoxon_stat": 1853.0,
+      "wilcoxon_p": 0.6621912389664522,
+      "cohens_d": 0.06274790966939227
+    },
+    {
+      "focal": "VALIDATION_SELECTED_MAX",
+      "baseline": "FRACTION_OF_RHO90_RULE",
+      "n_pairs": 137,
+      "mean_delta_macro_f1": 0.00840220300199825,
+      "median_delta_macro_f1": 0.0,
+      "std_delta_macro_f1": 0.09627746400570818,
+      "wins": 51,
+      "ties": 42,
+      "losses": 44,
+      "wilcoxon_stat": 2027.0,
+      "wilcoxon_p": 0.3476791837034826,
+      "cohens_d": 0.0869516241496572
+    }
+  ]
+}

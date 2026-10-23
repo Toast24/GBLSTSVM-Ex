@@ -262,6 +262,7 @@ def _to_ball_info(ball: GranularBall) -> BallInfo:
         label=label,
         purity=float(ball.purity),
         num_samples=int(ball.num),
+        scatter=ball.scatter.copy(),
     )
 
 
