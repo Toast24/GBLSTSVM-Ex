@@ -6,6 +6,7 @@ Selection uses frozen rho90 balls only (train-derived). Test labels are never us
 
 from __future__ import annotations
 
+import hashlib
 from typing import Any
 
 import numpy as np
@@ -55,9 +56,13 @@ def deterministic_rng_seed(
     method: str = "",
     repetition: int = 0,
 ) -> int:
-    """Stable 31-bit seed from dataset + seed + K (+ method/rep)."""
+    """Stable 31-bit seed from dataset + seed + K (+ method/rep).
+
+    Uses sha256, not built-in hash(): str hashing is salted per process
+    (PYTHONHASHSEED), which made every "deterministic" split differ between runs.
+    """
     key = f"{dataset}|{seed}|{k}|{method}|{repetition}"
-    return int(abs(hash(key)) % (2**31 - 1))
+    return int.from_bytes(hashlib.sha256(key.encode()).digest()[:8], "big") % (2**31 - 1)
 
 
 def _ranking_scores(

@@ -12,6 +12,7 @@ Chronological log of research sessions. Each session documents hypotheses, exper
 | [6](Session_6_Compression_K_Sensitivity_and_Validation.md) | Compression K-Sensitivity and Validation | Sep 2026 | Complete |
 | [7](Session_7_Control_Reconciliation_and_Regranulation_Ablated.md) | Control Reconciliation and Re-Granulation Ablation | 7 Sep 2026 | **Terminal** |
 | [8](Session_8_Angle_Gate_and_Paper_Strategy.md) | Angle Gate, Clean Compression Geometry, Paper Strategy | 29 Sep 2026 | Complete |
+| [9](Session_9_Paper_Evidence_and_Split_Bug.md) | Held-out Ladder, Closed-Form Test, Split-Seed Bug | 19 Nov 2026 | Complete |
 
 ## Research arc (Sessions 4–7)
 

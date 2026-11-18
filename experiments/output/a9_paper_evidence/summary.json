@@ -1,0 +1,727 @@
+{
+  "ladder_unscaled": {
+    "repo": {
+      "arms": {
+        "P_FULL": 0.7861,
+        "RAW": 0.7861,
+        "D_FULL": 0.7748,
+        "P_DIAG": 0.7647,
+        "P_L1": 0.7553,
+        "D_L1": 0.7461,
+        "P_ISO": 0.7397,
+        "P_L0": 0.7316,
+        "PUB": 0.7206
+      },
+      "contrasts": [
+        {
+          "contrast": "P_L1 - P_L0",
+          "meaning": "population weights",
+          "mean_delta": 0.0237,
+          "ci_lo": 0.0073,
+          "ci_hi": 0.0425,
+          "wins": 11,
+          "losses": 6,
+          "n": 17,
+          "p": 0.0232,
+          "p_holm": 0.1858
+        },
+        {
+          "contrast": "P_DIAG - P_L1",
+          "meaning": "diagonal scatter",
+          "mean_delta": 0.0094,
+          "ci_lo": -0.0374,
+          "ci_hi": 0.0552,
+          "wins": 10,
+          "losses": 7,
+          "n": 17,
+          "p": 0.9632,
+          "p_holm": 0.9632
+        },
+        {
+          "contrast": "P_FULL - P_DIAG",
+          "meaning": "off-diagonal scatter",
+          "mean_delta": 0.0214,
+          "ci_lo": 0.0005,
+          "ci_hi": 0.056,
+          "wins": 11,
+          "losses": 6,
+          "n": 17,
+          "p": 0.1454,
+          "p_holm": 0.5349
+        },
+        {
+          "contrast": "P_DIAG - P_ISO",
+          "meaning": "where mass goes",
+          "mean_delta": 0.025,
+          "ci_lo": 0.0049,
+          "ci_hi": 0.0478,
+          "wins": 13,
+          "losses": 4,
+          "n": 17,
+          "p": 0.0348,
+          "p_holm": 0.2435
+        },
+        {
+          "contrast": "P_ISO - P_L1",
+          "meaning": "isotropic mass",
+          "mean_delta": -0.0156,
+          "ci_lo": -0.0653,
+          "ci_hi": 0.035,
+          "wins": 7,
+          "losses": 10,
+          "n": 17,
+          "p": 0.2069,
+          "p_holm": 0.5349
+        },
+        {
+          "contrast": "D_FULL - D_L1",
+          "meaning": "scatter on deletion path",
+          "mean_delta": 0.0287,
+          "ci_lo": 0.0047,
+          "ci_hi": 0.0561,
+          "wins": 10,
+          "losses": 7,
+          "n": 17,
+          "p": 0.0887,
+          "p_holm": 0.5276
+        },
+        {
+          "contrast": "P_L1 - D_L1",
+          "meaning": "cost of deletion (L1)",
+          "mean_delta": 0.0092,
+          "ci_lo": -0.0096,
+          "ci_hi": 0.0259,
+          "wins": 12,
+          "losses": 4,
+          "n": 17,
+          "p": 0.0879,
+          "p_holm": 0.5276
+        },
+        {
+          "contrast": "RAW - D_FULL",
+          "meaning": "cost of deletion (exact)",
+          "mean_delta": 0.0113,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0238,
+          "wins": 11,
+          "losses": 5,
+          "n": 17,
+          "p": 0.1337,
+          "p_holm": 0.5349
+        },
+        {
+          "contrast": "RAW - PUB",
+          "meaning": "RAW vs published",
+          "mean_delta": 0.0655,
+          "ci_lo": 0.0245,
+          "ci_hi": 0.1072,
+          "wins": 13,
+          "losses": 4,
+          "n": 17,
+          "p": 0.0093,
+          "p_holm": 0.084
+        }
+      ]
+    },
+    "paper": {
+      "arms": {
+        "PUB": 0.707,
+        "P_L1": 0.6926,
+        "P_L0": 0.6838,
+        "RAW": 0.6827,
+        "P_FULL": 0.6827,
+        "D_FULL": 0.6719,
+        "D_L1": 0.6697,
+        "P_DIAG": 0.6637,
+        "P_ISO": 0.6379
+      },
+      "contrasts": [
+        {
+          "contrast": "P_L1 - P_L0",
+          "meaning": "population weights",
+          "mean_delta": 0.0087,
+          "ci_lo": -0.0197,
+          "ci_hi": 0.0386,
+          "wins": 11,
+          "losses": 6,
+          "n": 17,
+          "p": 0.5791,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "P_DIAG - P_L1",
+          "meaning": "diagonal scatter",
+          "mean_delta": -0.0289,
+          "ci_lo": -0.0783,
+          "ci_hi": 0.0118,
+          "wins": 8,
+          "losses": 9,
+          "n": 17,
+          "p": 0.5171,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "P_FULL - P_DIAG",
+          "meaning": "off-diagonal scatter",
+          "mean_delta": 0.0191,
+          "ci_lo": -0.0263,
+          "ci_hi": 0.0708,
+          "wins": 11,
+          "losses": 6,
+          "n": 17,
+          "p": 0.5477,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "P_DIAG - P_ISO",
+          "meaning": "where mass goes",
+          "mean_delta": 0.0258,
+          "ci_lo": -0.0576,
+          "ci_hi": 0.1131,
+          "wins": 9,
+          "losses": 8,
+          "n": 17,
+          "p": 0.8536,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "P_ISO - P_L1",
+          "meaning": "isotropic mass",
+          "mean_delta": -0.0547,
+          "ci_lo": -0.1496,
+          "ci_hi": 0.0309,
+          "wins": 8,
+          "losses": 9,
+          "n": 17,
+          "p": 0.5791,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "D_FULL - D_L1",
+          "meaning": "scatter on deletion path",
+          "mean_delta": 0.0022,
+          "ci_lo": -0.0423,
+          "ci_hi": 0.0495,
+          "wins": 8,
+          "losses": 9,
+          "n": 17,
+          "p": 0.89,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "P_L1 - D_L1",
+          "meaning": "cost of deletion (L1)",
+          "mean_delta": 0.0229,
+          "ci_lo": -0.0285,
+          "ci_hi": 0.0775,
+          "wins": 10,
+          "losses": 6,
+          "n": 17,
+          "p": 0.408,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "RAW - D_FULL",
+          "meaning": "cost of deletion (exact)",
+          "mean_delta": 0.0109,
+          "ci_lo": -0.0212,
+          "ci_hi": 0.0474,
+          "wins": 7,
+          "losses": 8,
+          "n": 17,
+          "p": 0.8203,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "RAW - PUB",
+          "meaning": "RAW vs published",
+          "mean_delta": -0.0242,
+          "ci_lo": -0.0686,
+          "ci_hi": 0.0203,
+          "wins": 8,
+          "losses": 9,
+          "n": 17,
+          "p": 0.4307,
+          "p_holm": 1.0
+        }
+      ]
+    }
+  },
+  "ladder_std": {
+    "repo": {
+      "arms": {
+        "P_FULL": 0.8286,
+        "RAW": 0.8286,
+        "D_FULL": 0.8125,
+        "P_DIAG": 0.8079,
+        "P_ISO": 0.8075,
+        "PUB": 0.7798,
+        "P_L1": 0.7768,
+        "P_L0": 0.7528,
+        "D_L1": 0.7462
+      },
+      "contrasts": [
+        {
+          "contrast": "P_L1 - P_L0",
+          "meaning": "population weights",
+          "mean_delta": 0.0241,
+          "ci_lo": 0.0051,
+          "ci_hi": 0.0461,
+          "wins": 12,
+          "losses": 5,
+          "n": 17,
+          "p": 0.0569,
+          "p_holm": 0.2844
+        },
+        {
+          "contrast": "P_DIAG - P_L1",
+          "meaning": "diagonal scatter",
+          "mean_delta": 0.031,
+          "ci_lo": -0.0123,
+          "ci_hi": 0.0692,
+          "wins": 10,
+          "losses": 7,
+          "n": 17,
+          "p": 0.0887,
+          "p_holm": 0.2856
+        },
+        {
+          "contrast": "P_FULL - P_DIAG",
+          "meaning": "off-diagonal scatter",
+          "mean_delta": 0.0207,
+          "ci_lo": 0.0024,
+          "ci_hi": 0.0497,
+          "wins": 11,
+          "losses": 6,
+          "n": 17,
+          "p": 0.0714,
+          "p_holm": 0.2856
+        },
+        {
+          "contrast": "P_DIAG - P_ISO",
+          "meaning": "where mass goes",
+          "mean_delta": 0.0003,
+          "ci_lo": -0.0068,
+          "ci_hi": 0.0073,
+          "wins": 8,
+          "losses": 9,
+          "n": 17,
+          "p": 0.89,
+          "p_holm": 0.89
+        },
+        {
+          "contrast": "P_ISO - P_L1",
+          "meaning": "isotropic mass",
+          "mean_delta": 0.0307,
+          "ci_lo": -0.0145,
+          "ci_hi": 0.0703,
+          "wins": 12,
+          "losses": 5,
+          "n": 17,
+          "p": 0.0797,
+          "p_holm": 0.2856
+        },
+        {
+          "contrast": "D_FULL - D_L1",
+          "meaning": "scatter on deletion path",
+          "mean_delta": 0.0663,
+          "ci_lo": 0.0367,
+          "ci_hi": 0.0966,
+          "wins": 13,
+          "losses": 4,
+          "n": 17,
+          "p": 0.0007,
+          "p_holm": 0.0052
+        },
+        {
+          "contrast": "P_L1 - D_L1",
+          "meaning": "cost of deletion (L1)",
+          "mean_delta": 0.0306,
+          "ci_lo": 0.0083,
+          "ci_hi": 0.0529,
+          "wins": 12,
+          "losses": 4,
+          "n": 17,
+          "p": 0.02,
+          "p_holm": 0.1198
+        },
+        {
+          "contrast": "RAW - D_FULL",
+          "meaning": "cost of deletion (exact)",
+          "mean_delta": 0.016,
+          "ci_lo": 0.0079,
+          "ci_hi": 0.0249,
+          "wins": 13,
+          "losses": 2,
+          "n": 17,
+          "p": 0.0038,
+          "p_holm": 0.0264
+        },
+        {
+          "contrast": "RAW - PUB",
+          "meaning": "RAW vs published",
+          "mean_delta": 0.0488,
+          "ci_lo": 0.0299,
+          "ci_hi": 0.0692,
+          "wins": 15,
+          "losses": 2,
+          "n": 17,
+          "p": 0.0003,
+          "p_holm": 0.0026
+        }
+      ]
+    },
+    "paper": {
+      "arms": {
+        "P_ISO": 0.7844,
+        "D_FULL": 0.7701,
+        "P_FULL": 0.7633,
+        "RAW": 0.7633,
+        "PUB": 0.7621,
+        "P_L1": 0.7501,
+        "P_DIAG": 0.7492,
+        "D_L1": 0.7285,
+        "P_L0": 0.7165
+      },
+      "contrasts": [
+        {
+          "contrast": "P_L1 - P_L0",
+          "meaning": "population weights",
+          "mean_delta": 0.0337,
+          "ci_lo": 0.0053,
+          "ci_hi": 0.0614,
+          "wins": 13,
+          "losses": 4,
+          "n": 17,
+          "p": 0.0305,
+          "p_holm": 0.2747
+        },
+        {
+          "contrast": "P_DIAG - P_L1",
+          "meaning": "diagonal scatter",
+          "mean_delta": -0.0009,
+          "ci_lo": -0.0512,
+          "ci_hi": 0.0444,
+          "wins": 11,
+          "losses": 6,
+          "n": 17,
+          "p": 0.89,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "P_FULL - P_DIAG",
+          "meaning": "off-diagonal scatter",
+          "mean_delta": 0.0141,
+          "ci_lo": -0.0177,
+          "ci_hi": 0.051,
+          "wins": 11,
+          "losses": 6,
+          "n": 17,
+          "p": 0.2435,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "P_DIAG - P_ISO",
+          "meaning": "where mass goes",
+          "mean_delta": -0.0352,
+          "ci_lo": -0.0715,
+          "ci_hi": -0.0052,
+          "wins": 5,
+          "losses": 12,
+          "n": 17,
+          "p": 0.0505,
+          "p_holm": 0.4043
+        },
+        {
+          "contrast": "P_ISO - P_L1",
+          "meaning": "isotropic mass",
+          "mean_delta": 0.0343,
+          "ci_lo": -0.012,
+          "ci_hi": 0.0773,
+          "wins": 13,
+          "losses": 4,
+          "n": 17,
+          "p": 0.1089,
+          "p_holm": 0.6533
+        },
+        {
+          "contrast": "D_FULL - D_L1",
+          "meaning": "scatter on deletion path",
+          "mean_delta": 0.0417,
+          "ci_lo": 0.0011,
+          "ci_hi": 0.0822,
+          "wins": 11,
+          "losses": 5,
+          "n": 17,
+          "p": 0.0879,
+          "p_holm": 0.6155
+        },
+        {
+          "contrast": "P_L1 - D_L1",
+          "meaning": "cost of deletion (L1)",
+          "mean_delta": 0.0217,
+          "ci_lo": -0.0063,
+          "ci_hi": 0.0529,
+          "wins": 8,
+          "losses": 7,
+          "n": 17,
+          "p": 0.2805,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "RAW - D_FULL",
+          "meaning": "cost of deletion (exact)",
+          "mean_delta": -0.0068,
+          "ci_lo": -0.0378,
+          "ci_hi": 0.0186,
+          "wins": 6,
+          "losses": 8,
+          "n": 17,
+          "p": 0.975,
+          "p_holm": 1.0
+        },
+        {
+          "contrast": "RAW - PUB",
+          "meaning": "RAW vs published",
+          "mean_delta": 0.0012,
+          "ci_lo": -0.0377,
+          "ci_hi": 0.0424,
+          "wins": 10,
+          "losses": 7,
+          "n": 17,
+          "p": 0.89,
+          "p_holm": 1.0
+        }
+      ]
+    }
+  },
+  "closed_form_unscaled": {
+    "identity_resid_max": 1.1061015498826163e-09,
+    "bound_ok_frac": 1.0,
+    "n_rows": 3060,
+    "per_arm": {
+      "DIAG": {
+        "spearman_theta_q": 0.3853627089506661,
+        "spearman_theta_eta": 0.6694756939621068,
+        "within_q_positive": 16,
+        "within_eta_positive": 17,
+        "n_datasets": 17,
+        "median_within_q": 1.0,
+        "median_within_eta": 1.0,
+        "median_relerr_over_q": 0.08363120430757937
+      },
+      "ISO": {
+        "spearman_theta_q": 0.6934447736886153,
+        "spearman_theta_eta": 0.34817152638161253,
+        "within_q_positive": 17,
+        "within_eta_positive": 17,
+        "n_datasets": 17,
+        "median_within_q": 1.0,
+        "median_within_eta": 1.0,
+        "median_relerr_over_q": 0.34371992942479934
+      },
+      "L1": {
+        "spearman_theta_q": 0.8167115293266076,
+        "spearman_theta_eta": 0.7586447490516764,
+        "within_q_positive": 17,
+        "within_eta_positive": 17,
+        "n_datasets": 17,
+        "median_within_q": 1.0,
+        "median_within_eta": 1.0,
+        "median_relerr_over_q": 0.02059452715893302
+      }
+    },
+    "cell_order_agreement": 0.23529411764705882
+  },
+  "closed_form_std": {
+    "identity_resid_max": 2.224035409444689e-08,
+    "bound_ok_frac": 1.0,
+    "n_rows": 3060,
+    "per_arm": {
+      "DIAG": {
+        "spearman_theta_q": 0.7993428679684893,
+        "spearman_theta_eta": 0.38792747824824425,
+        "within_q_positive": 17,
+        "within_eta_positive": 17,
+        "n_datasets": 17,
+        "median_within_q": 1.0,
+        "median_within_eta": 1.0,
+        "median_relerr_over_q": 0.16636598472385855
+      },
+      "ISO": {
+        "spearman_theta_q": 0.8383183753796041,
+        "spearman_theta_eta": 0.4418401337004029,
+        "within_q_positive": 17,
+        "within_eta_positive": 17,
+        "n_datasets": 17,
+        "median_within_q": 1.0,
+        "median_within_eta": 1.0,
+        "median_relerr_over_q": 0.20976363207629461
+      },
+      "L1": {
+        "spearman_theta_q": 0.784447121230115,
+        "spearman_theta_eta": 0.6481190758329608,
+        "within_q_positive": 15,
+        "within_eta_positive": 15,
+        "n_datasets": 17,
+        "median_within_q": 0.942857142857143,
+        "median_within_eta": 0.942857142857143,
+        "median_relerr_over_q": 0.0022973057143093256
+      }
+    },
+    "cell_order_agreement": 0.49019607843137253
+  },
+  "deletion": {
+    "mean_dropped": 0.26416417388096797,
+    "mean_dropped_pos": 0.3024229597666238,
+    "mean_dropped_neg": 0.2810365377853592,
+    "mean_raw_minus_dfull": 0.011282221228301418,
+    "spearman_drop_vs_cost": 0.45833333333333337
+  },
+  "split_stability": [
+    {
+      "scaling": "std",
+      "contrast": "D_FULL - D_L1",
+      "draws": 4,
+      "delta_min": 0.0551,
+      "delta_max": 0.0663,
+      "sig_draws": 4
+    },
+    {
+      "scaling": "std",
+      "contrast": "P_DIAG - P_ISO",
+      "draws": 4,
+      "delta_min": -0.0012,
+      "delta_max": 0.0009,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "std",
+      "contrast": "P_DIAG - P_L1",
+      "draws": 4,
+      "delta_min": 0.0287,
+      "delta_max": 0.0358,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "std",
+      "contrast": "P_FULL - P_DIAG",
+      "draws": 4,
+      "delta_min": 0.0177,
+      "delta_max": 0.0207,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "std",
+      "contrast": "P_ISO - P_L1",
+      "draws": 4,
+      "delta_min": 0.0292,
+      "delta_max": 0.0355,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "std",
+      "contrast": "P_L1 - D_L1",
+      "draws": 4,
+      "delta_min": 0.016,
+      "delta_max": 0.0306,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "std",
+      "contrast": "P_L1 - P_L0",
+      "draws": 4,
+      "delta_min": 0.0172,
+      "delta_max": 0.029,
+      "sig_draws": 1
+    },
+    {
+      "scaling": "std",
+      "contrast": "RAW - D_FULL",
+      "draws": 4,
+      "delta_min": 0.0101,
+      "delta_max": 0.016,
+      "sig_draws": 2
+    },
+    {
+      "scaling": "std",
+      "contrast": "RAW - PUB",
+      "draws": 4,
+      "delta_min": 0.0364,
+      "delta_max": 0.0488,
+      "sig_draws": 4
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "D_FULL - D_L1",
+      "draws": 5,
+      "delta_min": 0.024,
+      "delta_max": 0.0483,
+      "sig_draws": 1
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "P_DIAG - P_ISO",
+      "draws": 4,
+      "delta_min": 0.025,
+      "delta_max": 0.035,
+      "sig_draws": 1
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "P_DIAG - P_L1",
+      "draws": 4,
+      "delta_min": 0.0044,
+      "delta_max": 0.0094,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "P_FULL - P_DIAG",
+      "draws": 4,
+      "delta_min": 0.0161,
+      "delta_max": 0.0214,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "P_ISO - P_L1",
+      "draws": 4,
+      "delta_min": -0.0306,
+      "delta_max": -0.0156,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "P_L1 - D_L1",
+      "draws": 5,
+      "delta_min": 0.0092,
+      "delta_max": 0.0308,
+      "sig_draws": 1
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "P_L1 - P_L0",
+      "draws": 5,
+      "delta_min": 0.0216,
+      "delta_max": 0.0376,
+      "sig_draws": 1
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "RAW - D_FULL",
+      "draws": 5,
+      "delta_min": 0.01,
+      "delta_max": 0.0117,
+      "sig_draws": 0
+    },
+    {
+      "scaling": "unscaled",
+      "contrast": "RAW - PUB",
+      "draws": 5,
+      "delta_min": 0.0598,
+      "delta_max": 0.0713,
+      "sig_draws": 1
+    }
+  ]
+}
