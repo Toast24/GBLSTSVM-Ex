@@ -20,7 +20,7 @@ const HEX = { teal: "1F6F8B", orange: "E07A3F", green: "5C9E74", red: "B84A4A", 
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE";
 pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
-pres.title = "GBLSTSVM: Session 9 results and recommendations";
+pres.title = "GBLSTSVM: Sessions 9–10 results and recommendations";
 const C = pres.SchemeColor;
 
 pres.defineSlideMaster({
@@ -93,8 +93,8 @@ function note(s, text) { s.addText(text, T({ x: 0.6, y: 6.75, w: 11.5, h: 0.35, 
 
 // 1. Title
 let s = pres.addSlide({ masterName: "DARK", sectionTitle: SECTION });
-s.addText("Session 9: paper evidence and next steps", { placeholder: "title" });
-s.addText("Held-out ladder, closed-form test, deletion cost, and a reproducibility bug\nGBLSTSVM project · November 2026", { placeholder: "body" });
+s.addText("Sessions 9–10: paper evidence and next steps", { placeholder: "title" });
+s.addText("Held-out ladder, closed-form test, deletion cost, a reproducibility bug, and streaming with moments\nGBLSTSVM project · November 2026", { placeholder: "body" });
 
 // 2. What we ran + bottom line
 s = content("What we ran, and the bottom line", "The coding steps from Session 8's plan; 17 datasets × 10 seeds throughout");
@@ -103,9 +103,10 @@ table(s, [["Step", "What", "Outcome"],
   ["2", "Does ‖M⁻¹ΔM‖ predict the angle before solving?", "Yes: Spearman 0.78–0.84, beats η"],
   ["3", "Per-dataset cost of del_ball", "26% of data dropped; costs 1–2 F1 points"],
   ["4", "θ–η and θ–q figures for the paper", "Done, both scalings"],
-  ["+", "Found while checking step 1", "Split seed was not deterministic: fixed"]], 0.6, 1.6, 12.1, [0.7, 6.0, 5.4], [5], 14);
-s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 4.6, w: 12.1, h: 1.6, rectRadius: 0.08, fill: { color: "FBE9DD" }, line: { color: "FBE9DD" }, objectName: "bottom line" });
-s.addText("The analytical-paper thesis holds. Its classification claims need restating: use standardized coordinates, and report split-draw stability next to every p-value.", T({ x: 0.9, y: 4.6, w: 11.5, h: 1.6, fontSize: 18, bold: true, color: C.text2, valign: "middle" }));
+  ["+", "Found while checking step 1", "Split seed was not deterministic: fixed"],
+  ["5", "Session 10: streaming and unlearning with ball vs class moments", "Exact and constant-memory; +9–10 F1 over published; balls add nothing"]], 0.6, 1.6, 12.1, [0.7, 6.0, 5.4], [5], 14);
+s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 4.75, w: 12.1, h: 1.6, rectRadius: 0.08, fill: { color: "FBE9DD" }, line: { color: "FBE9DD" }, objectName: "bottom line" });
+s.addText("The analytical-paper thesis holds, and now has a constructive half: store moments, not balls. Classification claims need standardized coordinates and split-draw stability next to every p-value.", T({ x: 0.9, y: 4.75, w: 11.5, h: 1.6, fontSize: 18, bold: true, color: C.text2, valign: "middle" }));
 
 // 3. Bug
 s = content("Bug: the 'deterministic' split changed on every run", "Found because RAW, which has no randomness, picked a different c in 114 of 170 runs");
@@ -159,7 +160,29 @@ stat(s, 8.0, 1.6, 4.7, "26%", "dropped on average (minority 30%, majority 28%)",
 stat(s, 8.0, 3.3, 4.7, "+0.016 F1", "exact cost of deletion, standardized (Holm 0.026; up to +0.08 on heart)", HEX.red, 32);
 s.addText("Correction: Session 8's \"~3 F1 points\" was one draw of the center-only contrast. The robust figure is 1–2 points exactly.", T({ x: 8.0, y: 5.2, w: 4.7, h: 1.3, fontSize: 14, italic: true, color: C.text2 }));
 
-// 9. Recommendations
+// 9. Streaming (Session 10)
+s = content("Exact streaming beats published GBLSTSVM by 9–10 F1", "Session 10 · training data arrives in 10 batches; 17 datasets × 5 seeds × 3 noise levels = 255 streams, standardized");
+s.addImage({ path: path.join(FIG, "f1_along_stream.png"), x: 0.6, y: 1.55, w: 12.1, h: 3.46, altText: "Test macro-F1 along the stream for class moments, weighted ball moments and the two published variants at 0, 10 and 20 percent label noise" });
+table(s, [["Final macro-F1", "0% noise", "10% noise", "20% noise"],
+  ["Class moments = refit on all data", "0.825", "0.807", "0.779"],
+  ["Published, append balls per batch", "0.727 (−9.8)", "0.722 (−8.6)", "0.686 (−9.3)"],
+  ["Published, re-granulate everything", "0.784 (−4.1)", "0.731 (−7.6)", "0.679 (−10.1)"]], 0.6, 5.15, 8.6, [3.5, 1.7, 1.7, 1.7], [1], 12);
+s.addText("All gaps Holm p ≤ 0.022; class moments win on 14–17 of 17 datasets.", T({ x: 9.5, y: 5.2, w: 3.2, h: 1.3, fontSize: 13, italic: true, color: C.text2 }));
+
+// 10. Streaming: what it shows
+s = content("Streaming comes from moments, not from balls", "What exact moments give, what balls add on top, and what it costs");
+stat(s, 0.6, 1.55, 2.9, "3e-11", "max error vs refitting from scratch, every step of every stream", HEX.green, 34);
+stat(s, 3.7, 1.55, 2.9, "3e-11", "max error when unlearning a batch by subtracting its moments", HEX.green, 34);
+stat(s, 6.8, 1.55, 2.9, "27×", "less memory than storing samples (spambase), constant over time", HEX.green, 34);
+stat(s, 9.9, 1.55, 2.8, "+0.002", "F1 from ball-level label-agreement weights at 20% noise (n.s.)", HEX.gray, 34);
+table(s, [["Arm", "Update time (median)", "Numbers stored", "Model"],
+  ["Class moments", "0.1 ms", "840, fixed", "Exact"],
+  ["Ball moments (granulate each batch)", "10 ms", "840, fixed", "Exact, same as class moments"],
+  ["Refit on all samples", "0.14 ms", "9,800, grows", "Exact"],
+  ["Published, re-granulate everything", "83 ms", "9,800, grows", "−4 to −10 F1"]], 0.6, 3.6, 8.2, [3.2, 1.8, 1.5, 1.7], [1], 12);
+card(s, 9.1, 3.6, 3.6, 2.9, "Inference", bullets(["Per-class running totals do it all", "Balls give the identical model at 100–300× the update cost", "The paper's constructive message: store moments"], 13), HEX.orange);
+
+// 11. Recommendations
 s = content("Recommendations", "What the paper should say, and what to run before submitting");
 const rec = [
   ["Standardized is primary", "Use it for angles and classification; unscaled becomes the robustness check."],
@@ -168,10 +191,12 @@ const rec = [
   ["Promote the closed form", "State it as a proposition: identity, bound, and q as a pre-fit ranking predictor."],
   ["Re-run Session 6–7 K-selection", "With the fixed seed, before citing any of those p-values."],
   ["Drop coordinate-dependent claims", "ISO vs DIAG and ISO vs L1 flip with scaling, for both angles and F1."],
+  ["Constructive section: store moments", "Exact streaming, unlearning and fixed memory; frame it as needing no granulation, not as better balls."],
+  ["Keep q-minimising granulation as future work", "It only matters when memory can't hold scatter matrices: very high d or kernels."],
 ];
-rec.forEach((r, i) => card(s, 0.6 + (i % 2) * 6.15, 1.55 + Math.floor(i / 2) * 1.7, 5.95, 1.55, `${i + 1}. ${r[0]}`, r[1], [HEX.teal, HEX.teal, HEX.green, HEX.green, HEX.orange, HEX.red][i], { bs: 13 }));
+rec.forEach((r, i) => card(s, 0.6 + (i % 2) * 6.15, 1.55 + Math.floor(i / 2) * 1.32, 5.95, 1.2, `${i + 1}. ${r[0]}`, r[1], [HEX.teal, HEX.teal, HEX.green, HEX.green, HEX.orange, HEX.red, HEX.green, HEX.gray][i], { bs: 12 }));
 
-// 10. Next steps
+// 12. Next steps
 s = content("What's left before writing", "Coding is done; the remaining work is reading and proving");
 const left = [
   ["Literature review", "Does any granular-ball paper state the moment identity? This decides the novelty claim.", HEX.orange],
@@ -184,7 +209,7 @@ left.forEach((l, i) => {
   box(s, 0.6, y, 2.8, 1.0, l[0], l[2], 15);
   s.addText(l[1], T({ x: 3.7, y, w: 9.0, h: 1.0, fontSize: 16, valign: "middle" }));
 });
-note(s, "Full write-up: docs/Sessions/Session_9_Paper_Evidence_and_Split_Bug.md · Data: experiments/output/a9_paper_evidence/");
+note(s, "Write-ups: docs/Sessions/Session_9_Paper_Evidence_and_Split_Bug.md, Session_10_Streaming_Moments.md · Data: experiments/output/a9_paper_evidence/, a10_streaming/");
 
 (async () => {
   const out = process.argv[2];
